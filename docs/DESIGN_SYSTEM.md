@@ -26,6 +26,54 @@
 
 ---
 
+## Sprint 1.3 — Placeholder Badge Removal (Visual QA patch)
+
+`PlaceholderTag` removed entirely after visual QA found the capsule badge still appeared vertically in narrow trailing positions on macOS. No redesign. No business logic.
+
+| Change | Detail |
+|---|---|
+| `PlaceholderTag` struct | Removed from `OathenComponents.swift` |
+| All usages removed | `TodayView` (×2), `GoalsView`, `CoachView`, `HealthView`, `YouView`, `MacDashboardView` (×2) — 8 total |
+| Subtitle fix | `moduleHeaderCard` subtitle changed from `"Module implementation: \(item.sprintLabel)"` (truncated) to `item.sprintLabel` directly |
+
+Sprint context is conveyed through inline text labels ("Sprint 2", "Sprint 4", etc.) already present in each view — no badge needed.
+
+---
+
+## Sprint 1.2 — Placeholder Badge Cleanup
+
+`PlaceholderTag` restyled after visual QA. No redesign. No business logic.
+
+| Property | Before (Sprint 1) | After (Sprint 1.2) |
+|---|---|---|
+| Text | `"PLACEHOLDER"` (all caps) | `"Sprint 1"` |
+| Font weight | Bold | Medium |
+| Foreground | `OathenColors.accent.opacity(0.8)` | `.tertiary` (system adaptive) |
+| Background | None | `Color.secondary.opacity(0.1)` |
+| Border | Accent capsule stroke | None |
+| Visual weight | Dominant, accent-colored | Quiet, barely visible |
+
+Superseded by Sprint 1.3 — badge removed entirely.
+
+---
+
+## Sprint 1.1 — macOS Layout Constraints (Stabilization Patch)
+
+Applied after visual QA revealed column compression at default window size. No business logic. No redesign.
+
+| Constraint | Value | API |
+|---|---|---|
+| macOS default window width | 1100pt | `.defaultSize(width: 1100, height: 700)` in `OathenApp.swift` |
+| Sidebar minimum width | 200pt (ideal 220pt) | `.navigationSplitViewColumnWidth(min: 200, ideal: 220)` |
+| Content column minimum width | 380pt (ideal 440pt) | `.navigationSplitViewColumnWidth(min: 380, ideal: 440)` |
+| Detail panel | Remaining space | No constraint (SwiftUI fills the rest) |
+| Score widget text | `.lineLimit(1)` + `.minimumScaleFactor(0.8)` | Prevents "Discipline Score" wrapping in sidebar |
+| Module header card | `.layoutPriority(1)` on title VStack | Ensures title VStack expands to fill remaining card width |
+
+These are **Sprint 1 placeholder constraints only**. Final Mac layout spec is defined in Sprint 10.
+
+---
+
 ## Sprint 1 — Implemented Token Names (Swift)
 
 > These tokens are **placeholder values only** — not final brand decisions. Implemented in Sprint 1 as Swift constants. Token names are binding for Sprint 2+.

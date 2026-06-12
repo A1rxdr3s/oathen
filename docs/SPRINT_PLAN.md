@@ -70,7 +70,7 @@
 
 ## Sprint 1 — SwiftUI App Shell
 
-**Status:** Complete — 2026-06-11
+**Status:** Complete — 2026-06-11 (Sprint 1.1 layout patch: 2026-06-11, Sprint 1.2 badge cleanup: 2026-06-11, Sprint 1.3 badge removal: 2026-06-11)
 **Goal:** Create the functional Xcode project base with navigation structure, design tokens, placeholder screens, and target configuration. No business logic.
 
 ### Scope

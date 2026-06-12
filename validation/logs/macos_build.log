@@ -1,3 +1,4 @@
+eyJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjI2MEVFOUY1QkM5RkM4OTg5QjM5NzE5QSIsImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvYW5kcmVzaGVycmVyYVwvSGFja2luZ1wvb2F0aGVuLWFwcFwvb2F0aGVuXC9PYXRoZW4ueGNvZGVwcm9qIiwidHlwZSI6eyJibHVlcHJpbnQiOnt9fX0=
 note: Removed stale file '/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS-iphonesimulator/all-product-headers.yaml'
 
 warning: ONLY_ACTIVE_ARCH=YES requested with multiple ARCHS and no active architecture could be computed; building for all applicable architectures (in target 'Oathen_macOS' from project 'Oathen')

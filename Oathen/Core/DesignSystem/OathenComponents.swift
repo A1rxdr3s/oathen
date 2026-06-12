@@ -100,20 +100,6 @@ struct OathenSectionHeader: View {
     }
 }
 
-// MARK: - Placeholder tag
-
-/// Small badge indicating this content is Sprint 1 placeholder data.
-struct PlaceholderTag: View {
-    var body: some View {
-        Text("PLACEHOLDER")
-            .font(Font.system(size: 9, weight: .bold))
-            .foregroundStyle(OathenColors.accent.opacity(0.8))
-            .padding(.horizontal, 5)
-            .padding(.vertical, 2)
-            .overlay(Capsule().stroke(OathenColors.accent.opacity(0.4), lineWidth: 1))
-    }
-}
-
 // MARK: - Score ring (placeholder)
 
 struct ScoreRing: View {

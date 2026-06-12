@@ -1,6 +1,7 @@
 // Sprint 1 — Mac dashboard shell: NavigationSplitView.
 // macOS 14+. Not Mac Catalyst. Not a stretched iPhone layout.
 // Real module content: Sprint 2+.
+// Sprint 1.1: Column widths stabilized; window default size added to OathenApp.swift.
 #if os(macOS)
 import SwiftUI
 
@@ -39,32 +40,55 @@ struct MacDashboardView: View {
 
     var body: some View {
         NavigationSplitView {
-            List(MacSidebarItem.allCases, selection: $selection) { item in
-                Label(item.rawValue, systemImage: item.icon)
-                    .tag(item)
-            }
-            .navigationTitle("Discipline OS")
-            .listStyle(.sidebar)
-
-            Divider()
-            scoreWidget
-                .padding(OathenSpacing.md)
+            sidebarColumn
         } content: {
-            if let selected = selection {
-                contentPane(for: selected)
-                    .navigationTitle(selected.rawValue)
-            } else {
-                emptyContent
-            }
+            contentColumn
         } detail: {
             detailPane
         }
     }
 
+    // MARK: - Sidebar Column
+
+    private var sidebarColumn: some View {
+        VStack(spacing: 0) {
+            List(MacSidebarItem.allCases, selection: $selection) { item in
+                Label(item.rawValue, systemImage: item.icon)
+                    .tag(item)
+            }
+            .listStyle(.sidebar)
+
+            Divider()
+
+            scoreWidget
+                .padding(.horizontal, OathenSpacing.md)
+                .padding(.vertical, OathenSpacing.sm)
+        }
+        .navigationTitle("Discipline OS")
+        // Minimum 200 keeps sidebar readable; ideal 220 is the natural resting width.
+        .navigationSplitViewColumnWidth(min: 200, ideal: 220)
+    }
+
+    // MARK: - Content Column
+
+    private var contentColumn: some View {
+        Group {
+            if let selected = selection {
+                contentPane(for: selected)
+                    .navigationTitle(selected.rawValue)
+            } else {
+                emptyContent
+                    .navigationTitle("Discipline OS")
+            }
+        }
+        // Minimum 380 prevents title/card text from wrapping at normal window sizes.
+        .navigationSplitViewColumnWidth(min: 380, ideal: 440)
+    }
+
     // MARK: - Sidebar Score Widget
 
     private var scoreWidget: some View {
-        HStack(spacing: OathenSpacing.sm) {
+        HStack(alignment: .center, spacing: OathenSpacing.sm) {
             ScoreRing(
                 progress: PlaceholderData.scoreProgress,
                 score: PlaceholderData.disciplineScore,
@@ -74,12 +98,13 @@ struct MacDashboardView: View {
                 Text("Discipline Score")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
                 Text("\(PlaceholderData.disciplineScore)")
                     .font(OathenTypography.headingMedium)
                     .foregroundStyle(OathenColors.accent)
             }
-            Spacer()
-            PlaceholderTag()
+            .layoutPriority(1)
         }
     }
 
@@ -88,22 +113,7 @@ struct MacDashboardView: View {
     private func contentPane(for item: MacSidebarItem) -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
-                OathenCard {
-                    HStack {
-                        Image(systemName: item.icon)
-                            .foregroundStyle(OathenColors.accent)
-                            .font(.title2)
-                        VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                            Text(item.rawValue)
-                                .font(OathenTypography.headingLarge)
-                            Text("Module implementation: \(item.sprintLabel)")
-                                .font(OathenTypography.bodySmall)
-                                .foregroundStyle(.secondary)
-                        }
-                        Spacer()
-                        PlaceholderTag()
-                    }
-                }
+                moduleHeaderCard(for: item)
 
                 if item == .today {
                     macTodayContent
@@ -114,6 +124,31 @@ struct MacDashboardView: View {
                     .foregroundStyle(.tertiary)
             }
             .padding(OathenSpacing.lg)
+            // Ensure content always expands to the full column width.
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    private func moduleHeaderCard(for item: MacSidebarItem) -> some View {
+        OathenCard {
+            HStack(spacing: OathenSpacing.md) {
+                Image(systemName: item.icon)
+                    .foregroundStyle(OathenColors.accent)
+                    .font(.title2)
+                    .frame(width: 28, alignment: .center)
+
+                VStack(alignment: .leading, spacing: OathenSpacing.xs) {
+                    Text(item.rawValue)
+                        .font(OathenTypography.headingLarge)
+                        // One line: module names (Today, Goals…) never need to wrap.
+                        .lineLimit(1)
+                    Text(item.sprintLabel)
+                        .font(OathenTypography.bodySmall)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+                .layoutPriority(1)
+            }
         }
     }
 
@@ -156,7 +191,7 @@ struct MacDashboardView: View {
                 .font(OathenTypography.bodySmall)
                 .foregroundStyle(.tertiary)
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: 280)
+                .frame(maxWidth: 300)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -178,7 +213,7 @@ struct MacDashboardView: View {
 
 #Preview {
     MacDashboardView()
-        .frame(minWidth: 900, minHeight: 600)
+        .frame(minWidth: 1000, minHeight: 660)
         .preferredColorScheme(.dark)
 }
 #endif

@@ -64,7 +64,6 @@ struct HealthView: View {
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.secondary)
                 Spacer()
-                PlaceholderTag()
             }
         }
     }

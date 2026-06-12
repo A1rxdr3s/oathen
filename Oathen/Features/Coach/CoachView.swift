@@ -59,7 +59,6 @@ struct CoachView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                PlaceholderTag()
             }
         }
     }

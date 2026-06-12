@@ -43,7 +43,6 @@ struct TodayView: View {
                     .foregroundStyle(.tertiary)
             }
             Spacer()
-            PlaceholderTag()
         }
     }
 
@@ -156,12 +155,9 @@ struct TodayView: View {
                     .foregroundStyle(OathenColors.accent)
                     .font(.title3)
                 VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                    HStack(spacing: OathenSpacing.sm) {
-                        Text("Coach")
-                            .font(OathenTypography.headingSmall)
-                            .foregroundStyle(OathenColors.accent)
-                        PlaceholderTag()
-                    }
+                    Text("Coach")
+                        .font(OathenTypography.headingSmall)
+                        .foregroundStyle(OathenColors.accent)
                     Text(PlaceholderData.coachNudge)
                         .font(OathenTypography.bodySmall)
                         .foregroundStyle(.secondary)

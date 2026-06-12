@@ -42,7 +42,6 @@ struct GoalsView: View {
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.secondary)
                 Spacer()
-                PlaceholderTag()
             }
         }
     }

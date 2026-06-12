@@ -42,7 +42,6 @@ struct YouView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                PlaceholderTag()
             }
         }
     }

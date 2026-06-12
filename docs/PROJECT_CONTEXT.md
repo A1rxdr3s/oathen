@@ -75,6 +75,15 @@ Oathen (Discipline OS) is a premium Apple-native personal accountability operati
 - Validation uses `-target` + `-sdk` flags (no simulator runtime required): `Oathen_iOS`, `Oathen_macOS`, `OathenWatch`.
 - XcodeGen multiplatform target generates schemes named `Oathen_iOS` and `Oathen_macOS` (not a bare `Oathen` scheme).
 
+#### Sprint 1.3 — Placeholder Badge Removal (2026-06-11)
+Visual QA found the "Sprint 1" capsule badge still appearing vertically in narrow trailing positions on macOS. Removed `PlaceholderTag` entirely from all 8 usages across 7 files and deleted the component from `OathenComponents.swift`. Fixed `moduleHeaderCard` subtitle truncation: changed `"Module implementation: \(item.sprintLabel)"` to `item.sprintLabel` directly. Sprint context is conveyed through existing inline text labels in each view. No business logic added.
+
+#### Sprint 1.2 — Placeholder Badge Cleanup (2026-06-11)
+Visual QA identified that the all-caps "PLACEHOLDER" capsule badge with an accent-colored stroke was visually noisy and not premium. Replaced with a quiet "Sprint 1" pill using tertiary foreground and a very subtle background — no accent color, no stroke, no rotation. Superseded by Sprint 1.3.
+
+#### Sprint 1.1 — macOS Layout Stabilization (2026-06-11)
+Visual QA on macOS revealed the NavigationSplitView columns were compressed at default window size, causing title text ("Today") to split across lines and "Discipline Score" to wrap in the sidebar widget. Applied minimum column widths and a default launch size — no business logic or new functionality added.
+
 #### Next: Sprint 2 — Core Domain Models
 - Swift domain structs (Goal, Project, Habit, Task, etc.)
 - SwiftData `@Model` schemas
