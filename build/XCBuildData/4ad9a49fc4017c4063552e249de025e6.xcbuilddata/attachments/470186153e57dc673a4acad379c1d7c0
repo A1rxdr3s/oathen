@@ -1,0 +1,189 @@
+{
+  "" : {
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/Oathen_iOS-primary.dia",
+    "emit-module-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/Oathen_iOS-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/Oathen_iOS-primary-emit-module.dia",
+    "pch" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/Oathen_iOS-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/Oathen_iOS-primary.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/OathenApp.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenApp~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/OathenRootView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRootView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/OathenTab.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTab~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/PlatformRouter.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenColors.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenColors~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenComponents.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenComponents~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenRadius.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenRadius~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenSpacing.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenTypography.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/OathenTypography~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Foundation/AppEnvironment.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/AppEnvironment~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Foundation/PlaceholderData.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Coach/CoachView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/CoachView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Goals/GoalsView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GoalsView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Health/HealthView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/HealthView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/MacDashboard/MacDashboardView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Today/TodayView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/TodayView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/You/YouView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/YouView~partial.swiftmodule"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

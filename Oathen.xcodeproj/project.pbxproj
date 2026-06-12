@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1062A5D27ED07CF7648D7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E09E425BE166955F977E8B /* Assets.xcassets */; };
+		15445D800D580708C9626D67 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		1A9E8808FFC4C6C3C13C68D2 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
+		208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0692FD212ABE2ECCEDD410E /* YouView.swift */; };
+		225B008BB4889202D2656A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
+		235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
+		2EF9782F844FEB56F04758C9 /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
+		379868025C221DD580EABBFD /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
+		3B3B7DAFE48FAFAA54CFBECD /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
+		407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
+		4A96BDD25C27882834A83173 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
+		4CBB0F3F585F50D3922FDA6B /* OathenTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */; };
+		618D78B5BDC8D2FCCA4BBC5F /* OathenTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */; };
+		88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
+		891E8698BC3050038C9CD93F /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
+		8EC442861169A15124DD70DC /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
+		9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
+		96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */; };
+		9DE5CDED2FC8821367A53AED /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
+		A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
+		AC2CD77693C3EF2D61F15DC9 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
+		AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
+		B68B72B3E5D6A7A6EB4C6B3B /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
+		B8040300652CBE8C7E8ACD41 /* OathenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */; };
+		B897E2F66FAA9E307B111A45 /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
+		B8C1BD0E657E7BC76FC96C7A /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0692FD212ABE2ECCEDD410E /* YouView.swift */; };
+		B9A7E871729A4CA2964173E3 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
+		BC9589DC93983201373F8758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
+		BCBFFC8F82572FC61E267667 /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
+		C149390D1BB8887A5508A645 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		D465006883FEAF528B78171D /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
+		D621D88666896359C93FCC9A /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */; };
+		DE385FF82E73AE7027421C62 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
+		E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
+		F03EF4C8E8F1D8F5BA62B1C5 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABBC10215796200EE575D7 /* CoachView.swift */; };
+		F30463E5C68552A810611B06 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */; };
+		F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABBC10215796200EE575D7 /* CoachView.swift */; };
+		F5199ABB17C49898476AA411 /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
+		F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0678ED659BBD24A4028DA336 /* OathenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRootView.swift; sourceTree = "<group>"; };
+		0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		16E33DDAE65A979EB8996516 /* OathenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenApp.swift; sourceTree = "<group>"; };
+		2745854A7BE85970C89D90CE /* OathenColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenColors.swift; sourceTree = "<group>"; };
+		279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeView.swift; sourceTree = "<group>"; };
+		2A08573042820D67F43598B3 /* OathenSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenSpacing.swift; sourceTree = "<group>"; };
+		4BF3F38E338610DCFD004A9A /* Oathen.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C275D072380C9643FCF9D3 /* OathenRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRadius.swift; sourceTree = "<group>"; };
+		55ABBC10215796200EE575D7 /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
+		6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderData.swift; sourceTree = "<group>"; };
+		712110164077E75AADB41F65 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		88E09E425BE166955F977E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9188259441D507D84049A8DC /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDashboardView.swift; sourceTree = "<group>"; };
+		A52C27A095C441C021A1B5E1 /* OathenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OathenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenWatchApp.swift; sourceTree = "<group>"; };
+		B0692FD212ABE2ECCEDD410E /* YouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouView.swift; sourceTree = "<group>"; };
+		B6438A1879D0C075A0AA1CCE /* Oathen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTypography.swift; sourceTree = "<group>"; };
+		CFFF5EC523D5731E383B247F /* OathenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenComponents.swift; sourceTree = "<group>"; };
+		D8256AE6FAAC986D08DE8659 /* OathenTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTab.swift; sourceTree = "<group>"; };
+		EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRouter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2014757B02550204D5F3DF80 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6F75C08E2DD15B02036F0B26 /* Root */,
+				16E33DDAE65A979EB8996516 /* OathenApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2ACAECD7AF41A9EEFB014EAB /* OathenWatch */ = {
+			isa = PBXGroup;
+			children = (
+				88E09E425BE166955F977E8B /* Assets.xcassets */,
+				A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */,
+				279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */,
+			);
+			path = OathenWatch;
+			sourceTree = "<group>";
+		};
+		323AB920DDA39F4F56EB8041 /* MacDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */,
+			);
+			path = MacDashboard;
+			sourceTree = "<group>";
+		};
+		39572E8159AC1AE78BC82F5A /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				55ABBC10215796200EE575D7 /* CoachView.swift */,
+			);
+			path = Coach;
+			sourceTree = "<group>";
+		};
+		409A9AEDB0021F0077F18829 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				39572E8159AC1AE78BC82F5A /* Coach */,
+				8842103A40C9BFCB61B2FFD3 /* Goals */,
+				D7B2F76FCDB01E918CFC50F1 /* Health */,
+				323AB920DDA39F4F56EB8041 /* MacDashboard */,
+				643E6CEC2774F9E09ED3450B /* Today */,
+				765B757284C20117792AF714 /* You */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		58B121F97711B24FEFA44A42 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2745854A7BE85970C89D90CE /* OathenColors.swift */,
+				CFFF5EC523D5731E383B247F /* OathenComponents.swift */,
+				54C275D072380C9643FCF9D3 /* OathenRadius.swift */,
+				2A08573042820D67F43598B3 /* OathenSpacing.swift */,
+				B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		5BEE598BA46DA8E35EBDC1D1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */,
+				704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		643E6CEC2774F9E09ED3450B /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				712110164077E75AADB41F65 /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		64EA7046DD436A9CF6C6520B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3F38E338610DCFD004A9A /* Oathen.app */,
+				B6438A1879D0C075A0AA1CCE /* Oathen.app */,
+				A52C27A095C441C021A1B5E1 /* OathenWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F75C08E2DD15B02036F0B26 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0678ED659BBD24A4028DA336 /* OathenRootView.swift */,
+				D8256AE6FAAC986D08DE8659 /* OathenTab.swift */,
+				EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		765B757284C20117792AF714 /* You */ = {
+			isa = PBXGroup;
+			children = (
+				B0692FD212ABE2ECCEDD410E /* YouView.swift */,
+			);
+			path = You;
+			sourceTree = "<group>";
+		};
+		8642574C89837FFC738BD53B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				58B121F97711B24FEFA44A42 /* DesignSystem */,
+				5BEE598BA46DA8E35EBDC1D1 /* Foundation */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8842103A40C9BFCB61B2FFD3 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				9188259441D507D84049A8DC /* GoalsView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		9AE5D21DF7123A428B675B62 /* Oathen */ = {
+			isa = PBXGroup;
+			children = (
+				2014757B02550204D5F3DF80 /* App */,
+				8642574C89837FFC738BD53B /* Core */,
+				409A9AEDB0021F0077F18829 /* Features */,
+				6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */,
+			);
+			path = Oathen;
+			sourceTree = "<group>";
+		};
+		D7B2F76FCDB01E918CFC50F1 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		FDEBA4060824DC464775E735 = {
+			isa = PBXGroup;
+			children = (
+				9AE5D21DF7123A428B675B62 /* Oathen */,
+				2ACAECD7AF41A9EEFB014EAB /* OathenWatch */,
+				64EA7046DD436A9CF6C6520B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B7A7EF42E58D48E9F1D920D /* Oathen_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA04C38AFB75D7912E9AD087 /* Build configuration list for PBXNativeTarget "Oathen_iOS" */;
+			buildPhases = (
+				70CCD03A459A62449F247363 /* Sources */,
+				9B729326BF350135156A91FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Oathen_iOS;
+			packageProductDependencies = (
+			);
+			productName = Oathen_iOS;
+			productReference = 4BF3F38E338610DCFD004A9A /* Oathen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		260EE9F5BC9FC8989B39719A /* Oathen_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCD84D8F04C6A7370BBB49D /* Build configuration list for PBXNativeTarget "Oathen_macOS" */;
+			buildPhases = (
+				E7A7D4428DC173DC49567833 /* Sources */,
+				F5ECF3FE039C9D5467702971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Oathen_macOS;
+			packageProductDependencies = (
+			);
+			productName = Oathen_macOS;
+			productReference = B6438A1879D0C075A0AA1CCE /* Oathen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA304DD13393796CFA6B6274 /* OathenWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776FFCAF282ED72C122B49FB /* Build configuration list for PBXNativeTarget "OathenWatch" */;
+			buildPhases = (
+				A27A35B48427744C84A03EB9 /* Sources */,
+				F76AE2C1A3DFF1747D9287E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OathenWatch;
+			packageProductDependencies = (
+			);
+			productName = OathenWatch;
+			productReference = A52C27A095C441C021A1B5E1 /* OathenWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADCC5E6AAE0AB4502AA489A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1B7A7EF42E58D48E9F1D920D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					260EE9F5BC9FC8989B39719A = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					DA304DD13393796CFA6B6274 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CF836D2C30BCD1FEC6AED130 /* Build configuration list for PBXProject "Oathen" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FDEBA4060824DC464775E735;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 64EA7046DD436A9CF6C6520B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA304DD13393796CFA6B6274 /* OathenWatch */,
+				1B7A7EF42E58D48E9F1D920D /* Oathen_iOS */,
+				260EE9F5BC9FC8989B39719A /* Oathen_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B729326BF350135156A91FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9589DC93983201373F8758 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ECF3FE039C9D5467702971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225B008BB4889202D2656A45 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76AE2C1A3DFF1747D9287E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1062A5D27ED07CF7648D7A62 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70CCD03A459A62449F247363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68B72B3E5D6A7A6EB4C6B3B /* AppEnvironment.swift in Sources */,
+				F03EF4C8E8F1D8F5BA62B1C5 /* CoachView.swift in Sources */,
+				235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */,
+				96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */,
+				407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */,
+				AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */,
+				15445D800D580708C9626D67 /* OathenColors.swift in Sources */,
+				8EC442861169A15124DD70DC /* OathenComponents.swift in Sources */,
+				1A9E8808FFC4C6C3C13C68D2 /* OathenRadius.swift in Sources */,
+				D465006883FEAF528B78171D /* OathenRootView.swift in Sources */,
+				2EF9782F844FEB56F04758C9 /* OathenSpacing.swift in Sources */,
+				DE385FF82E73AE7027421C62 /* OathenTab.swift in Sources */,
+				618D78B5BDC8D2FCCA4BBC5F /* OathenTypography.swift in Sources */,
+				B897E2F66FAA9E307B111A45 /* PlaceholderData.swift in Sources */,
+				891E8698BC3050038C9CD93F /* PlatformRouter.swift in Sources */,
+				E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */,
+				B8C1BD0E657E7BC76FC96C7A /* YouView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27A35B48427744C84A03EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8040300652CBE8C7E8ACD41 /* OathenWatchApp.swift in Sources */,
+				D621D88666896359C93FCC9A /* WatchHomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A7D4428DC173DC49567833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A7E871729A4CA2964173E3 /* AppEnvironment.swift in Sources */,
+				F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */,
+				F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */,
+				F30463E5C68552A810611B06 /* HealthView.swift in Sources */,
+				88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */,
+				9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */,
+				C149390D1BB8887A5508A645 /* OathenColors.swift in Sources */,
+				F5199ABB17C49898476AA411 /* OathenComponents.swift in Sources */,
+				AC2CD77693C3EF2D61F15DC9 /* OathenRadius.swift in Sources */,
+				BCBFFC8F82572FC61E267667 /* OathenRootView.swift in Sources */,
+				3B3B7DAFE48FAFAA54CFBECD /* OathenSpacing.swift in Sources */,
+				4A96BDD25C27882834A83173 /* OathenTab.swift in Sources */,
+				4CBB0F3F585F50D3922FDA6B /* OathenTypography.swift in Sources */,
+				379868025C221DD580EABBFD /* PlaceholderData.swift in Sources */,
+				9DE5CDED2FC8821367A53AED /* PlatformRouter.swift in Sources */,
+				A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */,
+				208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		31F5BC5B9106B16CC8D7CDA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				INFOPLIST_KEY_NSHumanReadableDescription = "Personal Accountability OS";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.app;
+				PRODUCT_NAME = Oathen;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B94E52448A2B70557FFE580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				INFOPLIST_KEY_NSHumanReadableDescription = "Personal Accountability OS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.app;
+				PRODUCT_NAME = Oathen;
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		715F2B8E831E55526544F541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		7FDA0DFE2A871509AE6F61D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.watch;
+				PRODUCT_NAME = OathenWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		88E13A2247363660B4B90C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				INFOPLIST_KEY_NSHumanReadableDescription = "Personal Accountability OS";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.app;
+				PRODUCT_NAME = Oathen;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB373BA70D8F4A5358D42249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		DD47A918EEE64D33C815D026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				INFOPLIST_KEY_NSHumanReadableDescription = "Personal Accountability OS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.app;
+				PRODUCT_NAME = Oathen;
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8566AF5048FD691B88C2349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oathen;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.watch;
+				PRODUCT_NAME = OathenWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		776FFCAF282ED72C122B49FB /* Build configuration list for PBXNativeTarget "OathenWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FDA0DFE2A871509AE6F61D9 /* Debug */,
+				E8566AF5048FD691B88C2349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CF836D2C30BCD1FEC6AED130 /* Build configuration list for PBXProject "Oathen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				715F2B8E831E55526544F541 /* Debug */,
+				CB373BA70D8F4A5358D42249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DBCD84D8F04C6A7370BBB49D /* Build configuration list for PBXNativeTarget "Oathen_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD47A918EEE64D33C815D026 /* Debug */,
+				5B94E52448A2B70557FFE580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FA04C38AFB75D7912E9AD087 /* Build configuration list for PBXNativeTarget "Oathen_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31F5BC5B9106B16CC8D7CDA0 /* Debug */,
+				88E13A2247363660B4B90C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADCC5E6AAE0AB4502AA489A3 /* Project object */;
+}
