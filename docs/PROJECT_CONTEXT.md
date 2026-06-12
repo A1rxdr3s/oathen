@@ -15,7 +15,7 @@
 | Internal System Name | **Discipline OS** |
 | Product Descriptor | Personal Accountability OS |
 | Category | Discipline, Health, Focus & Execution |
-| Current Sprint | **Sprint 1 — SwiftUI App Shell** |
+| Current Sprint | **Sprint 2 — Core Domain Models** |
 | Sprint Status | Complete |
 | Last Updated | 2026-06-11 |
 
@@ -84,11 +84,39 @@ Visual QA identified that the all-caps "PLACEHOLDER" capsule badge with an accen
 #### Sprint 1.1 — macOS Layout Stabilization (2026-06-11)
 Visual QA on macOS revealed the NavigationSplitView columns were compressed at default window size, causing title text ("Today") to split across lines and "Discipline Score" to wrap in the sidebar widget. Applied minimum column widths and a default launch size — no business logic or new functionality added.
 
-#### Next: Sprint 2 — Core Domain Models
-- Swift domain structs (Goal, Project, Habit, Task, etc.)
-- SwiftData `@Model` schemas
-- Local persistence via ModelContainer
-- CRUD repository protocols
+### Sprint 2 — Core Domain Models (COMPLETE)
+
+**Completion date:** 2026-06-11
+
+#### What was built
+
+- **9 domain models** (pure Swift structs): `Goal`, `Project`, `Habit`, `OathenTask`, `Routine`, `RoutineStep`, `Evidence`, `DisciplineScore`, `ContextMode`
+- **6 value objects**: `Priority`, `CompletionStatus` (6 status enums), `EvidenceRequirement`, `RecurrenceRule`, `ScoreBreakdown`, `DateRange`
+- **2 policy helpers**: `DisciplineScorePolicy` (rule-based placeholder scorer), `TaskPriorityPolicy` (deterministic priority escalation)
+- **Fixtures**: `DomainFixtures` — sample goal, project, 3 habits, 2 tasks, a morning routine, a score, and context mode
+- **OathenTests** unit test target: 3 test files, macOS-only, domain source compiled directly into bundle (no host app dependency)
+  - `ModelTests.swift` — initialization, flags, display names, clamping
+  - `PolicyTests.swift` — scoring policy, priority escalation edge cases
+  - `CodableTests.swift` — JSON round-trip for all key models
+- `scripts/validate_sprint2.sh` — 65/65 checks pass
+- `validation/sprint2_validation_report.md` — generated
+
+#### Scope Boundaries
+
+- **No SwiftData**, no `@Model`, no `ModelContainer` — persistence is Sprint 3+
+- **No Supabase**, no backend schemas, no network code
+- **No HealthKit**, no real health data
+- **No AI providers**, no real scoring logic — `DisciplineScorePolicy` is a placeholder
+- **No notifications**, no widgets, no Live Activities, no Watch sync
+- **Not the full 42-entity data model** — Sprint 2 implements only the core foundation (D-021)
+
+#### Next: Sprint 3 — Daily Routine Engine
+- Morning Check-in, Night Review, Weekly Review full UI flows
+- Daily plan generation (rule-based)
+- Real Discipline Score calculation using domain models
+- Today screen driven by real data
+- Task completion (mark done, postpone, skip with reason)
+- Streak calculation
 
 ---
 
@@ -249,6 +277,7 @@ See `DATA_MODEL.md` for full entity definitions.
 |---|---|---|
 | Sprint 0 | Master Plan + All Documentation | 2026-06-11 |
 | Sprint 1 | SwiftUI App Shell + Validation Script | 2026-06-11 |
+| Sprint 2 | Core Domain Models + Unit Tests | 2026-06-11 |
 
 ---
 
@@ -256,7 +285,7 @@ See `DATA_MODEL.md` for full entity definitions.
 
 | Sprint | Deliverable |
 |---|---|
-| Sprint 2 | Core domain models, local persistence |
+| Sprint 3 | Daily Routine Engine (Morning Check-in, Night Review, Score) |
 | Sprint 3 | Daily Routine Engine (Morning Check-in, Night Review, Score) |
 | Sprint 4 | HealthKit, Exercise, Sleep |
 | Sprint 5 | Hydration + Evidence |

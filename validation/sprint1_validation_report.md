@@ -1,7 +1,7 @@
 # Sprint 1 Validation Report
 
 **Status:** PASSED
-**Date:** 2026-06-11 22:04:28 -04
+**Date:** 2026-06-11 22:55:24 -04
 **Repo:** /Users/andresherrera/Hacking/oathen-app/oathen
 
 ---
@@ -44,6 +44,7 @@ Command line invocation:
 
 Information about project "Oathen":
     Targets:
+        OathenTests
         OathenWatch
         Oathen_iOS
         Oathen_macOS
@@ -57,6 +58,7 @@ Information about project "Oathen":
     Schemes:
         Oathen_iOS
         Oathen_macOS
+        OathenTests
         OathenWatch
   ✅  Scheme 'Oathen_iOS' detected
   ✅  Scheme 'Oathen_macOS' detected
@@ -79,7 +81,7 @@ Information about project "Oathen":
 
 ## Goal 8 — Forbidden Implementation Scan
 
-  Scanning 19 Swift source files...
+  Scanning 40 Swift source files...
   ✅  No Supabase SDK import (import Supabase) found
   ✅  No SupabaseClient usage (SupabaseClient) found
   ✅  No Supabase query (supabase\.from() found

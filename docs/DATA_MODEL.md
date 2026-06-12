@@ -5,6 +5,53 @@
 - **Storage:** `Local` = device only | `Cloud` = Supabase sync | `Hybrid` = local default, cloud opt-in
 - **Sensitivity:** `Public` = non-sensitive | `Private` = user-controlled | `Sensitive` = restricted by default | `Critical` = never auto-uploaded
 - **Sync:** `Auto` = synced automatically | `OptIn` = user must enable | `Never` = never synced
+- **Implementation:** `✅ Sprint 2` = pure Swift domain struct exists | `⏳ Planned` = documented, not yet implemented | `🔒 Gated` = feasibility-gated
+
+---
+
+## Sprint 2 Implementation Status
+
+| Entity | Swift File | Status |
+|---|---|---|
+| `Goal` | `Domain/Models/Goal.swift` | ✅ Sprint 2 — pure Swift struct |
+| `Project` | `Domain/Models/Project.swift` | ✅ Sprint 2 — pure Swift struct |
+| `Habit` | `Domain/Models/Habit.swift` | ✅ Sprint 2 — pure Swift struct |
+| `OathenTask` | `Domain/Models/OathenTask.swift` | ✅ Sprint 2 — pure Swift struct |
+| `Routine` | `Domain/Models/Routine.swift` | ✅ Sprint 2 — pure Swift struct |
+| `RoutineStep` | `Domain/Models/RoutineStep.swift` | ✅ Sprint 2 — pure Swift struct |
+| `Evidence` | `Domain/Models/Evidence.swift` | ✅ Sprint 2 — concept only, no photo storage |
+| `DisciplineScore` | `Domain/Models/DisciplineScore.swift` | ✅ Sprint 2 — shape only, no calculation engine |
+| `ContextMode` | `Domain/Models/ContextMode.swift` | ✅ Sprint 2 — pure Swift enum |
+| `Priority` | `Domain/ValueObjects/Priority.swift` | ✅ Sprint 2 — value object |
+| `ScoreBreakdown` | `Domain/ValueObjects/ScoreBreakdown.swift` | ✅ Sprint 2 — value object |
+| `RecurrenceRule` | `Domain/ValueObjects/RecurrenceRule.swift` | ✅ Sprint 2 — value object |
+| `EvidenceRequirement` | `Domain/ValueObjects/EvidenceRequirement.swift` | ✅ Sprint 2 — value object |
+| `DateRange` | `Domain/ValueObjects/DateRange.swift` | ✅ Sprint 2 — value object |
+| `GoalStatus` / `TaskStatus` / etc. | `Domain/ValueObjects/CompletionStatus.swift` | ✅ Sprint 2 — 6 status enums |
+| `User` | — | ⏳ Planned — Sprint 8 (auth) |
+| `AuthProvider` | — | ⏳ Planned — Sprint 8 |
+| `DailyPlan` | — | ⏳ Planned — Sprint 3 |
+| `MorningCheckIn` | — | ⏳ Planned — Sprint 3 |
+| `NightReview` | — | ⏳ Planned — Sprint 3 |
+| `WeeklyReview` | — | ⏳ Planned — Sprint 3 |
+| `HydrationLog` | — | ⏳ Planned — Sprint 5 |
+| `ExerciseSession` | — | ⏳ Planned — Sprint 4 |
+| `SleepLog` | — | ⏳ Planned — Sprint 4 |
+| `HealthMetric` | — | ⏳ Planned — Sprint 4 |
+| `BodyProgressPhoto` | — | ⏳ Planned — Sprint 5 (local-only, biometric gated) |
+| `BodyMetric` | — | ⏳ Planned — Sprint 5 |
+| `AICoachMessage` | — | ⏳ Planned — Sprint 7 |
+| `AICoachMemory` | — | ⏳ Planned — Sprint 7 |
+| `AIInsight` | — | ⏳ Planned — Sprint 7 |
+| `NotificationRule` | — | ⏳ Planned — Sprint 6 |
+| `EscalationRule` | — | ⏳ Planned — Sprint 6 |
+| `FocusSession` | — | ⏳ Planned — Sprint 11 |
+| `SyncState` | — | ⏳ Planned — Sprint 8 |
+| `AccountabilityPartner` | — | ⏳ Planned — Sprint 12 |
+| `PermissionPolicy` | — | ⏳ Planned — Sprint 12 |
+| `DeviceActivityMonitor` | — | 🔒 Gated — Sprint 11 (entitlement required) |
+
+> **Note:** Sprint 2 establishes the domain language. The entities above that are "Planned" exist in Sprint 0 documentation and will be implemented in their respective sprints. No persistence, sync, or backend schemas exist yet.
 
 ---
 

@@ -60,6 +60,25 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
 
   # ──────────────────────────────────────
+  # OathenTests — unit tests (macOS, no host app)
+  # Domain source files compiled directly into test bundle.
+  # No dependency on app binary — domain models are pure Swift.
+  # ──────────────────────────────────────
+  OathenTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: OathenTests
+      - path: Oathen/Core/Domain
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.oathen.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "6.0"
+        CODE_SIGN_STYLE: Automatic
+
+  # ──────────────────────────────────────
   # OathenWatch — watchOS placeholder
   # ──────────────────────────────────────
   OathenWatch:

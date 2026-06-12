@@ -9,7 +9,7 @@
 |---|---|---|
 | 0 | Master Plan | **Complete** |
 | 1 | SwiftUI App Shell | **Complete** |
-| 2 | Core Domain Models | Pending |
+| 2 | Core Domain Models | **Complete** |
 | 3 | Daily Routine Engine | Pending |
 | 4 | HealthKit, Exercise, Sleep | Pending |
 | 5 | Hydration + Evidence | Pending |
@@ -133,29 +133,61 @@ Before closing Sprint 1 formally, install Xcode and verify:
 
 ## Sprint 2 — Core Domain Models
 
-**Status:** Pending
-**Goal:** Implement all core domain models as Swift structs, SwiftData schemas, and local persistence. No UI beyond what is needed to test.
+**Status:** Complete — 2026-06-11
+**Goal:** Build a clean, testable, pure Swift domain layer (no persistence, no SwiftData). Establish stable domain types as the foundation all future sprints build on (see D-021).
 
 ### Scope
 
 **In scope:**
-- Swift structs for all domain entities (no UI)
-- SwiftData `@Model` classes for local persistence
-- ModelContainer configuration
-- Basic CRUD repository protocols and implementations
-- Unit tests for model validation
-- Goal → Project → Habit → Task hierarchy working in persistence
-- Evidence model + local file reference model
-- DisciplineScore model (no calculation logic yet)
-- SyncState model
+- 9 domain model structs: `Goal`, `Project`, `Habit`, `OathenTask`, `Routine`, `RoutineStep`, `Evidence`, `DisciplineScore`, `ContextMode`
+- 6 value object enums/structs: `Priority`, `CompletionStatus` (6 status enums), `EvidenceRequirement`, `RecurrenceRule`, `ScoreBreakdown`, `DateRange`
+- 2 policy helpers: `DisciplineScorePolicy` (rule-based placeholder scorer), `TaskPriorityPolicy` (deterministic priority escalation)
+- `DomainFixtures` — deterministic sample data for testing and previews
+- `OathenTests` unit test target (macOS, domain source compiled directly into bundle)
+  - `ModelTests.swift` — initialization, flags, display names, clamping
+  - `PolicyTests.swift` — scoring policy, priority escalation edge cases
+  - `CodableTests.swift` — JSON round-trip for all key models
+- `scripts/validate_sprint2.sh` — automated 10-goal validation (65/65 checks)
+- `validation/sprint2_validation_report.md` — generated report
+- Documentation updates: DECISION_LOG.md, PROJECT_CONTEXT.md, ARCHITECTURE.md, DATA_MODEL.md, SPRINT_PLAN.md, SCOPE_CONTROL.md
 - PROJECT_CONTEXT.md update
 
 **Out of scope:**
-- Supabase sync
-- AI logic
-- HealthKit
-- UI implementation beyond test harness
-- Notification scheduling
+- SwiftData / `@Model` / `ModelContainer` (Sprint 3+)
+- Core Data
+- Supabase backend schemas, sync engine, or network code
+- HealthKit integration
+- AI providers, real AI scoring, or AI Coach logic
+- Notifications, WidgetKit, Live Activities
+- WatchConnectivity, Apple Watch sync
+- DeviceActivity / FamilyControls / ManagedSettings
+- Production authentication or onboarding
+- Photo storage, evidence upload, evidence validation
+- The full ~42-entity data model (D-021)
+- Any UI beyond the existing Sprint 1 shell
+
+### Acceptance Criteria
+
+- [x] 9 domain model structs implemented — all `Identifiable`, `Codable`, `Equatable`, `Hashable`, `Sendable`
+- [x] 6 value objects implemented — all `Codable`, `Equatable`, `Hashable`, `Sendable`
+- [x] 2 policy helpers implemented as pure `static func` — no instance state, no `@Model`
+- [x] `DomainFixtures` with fixed deterministic dates and UUIDs (no runtime `Date()` or `UUID()`)
+- [x] `OathenTests` target builds and all 3 test files pass (`** TEST SUCCEEDED **`)
+- [x] No SwiftUI, UIKit, AppKit, HealthKit, or SwiftData imports in domain layer
+- [x] No bare `struct Task:` (uses `OathenTask` to avoid Swift concurrency type conflict)
+- [x] No `@Model` annotations anywhere in domain layer
+- [x] `validate_sprint2.sh` passes 65/65 checks, 0 failures, 0 warnings
+- [x] iOS, macOS, watchOS builds pass (exit 0)
+- [x] PROJECT_CONTEXT.md updated
+
+### Andrés Validation Checklist
+
+- [x] Run `bash scripts/validate_sprint2.sh` — confirm 65/65 passed, 0 failures
+- [ ] Open `Oathen.xcodeproj` in Xcode
+- [ ] Select the `OathenTests` scheme and press ⌘U (Run Tests)
+- [ ] Confirm all 3 test files pass in the Xcode test navigator (ModelTests, PolicyTests, CodableTests)
+- [ ] Expand `Oathen/Core/Domain/` in the Project Navigator — confirm 18 domain source files present
+- [ ] Confirm no `@Model`, `ModelContainer`, or SwiftData import appears in any domain file
 
 ---
 

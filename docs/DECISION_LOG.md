@@ -242,3 +242,15 @@ Format: Decision | Date | Reasoning | Risk | Rejected Alternatives | Status | Im
 **Rejected Alternatives:** `-scheme Oathen -destination 'generic/platform=iOS Simulator'` (rejected: scheme doesn't exist; destination requires simulator runtime).
 **Status:** Final for Sprint 1; revisit in Sprint 9 (Watch) when simulator runtime testing becomes critical
 **Impact Area:** `scripts/validate_sprint1.sh`, CI/CD pipeline design
+
+---
+
+## D-021: Sprint 2 Implements Only Core Domain Models, Not the Full Data Model
+
+**Date:** 2026-06-11
+**Decision:** Sprint 2 implements 9 core domain models (Goal, Project, Habit, OathenTask, Routine, RoutineStep, Evidence, DisciplineScore, ContextMode), 6 value objects, 2 policy helpers, and 1 fixtures file — not the full ~42-entity data model from the Sprint 0 plan. No SwiftData, no persistence, no Supabase schemas.
+**Reasoning:** Establishing a stable, testable domain language before introducing SwiftData, Supabase, HealthKit, or AI complexity is critical. The domain layer must be correct and clean before persistence can be layered on top. Attempting to implement all 42 entities in a single sprint would introduce untested assumptions that compound in every subsequent sprint.
+**Risk:** Some future entities remain documented but not implemented yet. Sprint 3+ depends on these domain types being stable.
+**Rejected Alternatives:** Implementing all ~42 planned entities in Sprint 2 (rejected: too much surface area to test or stabilize); adding SwiftData persistence immediately (rejected: premature, would lock in schema before domain validation); adding backend schemas before domain validation (rejected: Supabase schema changes are harder to reverse than Swift struct changes).
+**Status:** Approved
+**Impact Area:** Architecture, implementation sequence, scope control, data model

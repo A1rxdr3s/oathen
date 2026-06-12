@@ -7,28 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D5809477E5B6B3AE751E80 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
+		086F4961C69847B0D4E9E31E /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
+		0D733B1F6FF438DD02FD44A9 /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
 		1062A5D27ED07CF7648D7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E09E425BE166955F977E8B /* Assets.xcassets */; };
+		13ED1C8E52819A651494F43D /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
 		15445D800D580708C9626D67 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		18F51DCF95BF7B35814020D8 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
+		1A17D77893AC31CCE914D45B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
 		1A9E8808FFC4C6C3C13C68D2 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
+		1C3045D1FA8F78C3D9D9D3F2 /* TaskPriorityPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */; };
+		1F050908059D608BFDCE49BF /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7314616006F8FAE21BDAB4E5 /* ModelTests.swift */; };
 		208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0692FD212ABE2ECCEDD410E /* YouView.swift */; };
 		225B008BB4889202D2656A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
 		235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
+		2889F061E21D8D0979B01A1E /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
+		2A8FE9C171F88CC176F63EC0 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
 		2EF9782F844FEB56F04758C9 /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
+		33DB73AF2A9C3268840E71DC /* DisciplineScorePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */; };
+		35703E3A8C4782F0EFB6F6A8 /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
+		359D17C5769785B6D2C4B4A2 /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
 		379868025C221DD580EABBFD /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
 		3B3B7DAFE48FAFAA54CFBECD /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
+		3DEBEDC54CE3D7FCA9987DEF /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
 		407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
+		45CC8AD3BA5B096DDFB84E10 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
+		46B35441E47AE813FAB528C5 /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
+		481D0716A71213F9B7C4915D /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
 		4A96BDD25C27882834A83173 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
 		4CBB0F3F585F50D3922FDA6B /* OathenTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */; };
+		51623C8F6FE2825B180C9E65 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
+		53AD500EF95EB42EF3F254BD /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
+		574ECBA9CA042A7C04288E57 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
+		5BC0A7E234D39AC09C417127 /* OathenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9505CC8C9943791433D86 /* OathenTask.swift */; };
+		5EC9CCB5E55A059F3253F70F /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
+		5F64AE3A437A747791187F98 /* TaskPriorityPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */; };
 		618D78B5BDC8D2FCCA4BBC5F /* OathenTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */; };
+		62CAED7BBE0E6201676CF4EF /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
+		6A46246149CC7DAE52F5E6F5 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */; };
+		6DFE7A7CBA9249CA7393ED9C /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
+		71DFF0DE1E458BF9FA1AE404 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
+		72BC92B97A42B0E19B814842 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
+		78A853FDEAB833B5017CB002 /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712655DE840D8ED8868E82 /* CodableTests.swift */; };
+		7EBE7AC3B8C711C5D1B1E7B0 /* DisciplineScorePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */; };
+		7FD880F0A678E87A41514174 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
+		81A12815734B2E75944448AC /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
+		82ECE645A4B5B4F5FF079E01 /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
+		86379E464CC583918858D524 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
 		88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
 		891E8698BC3050038C9CD93F /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
 		8EC442861169A15124DD70DC /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
+		9261DD1FB57AB515F61F3073 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */; };
 		9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
+		94AC2C7C905EBC9AB125A53C /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
 		96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */; };
+		9865226B5700741AF1CFA0A9 /* PolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */; };
+		991C5AFBEC12331BF3C1F5B7 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
 		9DE5CDED2FC8821367A53AED /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
+		A0DFF5C7E5A6A0720D301D41 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
+		A4D77F88D4D1534C10D736F1 /* TaskPriorityPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */; };
+		A6A3EA8131EB3548571E8701 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
 		A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
 		AC2CD77693C3EF2D61F15DC9 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
 		AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
+		B0D9A67DCFB18C00C3DCA24A /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
+		B4456AEA2295D5CF4F313FC5 /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
+		B4861B2857E639CCADE17041 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
 		B68B72B3E5D6A7A6EB4C6B3B /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
 		B8040300652CBE8C7E8ACD41 /* OathenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */; };
 		B897E2F66FAA9E307B111A45 /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
@@ -36,46 +80,92 @@
 		B9A7E871729A4CA2964173E3 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
 		BC9589DC93983201373F8758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
 		BCBFFC8F82572FC61E267667 /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
+		BF568B43EAE90474E6D01BE4 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
 		C149390D1BB8887A5508A645 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		CCC5375043CD5682551030FB /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
+		CDC90176F8D22B65C7FFC8B9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
+		D2E192C3BA5A4F70BE1171F4 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
 		D465006883FEAF528B78171D /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
 		D621D88666896359C93FCC9A /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */; };
+		DAAA4E0E605A32AF921566D3 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
 		DE385FF82E73AE7027421C62 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
+		E46062647368F624C1457880 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
+		E6DBA33F9C63E700DF3A42B5 /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
 		E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
+		E9FE4EAC1E66A66C5998B81E /* DisciplineScorePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */; };
+		EB9CF0D95664295634F16C18 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */; };
+		EBC0B56A410E29DDCEF32D31 /* OathenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9505CC8C9943791433D86 /* OathenTask.swift */; };
 		F03EF4C8E8F1D8F5BA62B1C5 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABBC10215796200EE575D7 /* CoachView.swift */; };
 		F30463E5C68552A810611B06 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */; };
 		F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABBC10215796200EE575D7 /* CoachView.swift */; };
 		F5199ABB17C49898476AA411 /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
+		F5277668B68296BBD4C9B78F /* OathenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9505CC8C9943791433D86 /* OathenTask.swift */; };
+		F72B3E7B48F22EA8E58E992A /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
 		F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
+		FE1C278CF435DCDB7CAABDE2 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00275B20DB88AFF5DC971C59 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		04F4E9D79CAD908933055724 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		0678ED659BBD24A4028DA336 /* OathenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRootView.swift; sourceTree = "<group>"; };
 		0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		16E33DDAE65A979EB8996516 /* OathenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenApp.swift; sourceTree = "<group>"; };
+		1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyTests.swift; sourceTree = "<group>"; };
+		256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionStatus.swift; sourceTree = "<group>"; };
 		2745854A7BE85970C89D90CE /* OathenColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenColors.swift; sourceTree = "<group>"; };
 		279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeView.swift; sourceTree = "<group>"; };
 		2A08573042820D67F43598B3 /* OathenSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenSpacing.swift; sourceTree = "<group>"; };
+		3853E3B7EFB1D567ACDD23C8 /* OathenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OathenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceRule.swift; sourceTree = "<group>"; };
+		3DD9505CC8C9943791433D86 /* OathenTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTask.swift; sourceTree = "<group>"; };
 		4BF3F38E338610DCFD004A9A /* Oathen.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F712655DE840D8ED8868E82 /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
 		54C275D072380C9643FCF9D3 /* OathenRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRadius.swift; sourceTree = "<group>"; };
 		55ABBC10215796200EE575D7 /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
+		5D0F03FE73AA75F0B4AC010E /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
+		6C89560137A1F06CF1262673 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		6E468863462CA3FA9B2803BC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderData.swift; sourceTree = "<group>"; };
 		712110164077E75AADB41F65 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainFixtures.swift; sourceTree = "<group>"; };
+		7314616006F8FAE21BDAB4E5 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		88E09E425BE166955F977E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		916F605FD8129789AF29DF8C /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		9188259441D507D84049A8DC /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDashboardView.swift; sourceTree = "<group>"; };
+		99B62BD503429B0F24A56AAE /* Evidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evidence.swift; sourceTree = "<group>"; };
+		A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineScore.swift; sourceTree = "<group>"; };
+		A26D3653878D0E7364EE936A /* ContextMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMode.swift; sourceTree = "<group>"; };
+		A44A85C57F9D240151081534 /* RoutineStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStep.swift; sourceTree = "<group>"; };
 		A52C27A095C441C021A1B5E1 /* OathenWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OathenWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenWatchApp.swift; sourceTree = "<group>"; };
 		B0692FD212ABE2ECCEDD410E /* YouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouView.swift; sourceTree = "<group>"; };
 		B6438A1879D0C075A0AA1CCE /* Oathen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTypography.swift; sourceTree = "<group>"; };
+		CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriorityPolicy.swift; sourceTree = "<group>"; };
 		CFFF5EC523D5731E383B247F /* OathenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenComponents.swift; sourceTree = "<group>"; };
 		D8256AE6FAAC986D08DE8659 /* OathenTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTab.swift; sourceTree = "<group>"; };
+		E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineScorePolicy.swift; sourceTree = "<group>"; };
+		E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvidenceRequirement.swift; sourceTree = "<group>"; };
 		EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRouter.swift; sourceTree = "<group>"; };
+		FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBreakdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		03E39A0EBCC79AD201FFEEC7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE15FDF60CD27A8631343A16 /* Fixtures */,
+				ED021723269C304986DDD466 /* Models */,
+				488DC5F8DB59A15F128918DC /* Policies */,
+				AC1B5230D5D528680A0A20F9 /* ValueObjects */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		2014757B02550204D5F3DF80 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +214,15 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		488DC5F8DB59A15F128918DC /* Policies */ = {
+			isa = PBXGroup;
+			children = (
+				E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */,
+				CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */,
+			);
+			path = Policies;
+			sourceTree = "<group>";
+		};
 		58B121F97711B24FEFA44A42 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +257,7 @@
 			children = (
 				4BF3F38E338610DCFD004A9A /* Oathen.app */,
 				B6438A1879D0C075A0AA1CCE /* Oathen.app */,
+				3853E3B7EFB1D567ACDD23C8 /* OathenTests.xctest */,
 				A52C27A095C441C021A1B5E1 /* OathenWatch.app */,
 			);
 			name = Products;
@@ -185,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				58B121F97711B24FEFA44A42 /* DesignSystem */,
+				03E39A0EBCC79AD201FFEEC7 /* Domain */,
 				5BEE598BA46DA8E35EBDC1D1 /* Foundation */,
 			);
 			path = Core;
@@ -198,6 +299,16 @@
 			path = Goals;
 			sourceTree = "<group>";
 		};
+		92148EA89AC4D257EBB9B6EA /* OathenTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F712655DE840D8ED8868E82 /* CodableTests.swift */,
+				7314616006F8FAE21BDAB4E5 /* ModelTests.swift */,
+				1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */,
+			);
+			path = OathenTests;
+			sourceTree = "<group>";
+		};
 		9AE5D21DF7123A428B675B62 /* Oathen */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +320,19 @@
 			path = Oathen;
 			sourceTree = "<group>";
 		};
+		AC1B5230D5D528680A0A20F9 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */,
+				5D0F03FE73AA75F0B4AC010E /* DateRange.swift */,
+				E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */,
+				00275B20DB88AFF5DC971C59 /* Priority.swift */,
+				3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */,
+				FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */,
+			);
+			path = ValueObjects;
+			sourceTree = "<group>";
+		};
 		D7B2F76FCDB01E918CFC50F1 /* Health */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +341,35 @@
 			path = Health;
 			sourceTree = "<group>";
 		};
+		ED021723269C304986DDD466 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A26D3653878D0E7364EE936A /* ContextMode.swift */,
+				A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */,
+				99B62BD503429B0F24A56AAE /* Evidence.swift */,
+				04F4E9D79CAD908933055724 /* Goal.swift */,
+				6E468863462CA3FA9B2803BC /* Habit.swift */,
+				3DD9505CC8C9943791433D86 /* OathenTask.swift */,
+				6C89560137A1F06CF1262673 /* Project.swift */,
+				916F605FD8129789AF29DF8C /* Routine.swift */,
+				A44A85C57F9D240151081534 /* RoutineStep.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE15FDF60CD27A8631343A16 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		FDEBA4060824DC464775E735 = {
 			isa = PBXGroup;
 			children = (
 				9AE5D21DF7123A428B675B62 /* Oathen */,
+				92148EA89AC4D257EBB9B6EA /* OathenTests */,
 				2ACAECD7AF41A9EEFB014EAB /* OathenWatch */,
 				64EA7046DD436A9CF6C6520B /* Products */,
 			);
@@ -246,6 +395,23 @@
 			productName = Oathen_iOS;
 			productReference = 4BF3F38E338610DCFD004A9A /* Oathen.app */;
 			productType = "com.apple.product-type.application";
+		};
+		242A6FC849326890F0B0A2AD /* OathenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88C901E7092715648E0BD815 /* Build configuration list for PBXNativeTarget "OathenTests" */;
+			buildPhases = (
+				CB3978F7A8B9D32A777AEFE8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OathenTests;
+			packageProductDependencies = (
+			);
+			productName = OathenTests;
+			productReference = 3853E3B7EFB1D567ACDD23C8 /* OathenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		260EE9F5BC9FC8989B39719A /* Oathen_macOS */ = {
 			isa = PBXNativeTarget;
@@ -296,6 +462,10 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
+					242A6FC849326890F0B0A2AD = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					260EE9F5BC9FC8989B39719A = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -320,6 +490,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				242A6FC849326890F0B0A2AD /* OathenTests */,
 				DA304DD13393796CFA6B6274 /* OathenWatch */,
 				1B7A7EF42E58D48E9F1D920D /* Oathen_iOS */,
 				260EE9F5BC9FC8989B39719A /* Oathen_macOS */,
@@ -361,7 +532,17 @@
 			files = (
 				B68B72B3E5D6A7A6EB4C6B3B /* AppEnvironment.swift in Sources */,
 				F03EF4C8E8F1D8F5BA62B1C5 /* CoachView.swift in Sources */,
+				9261DD1FB57AB515F61F3073 /* CompletionStatus.swift in Sources */,
+				6DFE7A7CBA9249CA7393ED9C /* ContextMode.swift in Sources */,
+				7FD880F0A678E87A41514174 /* DateRange.swift in Sources */,
+				B0D9A67DCFB18C00C3DCA24A /* DisciplineScore.swift in Sources */,
+				E9FE4EAC1E66A66C5998B81E /* DisciplineScorePolicy.swift in Sources */,
+				CCC5375043CD5682551030FB /* DomainFixtures.swift in Sources */,
+				53AD500EF95EB42EF3F254BD /* Evidence.swift in Sources */,
+				2A8FE9C171F88CC176F63EC0 /* EvidenceRequirement.swift in Sources */,
+				D2E192C3BA5A4F70BE1171F4 /* Goal.swift in Sources */,
 				235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */,
+				1A17D77893AC31CCE914D45B /* Habit.swift in Sources */,
 				96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */,
 				407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */,
 				AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */,
@@ -371,9 +552,17 @@
 				D465006883FEAF528B78171D /* OathenRootView.swift in Sources */,
 				2EF9782F844FEB56F04758C9 /* OathenSpacing.swift in Sources */,
 				DE385FF82E73AE7027421C62 /* OathenTab.swift in Sources */,
+				5BC0A7E234D39AC09C417127 /* OathenTask.swift in Sources */,
 				618D78B5BDC8D2FCCA4BBC5F /* OathenTypography.swift in Sources */,
 				B897E2F66FAA9E307B111A45 /* PlaceholderData.swift in Sources */,
 				891E8698BC3050038C9CD93F /* PlatformRouter.swift in Sources */,
+				13ED1C8E52819A651494F43D /* Priority.swift in Sources */,
+				86379E464CC583918858D524 /* Project.swift in Sources */,
+				086F4961C69847B0D4E9E31E /* RecurrenceRule.swift in Sources */,
+				574ECBA9CA042A7C04288E57 /* Routine.swift in Sources */,
+				05D5809477E5B6B3AE751E80 /* RoutineStep.swift in Sources */,
+				45CC8AD3BA5B096DDFB84E10 /* ScoreBreakdown.swift in Sources */,
+				1C3045D1FA8F78C3D9D9D3F2 /* TaskPriorityPolicy.swift in Sources */,
 				E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */,
 				B8C1BD0E657E7BC76FC96C7A /* YouView.swift in Sources */,
 			);
@@ -388,13 +577,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB3978F7A8B9D32A777AEFE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A853FDEAB833B5017CB002 /* CodableTests.swift in Sources */,
+				6A46246149CC7DAE52F5E6F5 /* CompletionStatus.swift in Sources */,
+				2889F061E21D8D0979B01A1E /* ContextMode.swift in Sources */,
+				62CAED7BBE0E6201676CF4EF /* DateRange.swift in Sources */,
+				46B35441E47AE813FAB528C5 /* DisciplineScore.swift in Sources */,
+				33DB73AF2A9C3268840E71DC /* DisciplineScorePolicy.swift in Sources */,
+				82ECE645A4B5B4F5FF079E01 /* DomainFixtures.swift in Sources */,
+				35703E3A8C4782F0EFB6F6A8 /* Evidence.swift in Sources */,
+				DAAA4E0E605A32AF921566D3 /* EvidenceRequirement.swift in Sources */,
+				94AC2C7C905EBC9AB125A53C /* Goal.swift in Sources */,
+				51623C8F6FE2825B180C9E65 /* Habit.swift in Sources */,
+				1F050908059D608BFDCE49BF /* ModelTests.swift in Sources */,
+				F5277668B68296BBD4C9B78F /* OathenTask.swift in Sources */,
+				9865226B5700741AF1CFA0A9 /* PolicyTests.swift in Sources */,
+				991C5AFBEC12331BF3C1F5B7 /* Priority.swift in Sources */,
+				CDC90176F8D22B65C7FFC8B9 /* Project.swift in Sources */,
+				E6DBA33F9C63E700DF3A42B5 /* RecurrenceRule.swift in Sources */,
+				81A12815734B2E75944448AC /* Routine.swift in Sources */,
+				5EC9CCB5E55A059F3253F70F /* RoutineStep.swift in Sources */,
+				71DFF0DE1E458BF9FA1AE404 /* ScoreBreakdown.swift in Sources */,
+				A4D77F88D4D1534C10D736F1 /* TaskPriorityPolicy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7A7D4428DC173DC49567833 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B9A7E871729A4CA2964173E3 /* AppEnvironment.swift in Sources */,
 				F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */,
+				EB9CF0D95664295634F16C18 /* CompletionStatus.swift in Sources */,
+				B4456AEA2295D5CF4F313FC5 /* ContextMode.swift in Sources */,
+				F72B3E7B48F22EA8E58E992A /* DateRange.swift in Sources */,
+				0D733B1F6FF438DD02FD44A9 /* DisciplineScore.swift in Sources */,
+				7EBE7AC3B8C711C5D1B1E7B0 /* DisciplineScorePolicy.swift in Sources */,
+				359D17C5769785B6D2C4B4A2 /* DomainFixtures.swift in Sources */,
+				3DEBEDC54CE3D7FCA9987DEF /* Evidence.swift in Sources */,
+				72BC92B97A42B0E19B814842 /* EvidenceRequirement.swift in Sources */,
+				A0DFF5C7E5A6A0720D301D41 /* Goal.swift in Sources */,
 				F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */,
+				E46062647368F624C1457880 /* Habit.swift in Sources */,
 				F30463E5C68552A810611B06 /* HealthView.swift in Sources */,
 				88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */,
 				9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */,
@@ -404,9 +631,17 @@
 				BCBFFC8F82572FC61E267667 /* OathenRootView.swift in Sources */,
 				3B3B7DAFE48FAFAA54CFBECD /* OathenSpacing.swift in Sources */,
 				4A96BDD25C27882834A83173 /* OathenTab.swift in Sources */,
+				EBC0B56A410E29DDCEF32D31 /* OathenTask.swift in Sources */,
 				4CBB0F3F585F50D3922FDA6B /* OathenTypography.swift in Sources */,
 				379868025C221DD580EABBFD /* PlaceholderData.swift in Sources */,
 				9DE5CDED2FC8821367A53AED /* PlatformRouter.swift in Sources */,
+				18F51DCF95BF7B35814020D8 /* Priority.swift in Sources */,
+				A6A3EA8131EB3548571E8701 /* Project.swift in Sources */,
+				481D0716A71213F9B7C4915D /* RecurrenceRule.swift in Sources */,
+				BF568B43EAE90474E6D01BE4 /* Routine.swift in Sources */,
+				B4861B2857E639CCADE17041 /* RoutineStep.swift in Sources */,
+				FE1C278CF435DCDB7CAABDE2 /* ScoreBreakdown.swift in Sources */,
+				5F64AE3A437A747791187F98 /* TaskPriorityPolicy.swift in Sources */,
 				A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */,
 				208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */,
 			);
@@ -567,6 +802,44 @@
 			};
 			name = Release;
 		};
+		99145FA09822ACD7F9DDEFEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.tests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A403BC967E500C2AA3A3FC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oathen.tests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
 		CB373BA70D8F4A5358D42249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,6 +950,15 @@
 			buildConfigurations = (
 				7FDA0DFE2A871509AE6F61D9 /* Debug */,
 				E8566AF5048FD691B88C2349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		88C901E7092715648E0BD815 /* Build configuration list for PBXNativeTarget "OathenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A403BC967E500C2AA3A3FC10 /* Debug */,
+				99145FA09822ACD7F9DDEFEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

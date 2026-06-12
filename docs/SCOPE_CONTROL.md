@@ -116,18 +116,35 @@ This is the REALISTIC path to building the MVP product vision.
 
 ## 3. Current Sprint Scope
 
-**Current Sprint: Sprint 0 — Master Plan**
-**Status: Complete**
+---
 
-Only the following work is in scope for Sprint 0:
-- Product strategy and vision documentation
-- Architecture design
-- Data model design
-- UX flow design
-- Design system direction
-- Cost modeling
-- Sprint roadmap
-- Required Markdown documentation
+### Sprint 2 — Core Domain Models (Complete — 2026-06-11)
+
+**What was built:**
+- Pure Swift domain models, value objects, and policy helpers — no persistence, no UI changes
+- `OathenTests` unit test target with 3 test files (ModelTests, PolicyTests, CodableTests)
+- `scripts/validate_sprint2.sh` — 65/65 checks pass, 0 failures
+
+**Scope boundaries — explicitly out of scope for Sprint 2:**
+- SwiftData / `@Model` / `ModelContainer` — local persistence is Sprint 3+
+- Supabase sync, Postgres schemas, or any backend/network code
+- HealthKit data access of any kind
+- AI providers, AI Coach logic, or real scoring analytics
+- Notifications, WidgetKit, Live Activities, WatchConnectivity
+- DeviceActivity / FamilyControls / ManagedSettings
+- Photo storage, evidence upload, or evidence validation (AI or otherwise)
+- Production authentication or onboarding
+- The full ~42-entity data model — Sprint 2 covers only core foundation (D-021)
+- Any UI beyond the existing Sprint 1 shell
+
+---
+
+### Sprint 3 — Daily Routine Engine (Next)
+
+**Current Sprint:** Sprint 3 — Daily Routine Engine
+**Status:** Pending (not yet approved — do not begin implementation)
+
+Sprint 3 scope is defined in SPRINT_PLAN.md. No Sprint 3 work begins until Andrés explicitly approves it.
 
 ---
 
