@@ -180,6 +180,83 @@ scripts/
 └── validate_sprint3.sh              # NEW — 12 goals, 74/74 checks
 ```
 
+### Sprint 4 Actual Structure (as built — additions only)
+
+```
+Oathen/
+├── App/
+│   └── OathenApp.swift              # UPDATED — creates ModelContainer + TodayPersistenceStore
+│                                    # init(store:) → TodayViewModel, .modelContainer() injected
+├── Core/
+│   └── Data/                        # NEW directory — Sprint 4 persistence layer
+│       └── LocalPersistence/
+│           ├── SwiftData/           # @Model entities ONLY — never in Core/Domain
+│           │   ├── PersistentTodayState.swift      # dayStart:Date (query key), cascade plan/checkIn/review
+│           │   ├── PersistentDailyPlan.swift       # domainID: UUID, @Relationship items cascade
+│           │   ├── PersistentDailyPlanItem.swift   # sortOrder:Int preserves order
+│           │   ├── PersistentMorningCheckIn.swift  # confirmedCriticalTaskIDsJSON: String (JSON [UUID])
+│           │   └── PersistentNightReview.swift     # 4 UUID-array JSON fields, failureReason?, excuseDetected
+│           ├── Mapping/             # @MainActor static mappers — domain ↔ persistent
+│           │   ├── TodayStateMapper.swift          # toPersistent inserts into context; toDomain recalculates score
+│           │   ├── DailyPlanMapper.swift           # toPersistent inserts plan + items into context
+│           │   ├── MorningCheckInMapper.swift      # returns nil from toDomain on corrupt rawValue
+│           │   ├── NightReviewMapper.swift         # toDomain always succeeds (no required enum guards)
+│           │   └── UUIDArrayCoding.swift           # encode/decode [UUID] as JSON string
+│           ├── Stores/
+│           │   ├── TodayPersistenceStore.swift     # @MainActor — loadToday, saveToday (delete+reinsert), deleteToday, resetToday
+│           │   └── TodayPersistenceError.swift     # LocalizedError enum
+│           └── OathenModelContainer.swift          # make(inMemory:) factory — used by app and tests
+├── Features/
+│   └── Today/
+│       └── TodayViewModel.swift     # UPDATED — init() (no-persist) + init(store:); persistState() after mutations
+
+OathenTests/
+└── Persistence/                     # NEW — 5 test files using in-memory ModelContainer
+    ├── MorningCheckInMapperTests.swift
+    ├── NightReviewMapperTests.swift
+    ├── DailyPlanMapperTests.swift
+    ├── TodayStateMapperTests.swift
+    └── TodayPersistenceStoreTests.swift
+
+scripts/
+└── validate_sprint4.sh              # NEW — Sprint 3 regression + Sprint 4 checks
+```
+
+### Persistence Architecture Rules (Sprint 4)
+
+| Rule | Enforcement |
+|---|---|
+| `@Model` only in `Core/Data/LocalPersistence/SwiftData/` | Validated by `validate_sprint4.sh` grep |
+| Domain models remain pure Swift (no `@Model`) | `validate_sprint4.sh` checks each domain file |
+| Mapper functions are `@MainActor` | Required — `@Model` instances bound to MainActor |
+| Store uses `ModelContext.mainContext` | `@MainActor final class TodayPersistenceStore` |
+| watchOS target unaffected | `OathenWatch/` sources exclude `Oathen/Core/Data/` |
+| Tests use in-memory `ModelContainer` | `OathenModelContainer.make(inMemory: true)` |
+
+### Persistence Data Flow (Sprint 4)
+
+```
+OathenApp.init()
+    ↓ OathenModelContainer.make()         → ModelContainer (on-disk SQLite)
+    ↓ TodayPersistenceStore(context:)     → store bound to mainContext
+    ↓ TodayViewModel(store:)              → loads today's state on init
+    ↓ .modelContainer(modelContainer)     → injected for future @Query views
+
+TodayViewModel mutation (toggle, check-in, review)
+    ↓ recalculateScore()
+    ↓ persistState()
+    ↓ store.saveToday(todayState)
+    ↓ TodayStateMapper.toPersistent(state, in: context)
+    ↓ context.save()
+
+App restart
+    ↓ TodayViewModel(store:)
+    ↓ store.loadToday(for: Date())
+    ↓ TodayStateMapper.toDomain(persistent)
+    ↓ DailyRoutinePolicy.calculateScore(from:)  ← score recalculated, not loaded
+    ↓ todayState = restored state
+```
+
 ### Daily Routine Data Flow (Sprint 3)
 
 ```

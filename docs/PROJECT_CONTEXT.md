@@ -15,7 +15,7 @@
 | Internal System Name | **Discipline OS** |
 | Product Descriptor | Personal Accountability OS |
 | Category | Discipline, Health, Focus & Execution |
-| Current Sprint | **Sprint 3.6 — Force Native iOS Scroll Layout** |
+| Current Sprint | **Sprint 4 — Local Persistence Foundation** |
 | Sprint Status | Complete |
 | Last Updated | 2026-06-14 |
 
@@ -159,7 +159,43 @@ Visual QA after Sprint 3 found that non-Today sections on macOS and iPhone still
 - `MacDashboardView` — `sprintLabel` replaced by `subtitle`; non-Today sections now show per-module placeholder cards; detail panel "Sprint 10" removed
 - `TodayView` + `HealthPillarsCard` — "HealthKit — Sprint 4" → "Local target" / "Local target only"
 
-#### Next: Sprint 4 — HealthKit, Exercise, and Sleep
+### Sprint 4 — Local Persistence Foundation (COMPLETE)
+
+**Completion date:** 2026-06-14
+
+#### What was built
+
+- **Persistence layer** — `Oathen/Core/Data/LocalPersistence/` directory, never touching domain models
+- **5 SwiftData entities** (in `SwiftData/`): `PersistentTodayState`, `PersistentDailyPlan`, `PersistentDailyPlanItem`, `PersistentMorningCheckIn`, `PersistentNightReview`
+  - `[UUID]` arrays stored as JSON strings (`confirmedCriticalTaskIDsJSON`, etc.) to avoid SwiftData compatibility issues
+  - `sortOrder: Int` on `PersistentDailyPlanItem` preserves daily plan item order across saves
+  - `dayStart: Date` (normalized start-of-day) on `PersistentTodayState` as the query key for date lookup
+- **4 mappers** + `UUIDArrayCoding` helper (in `Mapping/`): `TodayStateMapper`, `DailyPlanMapper`, `MorningCheckInMapper`, `NightReviewMapper` — all `@MainActor` static functions
+  - `TodayStateMapper.toDomain` recalculates `DisciplineScore` from plan state on restore — avoids persisting a derived value
+  - All raw enum values are round-tripped via `rawValue`/`init(rawValue:)` with nil-guard fallback
+- **`TodayPersistenceStore`** (`@MainActor`) — `loadToday(for:)`, `saveToday(_:)`, `deleteToday(for:)`, `resetToday()` — delete-and-reinsert strategy for saves, cascade delete for children
+- **`TodayPersistenceError`** — `LocalizedError` enum covering save/load/delete/corrupt-data cases
+- **`OathenModelContainer`** — factory `make(inMemory:)` throwing function used by app (persistent) and tests (in-memory)
+- **`TodayViewModel`** updated: two `init` overloads (`init()` for previews/no-persistence, `init(store:)` for full persistence); loads on init, persists after every mutation, falls back gracefully on save error
+- **`OathenApp`** updated: creates `ModelContainer` in `init()`, falls back to in-memory container on failure, creates `TodayPersistenceStore` from `mainContext`, passes store to `TodayViewModel`; `.modelContainer(modelContainer)` injected for future SwiftUI `@Query` use
+- **5 new unit test files** (in `OathenTests/Persistence/`): mapper round-trip tests and store integration tests using in-memory container
+- **`project.yml`** updated: `Oathen/Core/Data/LocalPersistence` added to `OathenTests` sources
+- **`scripts/validate_sprint4.sh`** — automated validation: Sprint 3 regression + Sprint 4 checks
+
+#### Architecture rules enforced
+
+- `@Model` annotation appears **only** in `Core/Data/LocalPersistence/SwiftData/` — never in domain models
+- Domain models (`TodayState`, `DailyPlan`, `MorningCheckIn`, `NightReview`) remain pure Swift structs with no persistence imports
+- `watchOS` target unaffected — persistence files are in `Oathen/Core/Data/`, which `OathenWatch` does not source
+
+#### Scope Boundaries
+
+- **No HealthKit** — health pillars remain local checkboxes
+- **No Supabase** — persistence is device-local only (SwiftData, on-disk SQLite)
+- **No cross-day streak tracking** — only today's state is persisted
+- **No AI providers**, no notifications, no widgets, no Watch sync added
+
+#### Next: Sprint 5 — HealthKit, Exercise, and Sleep
 - HealthKit permission request flow (lazy, at feature use)
 - Real exercise and sleep data integration
 - Hydration write to HealthKit
@@ -328,6 +364,7 @@ See `DATA_MODEL.md` for full entity definitions.
 | Sprint 1 | SwiftUI App Shell + Validation Script | 2026-06-11 |
 | Sprint 2 | Core Domain Models + Unit Tests | 2026-06-11 |
 | Sprint 3 | Daily Routine Engine (in-memory) | 2026-06-12 |
+| Sprint 4 | Local Persistence Foundation (SwiftData) | 2026-06-14 |
 
 ---
 
@@ -335,9 +372,8 @@ See `DATA_MODEL.md` for full entity definitions.
 
 | Sprint | Deliverable |
 |---|---|
-| Sprint 4 | HealthKit, Exercise, Sleep |
-| Sprint 4 | HealthKit, Exercise, Sleep |
-| Sprint 5 | Hydration + Evidence |
+| Sprint 5 | HealthKit, Exercise, Sleep |
+| Sprint 6 (prev. 5) | Hydration + Evidence |
 | Sprint 6 | Notifications + Escalation Engine |
 | Sprint 7 | AI Coach Foundation |
 | Sprint 8 | Supabase Sync |

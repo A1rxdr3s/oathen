@@ -1,6 +1,6 @@
-// Sprint 3 — TodayViewModel.
-// In-memory state for the current day. Resets on app restart (no persistence yet).
-// Owns TodayState and drives all Today tab interactions.
+// Sprint 4 — TodayViewModel with local persistence.
+// In-memory state backed by SwiftData. Falls back to in-memory-only when store is nil
+// (previews, tests that don't need persistence).
 import SwiftUI
 import Observation
 
@@ -17,8 +17,20 @@ final class TodayViewModel {
 
     // MARK: - Init
 
+    /// No-persistence init — used by previews and tests.
     init() {
+        self.store = nil
         self.todayState = DailyRoutinePolicy.defaultTodayState()
+    }
+
+    /// Persistent init — loads today's saved state or defaults on first launch.
+    init(store: TodayPersistenceStore) {
+        self.store = store
+        if let saved = try? store.loadToday(for: Date()) {
+            self.todayState = saved
+        } else {
+            self.todayState = DailyRoutinePolicy.defaultTodayState()
+        }
     }
 
     // MARK: - Accessors
@@ -56,6 +68,7 @@ final class TodayViewModel {
         todayState.contextMode = contextMode
         todayState.dailyPlan.contextMode = contextMode
         recalculateScore()
+        persistState()
     }
 
     func completeMorningCheckInWithDefaults() {
@@ -76,6 +89,7 @@ final class TodayViewModel {
         todayState.dailyPlan.items[idx] = todayState.dailyPlan.items[idx].toggled(at: Date())
         todayState.dailyPlan.updatedAt = Date()
         recalculateScore()
+        persistState()
     }
 
     // MARK: - Night Review
@@ -90,17 +104,34 @@ final class TodayViewModel {
         review.completedAt = now
         todayState.nightReview = review
         recalculateScore()
+        persistState()
     }
 
     // MARK: - Reset
 
     func resetToDefaults() {
-        todayState = DailyRoutinePolicy.defaultTodayState()
+        if let store {
+            todayState = (try? store.resetToday()) ?? DailyRoutinePolicy.defaultTodayState()
+        } else {
+            todayState = DailyRoutinePolicy.defaultTodayState()
+        }
     }
 
     // MARK: - Private
 
+    private let store: TodayPersistenceStore?
+
     private func recalculateScore() {
         todayState.score = DailyRoutinePolicy.calculateScore(from: todayState)
+    }
+
+    private func persistState() {
+        guard let store else { return }
+        do {
+            try store.saveToday(todayState)
+        } catch {
+            // Persistence failure is non-fatal — in-memory state remains correct.
+            print("[Oathen] Persistence save failed: \(error.localizedDescription)")
+        }
     }
 }

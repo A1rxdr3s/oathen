@@ -266,3 +266,27 @@ Format: Decision | Date | Reasoning | Risk | Rejected Alternatives | Status | Im
 **Rejected Alternatives:** Adding SwiftData immediately (rejected: premature before daily flow validation); integrating HealthKit before the daily routine loop (rejected: adds complexity before core UX is validated); adding AI Coach before deterministic local behavior exists (rejected: non-determinism before correctness).
 **Status:** Approved
 **Impact Area:** Product, UX, architecture, implementation sequence, scope control
+
+---
+
+## D-023: SwiftData Persistence Uses Separate @Model Entities, Not @Model on Domain Structs
+
+**Date:** 2026-06-14
+**Decision:** Sprint 4 adds SwiftData persistence via a separate `Core/Data/LocalPersistence/` layer. The 5 domain models that need persistence (`TodayState`, `DailyPlan`, `DailyPlanItem`, `MorningCheckIn`, `NightReview`) are wrapped by separate `Persistent*` `@Model` classes. Domain structs remain annotation-free.
+**Reasoning:** SwiftData `@Model` converts structs to reference-type classes and adds runtime coupling to the persistence layer. Domain models must remain pure Swift for testability (compiled directly into `OathenTests` without a host app), Codable round-trips, `Sendable` conformance, and clean watchOS builds. The mapper pattern (domain ↔ persistent) is a well-established clean architecture pattern that makes the boundary explicit and testable. The additional mapper code is a small cost compared to the flexibility gained.
+**Risk:** Mapper boilerplate; risk of mapper and domain model diverging silently. Mitigated by: mapper round-trip unit tests, `validate_sprint4.sh` grep checks for `@Model` in domain files, and `DisciplineScore` being recalculated (not persisted) so it can never drift.
+**Rejected Alternatives:** Adding `@Model` directly to domain structs (rejected: couples domain to SwiftData, breaks `OathenTests` bundle compilation, breaks watchOS build, removes Sendable conformance); using `NSCoding` / `Codable` + file system (rejected: more boilerplate, harder querying, no SwiftUI integration); full Core Data stack (rejected: more complex setup, less Swift-native).
+**Status:** Approved
+**Impact Area:** Architecture, persistence, testing, watchOS compatibility, scope control
+
+---
+
+## D-024: DisciplineScore Is Not Persisted — Recalculated on Load
+
+**Date:** 2026-06-14
+**Decision:** `DisciplineScore` is not persisted to SwiftData. On every load of a `TodayState` from the store, `DailyRoutinePolicy.calculateScore(from:)` is called to recompute the score.
+**Reasoning:** `DisciplineScore` is a pure function of the plan state at a given point in time. Persisting it would create a secondary source of truth that could silently diverge from the actual plan completion data. Recalculating is deterministic, cheap, and ensures the score is always consistent with the loaded plan items' completion state. `DisciplineScore` contains a `ScoreBreakdown` struct which would require additional persistent entity fields for no gain.
+**Risk:** Score calculation changes in a future sprint (e.g., when HealthKit data is added) will retroactively change scores for loaded historical days. This is intentional — stored plan completion states are facts, score interpretation is policy.
+**Rejected Alternatives:** Persisting `DisciplineScore` and `ScoreBreakdown` directly (rejected: derived value problem, additional entity complexity); caching score in `PersistentTodayState` as a simple `Int` (rejected: still a second source of truth, marginal benefit).
+**Status:** Approved
+**Impact Area:** Persistence architecture, score consistency, future HealthKit integration

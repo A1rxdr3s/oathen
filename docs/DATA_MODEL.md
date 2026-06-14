@@ -9,22 +9,37 @@
 
 ---
 
+## Sprint 4 Implementation Status — Local Persistence
+
+Sprint 4 added a SwiftData persistence layer. **Domain models are unchanged — still pure Swift structs.** Persistence is handled entirely in `Core/Data/LocalPersistence/`.
+
+| Persistent Entity | Swift File | Corresponding Domain Model | Notes |
+|---|---|---|---|
+| `PersistentTodayState` | `LocalPersistence/SwiftData/PersistentTodayState.swift` | `TodayState` | `dayStart: Date` used as query key; no domain `id` (TodayState has none) |
+| `PersistentDailyPlan` | `LocalPersistence/SwiftData/PersistentDailyPlan.swift` | `DailyPlan` | `domainID: UUID` preserves original plan `id`; items cascade |
+| `PersistentDailyPlanItem` | `LocalPersistence/SwiftData/PersistentDailyPlanItem.swift` | `DailyPlanItem` | `sortOrder: Int` preserves item array order |
+| `PersistentMorningCheckIn` | `LocalPersistence/SwiftData/PersistentMorningCheckIn.swift` | `MorningCheckIn` | `confirmedCriticalTaskIDsJSON: String` — JSON-encoded `[UUID]` |
+| `PersistentNightReview` | `LocalPersistence/SwiftData/PersistentNightReview.swift` | `NightReview` | 4 JSON UUID-array fields; `failureReason?`, `excuseDetected`, `recoveryPlan?` |
+
+> **Architecture Rule:** `@Model` appears ONLY in `Core/Data/LocalPersistence/SwiftData/`. Domain models in `Core/Domain/` remain annotation-free.
+> **DisciplineScore** is NOT persisted — it is recalculated from plan state on every load via `DailyRoutinePolicy.calculateScore(from:)`.
+
 ## Sprint 3 Implementation Status
 
 | Entity | Swift File | Status |
 |---|---|---|
-| `MorningCheckIn` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
-| `NightReview` | `Domain/Models/NightReview.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
-| `DailyPlanItem` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
-| `DailyPlan` | `Domain/Models/DailyPlan.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
-| `TodayState` | `Domain/Models/TodayState.swift` | ✅ Sprint 3 — pure Swift struct, in-memory, resets on restart |
+| `MorningCheckIn` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — pure Swift struct; ✅ Sprint 4 — persisted |
+| `NightReview` | `Domain/Models/NightReview.swift` | ✅ Sprint 3 — pure Swift struct; ✅ Sprint 4 — persisted |
+| `DailyPlanItem` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — pure Swift struct; ✅ Sprint 4 — persisted |
+| `DailyPlan` | `Domain/Models/DailyPlan.swift` | ✅ Sprint 3 — pure Swift struct; ✅ Sprint 4 — persisted |
+| `TodayState` | `Domain/Models/TodayState.swift` | ✅ Sprint 3 — pure Swift struct; ✅ Sprint 4 — survives restart |
 | `EnergyLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
 | `FocusLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
 | `MoodLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
 | `DailyPlanItemKind` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — value enum |
 | `DailyPlanItemStatus` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — value enum |
 
-> **Note:** Sprint 3 models are in-memory only. No persistence, no SwiftData, no backend schema. Data resets on app restart. Persistence is Sprint 4+.
+> **Note:** Sprint 3 domain models are pure Swift. Sprint 4 wraps them with separate SwiftData entities. State now survives app restart.
 
 ## Sprint 2 Implementation Status
 

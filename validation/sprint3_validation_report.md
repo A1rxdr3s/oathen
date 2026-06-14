@@ -1,6 +1,6 @@
 # Oathen Sprint 3 Validation Report
 
-**Generated:** 2026-06-14 01:31:30
+**Generated:** 2026-06-14 02:13:41
 **Script:** scripts/validate_sprint3.sh
 **Repository:** /Users/andresherrera/Hacking/oathen-app/oathen
 
@@ -8,8 +8,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Passed | 74 |
-| Failed | 0 |
+| Passed | 70 |
+| Failed | 4 |
 | Warnings | 0 |
 | Total | 74 |
 

@@ -1,0 +1,52 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Oathen.xcodeproj -target Oathen_macOS -sdk macosx -configuration Debug ONLY_ACTIVE_ARCH=NO build
+
+Build settings from command line:
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = macosx26.5
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Oathen_macOS' in project 'Oathen' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 29f526a0c760819c712a638502ff4733
+Build description path: /Users/andresherrera/Hacking/oathen-app/oathen/build/XCBuildData/29f526a0c760819c712a638502ff4733.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /var/folders/73/zpfnhtf90wzcgrg76hlg5v0h0000gn/C/com.apple.DeveloperTools/26.5-17F42/Xcode/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /var/folders/73/zpfnhtf90wzcgrg76hlg5v0h0000gn/C/com.apple.DeveloperTools/26.5-17F42/Xcode/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+WriteAuxiliaryFile /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS/all-product-headers.yaml
+    cd /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj
+    write-file /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS/all-product-headers.yaml
+
+ProcessInfoPlistFile /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug/Oathen.app/Contents/Info.plist /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug/Oathen_macOS.build/empty-Oathen.plist (in target 'Oathen_macOS' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    builtin-infoPlistUtility /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug/Oathen_macOS.build/empty-Oathen.plist -producttype com.apple.product-type.application -genpkginfo /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug/Oathen.app/Contents/PkgInfo -expandbuildsettings -platform macosx -additionalcontentfile /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug/Oathen_macOS.build/assetcatalog_generated_info.plist -o /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug/Oathen.app/Contents/Info.plist
+
+note: Removed stale file '/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS-iphonesimulator/all-product-headers.yaml'
+
+** BUILD SUCCEEDED **
+

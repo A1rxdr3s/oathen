@@ -86,6 +86,19 @@ The architecture must be designed so that **privacy is the default, not an optio
 
 ## 5. Local-First Storage Policy
 
+### Sprint 4 — SwiftData Persistence (On-Device Only)
+
+Sprint 4 added SwiftData-backed local persistence for daily routine state. All data is stored on-device in the default SwiftData (SQLite) store, covered by iOS file encryption (Data Protection). No data is sent to any server. No new permissions are required.
+
+| Persistent Entity | Storage | Sensitivity | Cloud Sync |
+|---|---|---|---|
+| `PersistentTodayState` | On-device SwiftData | Private | Never (Sprint 4) |
+| `PersistentDailyPlan` + items | On-device SwiftData | Private | Never (Sprint 4) |
+| `PersistentMorningCheckIn` | On-device SwiftData | Sensitive | Never |
+| `PersistentNightReview` | On-device SwiftData | Sensitive | Never |
+
+The `TodayPersistenceStore` uses `ModelContext.mainContext` (main actor, on-disk SQLite). The `OathenModelContainer` factory falls back to an in-memory store if the on-disk store cannot be opened, ensuring the app remains usable without crashing. No sensitive data leaves the device in Sprint 4.
+
 ### Storage Decision Matrix
 
 | Entity | Default | Opt-In Cloud Sync | Never Synced |

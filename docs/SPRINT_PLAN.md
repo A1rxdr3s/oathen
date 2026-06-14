@@ -16,7 +16,8 @@
 | 3.4 | iOS Tab Bar and Safe Area Cleanup | **Complete** |
 | 3.5 | iOS Scroll and Tab Bar Fix | **Complete** |
 | 3.6 | Force Native iOS Scroll Layout | **Complete** |
-| 4 | HealthKit, Exercise, Sleep | Pending |
+| 4 | Local Persistence Foundation | **Complete** |
+| 5 | HealthKit, Exercise, Sleep | Pending |
 | 5 | Hydration + Evidence | Pending |
 | 6 | Notifications + Escalation Engine | Pending |
 | 7 | AI Coach Foundation | Pending |
@@ -398,7 +399,48 @@ The iOS layout now uses reliable scrollable native tab screens (bare `ScrollView
 
 ---
 
-## Sprint 4 — HealthKit, Exercise, and Sleep
+## Sprint 4 — Local Persistence Foundation
+
+**Status:** Complete — 2026-06-14
+**Goal:** Add SwiftData-backed local persistence so the daily routine state survives app restarts. Domain models must remain pure Swift. A separate persistence layer wraps them.
+
+### Scope
+
+**In scope:**
+- `Core/Data/LocalPersistence/SwiftData/` — 5 `@Model` entities: `PersistentTodayState`, `PersistentDailyPlan`, `PersistentDailyPlanItem`, `PersistentMorningCheckIn`, `PersistentNightReview`
+- `Core/Data/LocalPersistence/Mapping/` — 4 mappers + `UUIDArrayCoding` helper
+- `Core/Data/LocalPersistence/Stores/` — `TodayPersistenceStore` (`@MainActor`) + `TodayPersistenceError`
+- `Core/Data/LocalPersistence/OathenModelContainer.swift` — factory with in-memory fallback
+- Updated `TodayViewModel` — two `init` overloads; loads on init, saves after every mutation
+- Updated `OathenApp` — creates container + store in `init()`, injects `.modelContainer()`
+- `OathenTests/Persistence/` — 5 test files, in-memory container, `@MainActor` test classes
+- `project.yml` — `Oathen/Core/Data/LocalPersistence` added to `OathenTests` sources
+- `scripts/validate_sprint4.sh` — Sprint 3 regression + Sprint 4 structural/arch checks
+- 7 documentation file updates
+
+**Out of scope:**
+- `@Model` on any existing domain model (TodayState, DailyPlan, etc.)
+- HealthKit, Supabase, AI, notifications, widgets, Watch sync
+- Cross-day streak tracking (only today's state is persisted)
+- SwiftData `@Query` in views (no view-layer persistence queries yet)
+- Photo storage, evidence upload, accountability partner logic
+
+### Acceptance Criteria
+
+- [x] `@Model` annotation appears ONLY in `Core/Data/LocalPersistence/SwiftData/`
+- [x] Domain models in `Core/Domain/` have no `@Model`, no `import SwiftData`
+- [x] `TodayState` survives app restart (daily plan items, morning check-in, night review)
+- [x] `TodayViewModel.init()` (no-arg) still works for previews and no-persist tests
+- [x] `OathenApp` creates on-disk `ModelContainer`, falls back to in-memory on failure
+- [x] `OathenTests` compiles persistence files and all mapper/store tests pass
+- [x] `watchOS` target builds unchanged (no persistence imports in `OathenWatch/`)
+- [x] `validate_sprint3.sh` still passes 74/74 (Sprint 3 regression)
+- [x] `validate_sprint4.sh` passes all Sprint 4 checks
+- [x] PROJECT_CONTEXT.md, ARCHITECTURE.md, DATA_MODEL.md, SPRINT_PLAN.md, DECISION_LOG.md, SCOPE_CONTROL.md, SECURITY_PRIVACY.md all updated
+
+---
+
+## Sprint 5 — HealthKit, Exercise, and Sleep
 
 **Status:** Pending
 **Goal:** Integrate HealthKit for exercise, sleep, and basic health metrics. Update Discipline Score to use real health data.

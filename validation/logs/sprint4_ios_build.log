@@ -1,0 +1,54 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Oathen.xcodeproj -target Oathen_iOS -sdk iphonesimulator -configuration Debug ONLY_ACTIVE_ARCH=NO build
+
+Build settings from command line:
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphonesimulator26.5
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Oathen_iOS' in project 'Oathen' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: bbcee352a7beb84c8cce0262ca7f3744
+Build description path: /Users/andresherrera/Hacking/oathen-app/oathen/build/XCBuildData/bbcee352a7beb84c8cce0262ca7f3744.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk /var/folders/73/zpfnhtf90wzcgrg76hlg5v0h0000gn/C/com.apple.DeveloperTools/26.5-17F42/Xcode/SDKStatCaches.noindex/iphonesimulator26.5-23F73-6cfe768891a92b912361537c460fe42b.sdkstatcache
+    cd /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -o /var/folders/73/zpfnhtf90wzcgrg76hlg5v0h0000gn/C/com.apple.DeveloperTools/26.5-17F42/Xcode/SDKStatCaches.noindex/iphonesimulator26.5-23F73-6cfe768891a92b912361537c460fe42b.sdkstatcache
+
+WriteAuxiliaryFile /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj
+    write-file /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS-iphonesimulator/all-product-headers.yaml
+
+ProcessInfoPlistFile /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug-iphonesimulator/Oathen.app/Info.plist /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/empty-Oathen.plist (in target 'Oathen_iOS' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    builtin-infoPlistUtility /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/empty-Oathen.plist -producttype com.apple.product-type.application -genpkginfo /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug-iphonesimulator/Oathen.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/assetcatalog_generated_info.plist -o /Users/andresherrera/Hacking/oathen-app/oathen/build/Debug-iphonesimulator/Oathen.app/Info.plist
+
+note: Removed stale file '/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-watchsimulator/Oathen-e5ca6208fdb6e0fa2720284547a425e0-VFS-watchsimulator/all-product-headers.yaml'
+
+** BUILD SUCCEEDED **
+

@@ -1,7 +1,7 @@
 # Sprint 2 Validation Report
 
-**Status:** PASSED
-**Date:** 2026-06-14 01:31:19 -04
+**Status:** FAILED (3 failures)
+**Date:** 2026-06-14 02:13:30 -04
 **Repo:** /Users/andresherrera/Hacking/oathen-app/oathen
 
 ---
@@ -75,13 +75,13 @@
 ## Goal 8 — Unit Tests (OathenTests scheme, macOS)
 
   Running: xcodebuild test -scheme OathenTests -destination 'platform=macOS,arch=arm64' ...
-  ✅  All unit tests PASSED
+  ❌  Unit tests FAILED — log: validation/logs/sprint2_unit_tests.log
 
 ## Goal 9 — Forbidden Implementation Scan (Sprint 2)
 
-  Scanning 58 Swift source files...
-  ✅  No SwiftData @Model (@Model)
-  ✅  No SwiftData ModelContainer (ModelContainer)
+  Scanning 76 Swift source files...
+  ❌  FORBIDDEN: SwiftData @Model (@Model) found in: ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlan.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlanItem.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentMorningCheckIn.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentNightReview.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentTodayState.swift  — Persistence — Sprint 3+
+  ❌  FORBIDDEN: SwiftData ModelContainer (ModelContainer) found in: ./Oathen/App/OathenApp.swift ./Oathen/Core/Data/LocalPersistence/OathenModelContainer.swift ./OathenTests/Persistence/DailyPlanMapperTests.swift ./OathenTests/Persistence/MorningCheckInMapperTests.swift ./OathenTests/Persistence/NightReviewMapperTests.swift ./OathenTests/Persistence/TodayPersistenceStoreTests.swift ./OathenTests/Persistence/TodayStateMapperTests.swift  — Persistence — Sprint 3+
   ✅  No Core Data (NSManagedObject)
   ✅  No Core Data stack (NSPersistentContainer)
   ✅  No Supabase SDK (import Supabase)
@@ -112,11 +112,11 @@
 ## Validation Summary
 
   Total checks : 65
-  Passed       : 65
-  Failed       : 0
+  Passed       : 62
+  Failed       : 3
   Warnings     : 0
 
-  ✅  ALL CHECKS PASSED — Sprint 2 domain models are valid.
+  ❌  3 CHECKS FAILED — address the failures above before Sprint 3.
 
 ---
 
@@ -160,5 +160,4 @@ Full build logs: `validation/logs/`
 
 ## Next Steps
 
-- Sprint 2 domain layer validated. Proceed to Sprint 3 planning.
-- Sprint 3: Morning Check-in, Night Review, Daily Routine Engine, Score calculation.
+- Address the 3 failing checks above, then re-run this script.

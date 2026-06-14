@@ -61,8 +61,9 @@ targets:
 
   # ──────────────────────────────────────
   # OathenTests — unit tests (macOS, no host app)
-  # Domain source files compiled directly into test bundle.
+  # Domain and persistence source files compiled directly into test bundle.
   # No dependency on app binary — domain models are pure Swift.
+  # Sprint 4: Oathen/Core/Data/LocalPersistence added for persistence tests.
   # ──────────────────────────────────────
   OathenTests:
     type: bundle.unit-test
@@ -71,6 +72,7 @@ targets:
     sources:
       - path: OathenTests
       - path: Oathen/Core/Domain
+      - path: Oathen/Core/Data/LocalPersistence
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.oathen.tests

@@ -4,7 +4,7 @@ Command line invocation:
 Build settings from command line:
     CODE_SIGNING_ALLOWED = NO
 
-2026-06-14 01:31:29.107 xcodebuild[53545:3889392] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-06-14 02:13:39.752 xcodebuild[75725:3967483] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
 ComputePackagePrebuildTargetDependencyGraph
 
 Prepare packages
@@ -32,255 +32,190 @@ ProcessInfoPlistFile /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oa
     cd /Users/andresherrera/Hacking/oathen-app/oathen
     builtin-infoPlistUtility /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/empty-OathenTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Info.plist
 
-CopySwiftLibs /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest (in target 'OathenTests' from project 'Oathen')
+SwiftDriver OathenTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'OathenTests' from project 'Oathen')
     cd /Users/andresherrera/Hacking/oathen-app/oathen
-    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/MacOS/OathenTests --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Frameworks --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/PlugIns --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Library/SystemExtensions --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
-Ignoring --strip-bitcode because --sign was not passed
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name OathenTests -Onone @/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/andresherrera/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-generated-files.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-own-target-headers.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-project-headers.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/include -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources/arm64 -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests-Swift.h -working-directory /Users/andresherrera/Hacking/oathen-app/oathen -experimental-emit-module-separately -disable-cmo
 
-Test Suite 'All tests' started at 2026-06-14 01:31:30.179.
-Test Suite 'OathenTests.xctest' started at 2026-06-14 01:31:30.179.
-Test Suite 'CodableTests' started at 2026-06-14 01:31:30.179.
-Test Case '-[OathenTests.CodableTests testContextModeCodableAllCases]' started.
-Test Case '-[OathenTests.CodableTests testContextModeCodableAllCases]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testDisciplineScoreCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testDisciplineScoreCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testEvidenceCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testEvidenceCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testGoalCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testGoalCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testGoalWithOptionalFieldsCodable]' started.
-Test Case '-[OathenTests.CodableTests testGoalWithOptionalFieldsCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testHabitCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testHabitCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testOathenTaskCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testOathenTaskCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testOathenTaskWithNilOptionals]' started.
-Test Case '-[OathenTests.CodableTests testOathenTaskWithNilOptionals]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testPriorityCodableAllCases]' started.
-Test Case '-[OathenTests.CodableTests testPriorityCodableAllCases]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testProjectCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testProjectCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testRecurrenceRuleCodable]' started.
-Test Case '-[OathenTests.CodableTests testRecurrenceRuleCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testRoutineCodableRoundTrip]' started.
-Test Case '-[OathenTests.CodableTests testRoutineCodableRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.CodableTests testScoreBreakdownCodable]' started.
-Test Case '-[OathenTests.CodableTests testScoreBreakdownCodable]' passed (0.001 seconds).
-Test Suite 'CodableTests' passed at 2026-06-14 01:31:30.192.
-	 Executed 13 tests, with 0 failures (0 unexpected) in 0.009 (0.013) seconds
-Test Suite 'DailyRoutineCodableTests' started at 2026-06-14 01:31:30.193.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanDefaultRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanDefaultRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemKindAllCasesCodable]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemKindAllCasesCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemRoundTrip]' passed (0.004 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemStatusAllCasesCodable]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemStatusAllCasesCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testEnergyLevelCodable]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testEnergyLevelCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testFocusLevelCodable]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testFocusLevelCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testMoodLevelCodable]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testMoodLevelCodable]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTripWithNilFields]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTripWithNilFields]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTripWithNilFields]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTripWithNilFields]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateRoundTrip]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateWithNightReviewRoundTrip]' started.
-Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateWithNightReviewRoundTrip]' passed (0.001 seconds).
-Test Suite 'DailyRoutineCodableTests' passed at 2026-06-14 01:31:30.212.
-	 Executed 14 tests, with 0 failures (0 unexpected) in 0.014 (0.020) seconds
-Test Suite 'DailyRoutineTests' started at 2026-06-14 01:31:30.213.
-Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreFromDefaultState]' started.
-Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreFromDefaultState]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreIncreasesWhenItemsComplete]' started.
-Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreIncreasesWhenItemsComplete]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeAfterMorningCheckIn]' started.
-Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeAfterMorningCheckIn]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeBeforeMorningCheckIn]' started.
-Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeBeforeMorningCheckIn]' passed (0.004 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanCriticalFilter]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanCriticalFilter]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanDefaults]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanDefaults]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanHealthPillarFlags]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanHealthPillarFlags]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemDefaults]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemDefaults]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindAllCasesHaveDisplayNamesAndIcons]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindAllCasesHaveDisplayNamesAndIcons]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindHealthPillar]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindHealthPillar]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemStatusFlags]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemStatusFlags]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemToggled]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemToggled]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanProgressFraction]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDailyPlanProgressFraction]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDefaultDailyPlanHasItems]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDefaultDailyPlanHasItems]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDefaultMorningCheckInIsNotComplete]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDefaultMorningCheckInIsNotComplete]' passed (0.003 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testDefaultTodayStateStructure]' started.
-Test Case '-[OathenTests.DailyRoutineTests testDefaultTodayStateStructure]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testEnergyLevelAllCasesHaveDisplayNames]' started.
-Test Case '-[OathenTests.DailyRoutineTests testEnergyLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testFocusLevelAllCasesHaveDisplayNames]' started.
-Test Case '-[OathenTests.DailyRoutineTests testFocusLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testIsMorningCheckInCompleteHelper]' started.
-Test Case '-[OathenTests.DailyRoutineTests testIsMorningCheckInCompleteHelper]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testIsNightReviewCompleteHelper]' started.
-Test Case '-[OathenTests.DailyRoutineTests testIsNightReviewCompleteHelper]' passed (0.003 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testMoodLevelAllCasesHaveDisplayNames]' started.
-Test Case '-[OathenTests.DailyRoutineTests testMoodLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInDefaults]' started.
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInDefaults]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInIsComplete]' started.
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInIsComplete]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepHoursClamped]' started.
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepHoursClamped]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepQualityLabels]' started.
-Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepQualityLabels]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewCounts]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewCounts]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewDefaults]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewDefaults]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewDerivation]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewDerivation]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewExcuseDetection]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewExcuseDetection]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewExecutionSummary]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewExecutionSummary]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewIsComplete]' started.
-Test Case '-[OathenTests.DailyRoutineTests testNightReviewIsComplete]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testProgressFraction]' started.
-Test Case '-[OathenTests.DailyRoutineTests testProgressFraction]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationManyMissed]' started.
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationManyMissed]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationOneMissed]' started.
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationOneMissed]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationZeroMissed]' started.
-Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationZeroMissed]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateCompletionSummary]' started.
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateCompletionSummary]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateDefaults]' started.
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateDefaults]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateMorningCheckInFlag]' started.
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateMorningCheckInFlag]' passed (0.001 seconds).
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateNightReviewFlag]' started.
-Test Case '-[OathenTests.DailyRoutineTests testTodayStateNightReviewFlag]' passed (0.001 seconds).
-Test Suite 'DailyRoutineTests' passed at 2026-06-14 01:31:30.262.
-	 Executed 39 tests, with 0 failures (0 unexpected) in 0.032 (0.049) seconds
-Test Suite 'ModelTests' started at 2026-06-14 01:31:30.262.
-Test Case '-[OathenTests.ModelTests testContextModeAllCasesHaveDisplayNames]' started.
-Test Case '-[OathenTests.ModelTests testContextModeAllCasesHaveDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testContextModeIsReducedFlag]' started.
-Test Case '-[OathenTests.ModelTests testContextModeIsReducedFlag]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testContextModeScoreMultipliers]' started.
-Test Case '-[OathenTests.ModelTests testContextModeScoreMultipliers]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testDateRangeDuration]' started.
-Test Case '-[OathenTests.ModelTests testDateRangeDuration]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testDateRangeIsValid]' started.
-Test Case '-[OathenTests.ModelTests testDateRangeIsValid]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testDisciplineScoreLabels]' started.
-Test Case '-[OathenTests.ModelTests testDisciplineScoreLabels]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testDisciplineScoreTotalClamped]' started.
-Test Case '-[OathenTests.ModelTests testDisciplineScoreTotalClamped]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testEvidenceDefaultLocalOnly]' started.
-Test Case '-[OathenTests.ModelTests testEvidenceDefaultLocalOnly]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testEvidenceRequirementFlags]' started.
-Test Case '-[OathenTests.ModelTests testEvidenceRequirementFlags]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testEvidenceTypeFlags]' started.
-Test Case '-[OathenTests.ModelTests testEvidenceTypeFlags]' passed (0.002 seconds).
-Test Case '-[OathenTests.ModelTests testEvidenceValidationStatusResolved]' started.
-Test Case '-[OathenTests.ModelTests testEvidenceValidationStatusResolved]' passed (0.000 seconds).
-Test Case '-[OathenTests.ModelTests testGoalCategoryDisplayNames]' started.
-Test Case '-[OathenTests.ModelTests testGoalCategoryDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testGoalDefaultInit]' started.
-Test Case '-[OathenTests.ModelTests testGoalDefaultInit]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testGoalProgressPercentClamped]' started.
-Test Case '-[OathenTests.ModelTests testGoalProgressPercentClamped]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testHabitDefaultRecurrence]' started.
-Test Case '-[OathenTests.ModelTests testHabitDefaultRecurrence]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testHabitStreakClamped]' started.
-Test Case '-[OathenTests.ModelTests testHabitStreakClamped]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testOathenTaskDefaultInit]' started.
-Test Case '-[OathenTests.ModelTests testOathenTaskDefaultInit]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testOathenTaskEstimatedMinutesClamped]' started.
-Test Case '-[OathenTests.ModelTests testOathenTaskEstimatedMinutesClamped]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testPriorityBlockedIsNotActionable]' started.
-Test Case '-[OathenTests.ModelTests testPriorityBlockedIsNotActionable]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testPriorityDisplayNames]' started.
-Test Case '-[OathenTests.ModelTests testPriorityDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testPrioritySortOrderIsAscending]' started.
-Test Case '-[OathenTests.ModelTests testPrioritySortOrderIsAscending]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testRecurrenceRulePresets]' started.
-Test Case '-[OathenTests.ModelTests testRecurrenceRulePresets]' passed (0.004 seconds).
-Test Case '-[OathenTests.ModelTests testRoutineProgressFraction]' started.
-Test Case '-[OathenTests.ModelTests testRoutineProgressFraction]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testRoutineTypeDisplayNames]' started.
-Test Case '-[OathenTests.ModelTests testRoutineTypeDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testScoreBreakdownTotal]' started.
-Test Case '-[OathenTests.ModelTests testScoreBreakdownTotal]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testTaskStatusDisplayNames]' started.
-Test Case '-[OathenTests.ModelTests testTaskStatusDisplayNames]' passed (0.001 seconds).
-Test Case '-[OathenTests.ModelTests testTaskStatusTerminalFlags]' started.
-Test Case '-[OathenTests.ModelTests testTaskStatusTerminalFlags]' passed (0.001 seconds).
-Test Suite 'ModelTests' passed at 2026-06-14 01:31:30.294.
-	 Executed 27 tests, with 0 failures (0 unexpected) in 0.020 (0.032) seconds
-Test Suite 'PolicyTests' started at 2026-06-14 01:31:30.297.
-Test Case '-[OathenTests.PolicyTests testBlockedAlwaysWins]' started.
-Test Case '-[OathenTests.PolicyTests testBlockedAlwaysWins]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testContextModeReducesScore]' started.
-Test Case '-[OathenTests.PolicyTests testContextModeReducesScore]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testCriticalDoesNotEscalateBeyondCritical]' started.
-Test Case '-[OathenTests.PolicyTests testCriticalDoesNotEscalateBeyondCritical]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testDueWithin24HoursWithEvidenceEscalates]' started.
-Test Case '-[OathenTests.PolicyTests testDueWithin24HoursWithEvidenceEscalates]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testDueWithin4HoursEscalates]' started.
-Test Case '-[OathenTests.PolicyTests testDueWithin4HoursEscalates]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testFutureDueNoEvidenceKeepsAssigned]' started.
-Test Case '-[OathenTests.PolicyTests testFutureDueNoEvidenceKeepsAssigned]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testNoDueDateReturnsAssigned]' started.
-Test Case '-[OathenTests.PolicyTests testNoDueDateReturnsAssigned]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testNoTasksGivesFullTaskScore]' started.
-Test Case '-[OathenTests.PolicyTests testNoTasksGivesFullTaskScore]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromLow]' started.
-Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromLow]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromNormal]' started.
-Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromNormal]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testPartialCriticalTasksScore]' started.
-Test Case '-[OathenTests.PolicyTests testPartialCriticalTasksScore]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testPerfectDayReachesMaxScore]' started.
-Test Case '-[OathenTests.PolicyTests testPerfectDayReachesMaxScore]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testScoreCappedAt100]' started.
-Test Case '-[OathenTests.PolicyTests testScoreCappedAt100]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testUltraStrictModeIncreasesScore]' started.
-Test Case '-[OathenTests.PolicyTests testUltraStrictModeIncreasesScore]' passed (0.001 seconds).
-Test Case '-[OathenTests.PolicyTests testZeroDayScoresZero]' started.
-Test Case '-[OathenTests.PolicyTests testZeroDayScoresZero]' passed (0.001 seconds).
-Test Suite 'PolicyTests' passed at 2026-06-14 01:31:30.315.
-	 Executed 15 tests, with 0 failures (0 unexpected) in 0.009 (0.018) seconds
-Test Suite 'OathenTests.xctest' passed at 2026-06-14 01:31:30.315.
-	 Executed 108 tests, with 0 failures (0 unexpected) in 0.084 (0.136) seconds
-Test Suite 'All tests' passed at 2026-06-14 01:31:30.316.
-	 Executed 108 tests, with 0 failures (0 unexpected) in 0.084 (0.137) seconds
-2026-06-14 01:31:30.592 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.829 elapsed -- Testing started completed.
-2026-06-14 01:31:30.593 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
-2026-06-14 01:31:30.593 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.829 sec, +0.829 sec -- end
+SwiftCompile normal arm64 Compiling\ MorningCheckInMapper.swift,\ MorningCheckInMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/MorningCheckInMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/MorningCheckInMapper.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:12:9: warning: main actor-isolated property 'container' can not be mutated from a nonisolated context
+        container = try OathenModelContainer.make(inMemory: true)
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:8:17: note: mutation of this property is only permitted within the actor
+    private var container: ModelContainer!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:13:9: warning: main actor-isolated property 'context' can not be mutated from a nonisolated context
+        context = container.mainContext
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:9:17: note: mutation of this property is only permitted within the actor
+    private var context: ModelContext!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:13:29: warning: main actor-isolated property 'mainContext' can not be referenced from a nonisolated context
+        context = container.mainContext
+                            ^
+SwiftData.ModelContainer.mainContext:2:23: note: property declared here
+@MainActor public var mainContext: ModelContext { get }}
+                      ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:13:19: warning: main actor-isolated property 'container' can not be referenced from a nonisolated context
+        context = container.mainContext
+                  ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:8:17: note: property declared here
+    private var container: ModelContainer!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:17:9: warning: main actor-isolated property 'container' can not be mutated from a nonisolated context
+        container = nil
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:8:17: note: mutation of this property is only permitted within the actor
+    private var container: ModelContainer!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:18:9: warning: main actor-isolated property 'context' can not be mutated from a nonisolated context
+        context = nil
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:9:17: note: mutation of this property is only permitted within the actor
+    private var context: ModelContext!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift:30:35: error: type 'ContextMode' has no member 'performance'
+            selectedContextMode: .performance,
+                                 ~^~~~~~~~~~~
+
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/CodableTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/CompletionStatus.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/ContextMode.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/DailyPlan.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/DailyPlanItem.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/DailyPlanMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/DailyPlanMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/DailyRoutineCodableTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Policies/DailyRoutinePolicy.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/DailyRoutineTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/DateRange.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/DisciplineScore.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Policies/DisciplineScorePolicy.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Fixtures/DomainFixtures.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Evidence.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/EvidenceRequirement.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Goal.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Habit.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/ModelTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/MorningCheckIn.swift -primary-file /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/MorningCheckInMapper.swift -primary-file /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/NightReview.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/NightReviewMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/NightReviewMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/OathenModelContainer.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/OathenTask.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlan.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlanItem.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentMorningCheckIn.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentNightReview.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentTodayState.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/PolicyTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/Priority.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Project.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/RecurrenceRule.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Routine.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/RoutineStep.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/ScoreBreakdown.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Policies/TaskPriorityPolicy.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceError.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceStore.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/TodayState.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/TodayStateMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayStateMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/UUIDArrayCoding.swift -emit-dependencies-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.d -emit-const-values-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.swiftconstvalues -emit-reference-dependencies-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.swiftdeps -serialize-diagnostics-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.dia -emit-dependencies-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.d -emit-const-values-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.swiftconstvalues -emit-reference-dependencies-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.swiftdeps -serialize-diagnostics-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.dia -target arm64-apple-macos14.0 -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftDataMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftDataMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests-dependencies-1.json -debug-module-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests.swiftmodule -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -I /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -profile-generate -profile-coverage-mapping -swift-version 6 -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/OathenTests_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/andresherrera/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/andresherrera/Hacking/oathen-app/oathen -enable-anonymous-context-mangled-names -file-compilation-dir /Users/andresherrera/Hacking/oathen-app/oathen -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-generated-files.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-own-target-headers.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/OathenTests-project-headers.hmap -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/include -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources/arm64 -Xcc -I/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/DerivedSources -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name OathenTests -frontend-parseable-output -disable-clang-spi -clang-target arm64-apple-macos26.5 -target-sdk-version 26.5 -target-sdk-name macosx26.5 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -o /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.o -o /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.o -index-unit-output-path /Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapper.o -index-unit-output-path /Oathen.build/Debug/OathenTests.build/Objects-normal/arm64/MorningCheckInMapperTests.o -index-store-path /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Index.noindex/DataStore -index-system-modules
+SwiftEmitModule normal arm64 Emitting\ module\ for\ OathenTests (in target 'OathenTests' from project 'Oathen')
+EmitSwiftModule normal arm64 (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ DailyPlanMapper.swift,\ DailyPlanMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/DailyPlanMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/DailyPlanMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/DailyPlanMapper.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/DailyPlanMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ PersistentDailyPlanItem.swift,\ PersistentMorningCheckIn.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlanItem.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentMorningCheckIn.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlanItem.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentMorningCheckIn.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ TodayPersistenceStoreTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:11:9: warning: main actor-isolated property 'container' can not be mutated from a nonisolated context
+        container = try OathenModelContainer.make(inMemory: true)
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:7:17: note: mutation of this property is only permitted within the actor
+    private var container: ModelContainer!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:12:9: warning: main actor-isolated property 'store' can not be mutated from a nonisolated context
+        store = TodayPersistenceStore(context: container.mainContext)
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:8:17: note: mutation of this property is only permitted within the actor
+    private var store: TodayPersistenceStore!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:12:17: warning: call to main actor-isolated initializer 'init(context:)' in a synchronous nonisolated context
+        store = TodayPersistenceStore(context: container.mainContext)
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceStore.swift:10:5: note: calls to initializer 'init(context:)' from outside of its actor context are implicitly asynchronous
+    init(context: ModelContext) {
+    ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:12:58: warning: main actor-isolated property 'mainContext' can not be referenced from a nonisolated context
+        store = TodayPersistenceStore(context: container.mainContext)
+                                                         ^
+SwiftData.ModelContainer.mainContext:2:23: note: property declared here
+@MainActor public var mainContext: ModelContext { get }}
+                      ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:12:48: warning: main actor-isolated property 'container' can not be referenced from a nonisolated context
+        store = TodayPersistenceStore(context: container.mainContext)
+                                               ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:7:17: note: property declared here
+    private var container: ModelContainer!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:16:9: warning: main actor-isolated property 'store' can not be mutated from a nonisolated context
+        store = nil
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:8:17: note: mutation of this property is only permitted within the actor
+    private var store: TodayPersistenceStore!
+                ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:17:9: warning: main actor-isolated property 'container' can not be mutated from a nonisolated context
+        container = nil
+        ^
+/Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayPersistenceStoreTests.swift:7:17: note: mutation of this property is only permitted within the actor
+    private var container: ModelContainer!
+                ^
+
+SwiftCompile normal arm64 Compiling\ TodayStateMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/TodayStateMapper.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/TodayStateMapper.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ TodayStateMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayStateMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/TodayStateMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ NightReviewMapper.swift,\ NightReviewMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/NightReviewMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/NightReviewMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/NightReviewMapper.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/NightReviewMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ TodayPersistenceError.swift,\ TodayPersistenceStore.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceError.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceStore.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceError.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Stores/TodayPersistenceStore.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ PersistentNightReview.swift,\ PersistentTodayState.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentNightReview.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentTodayState.swift (in target 'OathenTests' from project 'Oathen')
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentNightReview.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentTodayState.swift (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    
+
+SwiftCompile normal arm64 Compiling\ OathenModelContainer.swift,\ PersistentDailyPlan.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/OathenModelContainer.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlan.swift (in target 'OathenTests' from project 'Oathen')
+
 
 Test session results, code coverage, and logs:
-	/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Logs/Test/Test-OathenTests-2026.06.14_01-31-29--0400.xcresult
+	/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Logs/Test/Test-OathenTests-2026.06.14_02-13-39--0400.xcresult
 
-** TEST SUCCEEDED **
+Testing failed:
+	Type 'ContextMode' has no member 'performance'
+	Testing cancelled because the build failed.
 
-Testing started
+** TEST FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+	SwiftCompile normal arm64 Compiling\ MorningCheckInMapper.swift,\ MorningCheckInMapperTests.swift /Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Data/LocalPersistence/Mapping/MorningCheckInMapper.swift /Users/andresherrera/Hacking/oathen-app/oathen/OathenTests/Persistence/MorningCheckInMapperTests.swift (in target 'OathenTests' from project 'Oathen')
+	Testing project Oathen with scheme OathenTests
+(3 failures)

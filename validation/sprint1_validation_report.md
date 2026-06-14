@@ -1,7 +1,7 @@
 # Sprint 1 Validation Report
 
-**Status:** PASSED
-**Date:** 2026-06-14 01:31:11 -04
+**Status:** FAILED (2 failures)
+**Date:** 2026-06-14 02:13:23 -04
 **Repo:** /Users/andresherrera/Hacking/oathen-app/oathen
 
 ---
@@ -81,7 +81,7 @@ Information about project "Oathen":
 
 ## Goal 8 — Forbidden Implementation Scan
 
-  Scanning 58 Swift source files...
+  Scanning 76 Swift source files...
   ✅  No Supabase SDK import (import Supabase) found
   ✅  No SupabaseClient usage (SupabaseClient) found
   ✅  No Supabase query (supabase\.from() found
@@ -93,8 +93,10 @@ Information about project "Oathen":
   ✅  No Gemini endpoint hardcoded (generativelanguage\.google) found
   ✅  No OpenAI ChatCompletion call (ChatCompletion) found
   ✅  No Anthropic SDK client (AnthropicClient) found
-  ✅  No SwiftData @Model (@Model) found
-  ✅  No SwiftData ModelContainer (ModelContainer) found
+  ❌  FORBIDDEN: SwiftData @Model (@Model) found in: ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlan.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentDailyPlanItem.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentMorningCheckIn.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentNightReview.swift ./Oathen/Core/Data/LocalPersistence/SwiftData/PersistentTodayState.swift 
+    Context: Persistence — Sprint 2+
+  ❌  FORBIDDEN: SwiftData ModelContainer (ModelContainer) found in: ./Oathen/App/OathenApp.swift ./Oathen/Core/Data/LocalPersistence/OathenModelContainer.swift ./OathenTests/Persistence/DailyPlanMapperTests.swift ./OathenTests/Persistence/MorningCheckInMapperTests.swift ./OathenTests/Persistence/NightReviewMapperTests.swift ./OathenTests/Persistence/TodayPersistenceStoreTests.swift ./OathenTests/Persistence/TodayStateMapperTests.swift 
+    Context: Persistence — Sprint 2+
   ✅  No Core Data NSManagedObject (NSManagedObject) found
   ✅  No Core Data stack (NSPersistentContainer) found
   ✅  No Sign in with Apple (ASAuthorizationController) found
@@ -138,11 +140,11 @@ Information about project "Oathen":
 ## Validation Summary
 
   Total checks : 73
-  Passed       : 73
-  Failed       : 0
+  Passed       : 71
+  Failed       : 2
   Warnings     : 0
 
-  ✅  ALL CHECKS PASSED — Sprint 1 shell is valid.
+  ❌  2 CHECKS FAILED — address the failures above before Sprint 2.
 
 ---
 
@@ -157,4 +159,4 @@ Full build logs: `validation/logs/`
 
 ## Next Steps
 
-- Sprint 1 shell is validated. Proceed to Sprint 2 planning.
+- Address the 2 failing checks above, then re-run this script.

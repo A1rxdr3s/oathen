@@ -163,12 +163,30 @@ This is the REALISTIC path to building the MVP product vision.
 
 ---
 
-### Sprint 4 — HealthKit, Exercise, and Sleep (Next)
+### Sprint 4 — Local Persistence Foundation (COMPLETE)
 
-**Current Sprint:** Sprint 4 — HealthKit, Exercise, and Sleep
+**Status:** Complete — 2026-06-14
+
+**Scope boundaries — explicitly out of scope for Sprint 4:**
+- `@Model` annotation on any existing domain model — only permitted in `Core/Data/LocalPersistence/SwiftData/`
+- HealthKit — health pillars remain local checkboxes (Sprint 5)
+- Supabase sync — persistence is device-local SwiftData only
+- AI providers, AI Coach, notifications, WidgetKit, Live Activities, WatchConnectivity
+- Photo storage, evidence upload, accountability partner logic
+- Cross-day streak tracking — only today's state is persisted
+- SwiftData `@Query` in views (no view-layer queries in Sprint 4)
+- Custom app icon, custom launch screen, final branding, production onboarding
+
+**What was added in Sprint 4:** `Core/Data/LocalPersistence/` directory with 5 `@Model` entities, 4 mappers, `TodayPersistenceStore`, `OathenModelContainer`, 5 test files, `validate_sprint4.sh`, and updates to `TodayViewModel` and `OathenApp`.
+
+---
+
+### Sprint 5 — HealthKit, Exercise, and Sleep (Next)
+
+**Current Sprint:** Sprint 5 — HealthKit, Exercise, and Sleep
 **Status:** Pending (not yet approved — do not begin implementation)
 
-Sprint 4 scope is defined in SPRINT_PLAN.md. No Sprint 4 work begins until Andrés explicitly approves it.
+Sprint 5 scope is defined in SPRINT_PLAN.md. No Sprint 5 work begins until Andrés explicitly approves it.
 
 ---
 
