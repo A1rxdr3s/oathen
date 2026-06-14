@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011EF4E60819F828ECF5EC21 /* DailyRoutinePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70A77BC582C1316823C878 /* DailyRoutinePolicy.swift */; };
 		05D5809477E5B6B3AE751E80 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
 		086F4961C69847B0D4E9E31E /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
 		0D733B1F6FF438DD02FD44A9 /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
 		1062A5D27ED07CF7648D7A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E09E425BE166955F977E8B /* Assets.xcassets */; };
+		113CFFE4F9FEE36F7389220C /* DailyPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF614172AC95A3E420D047CF /* DailyPlanItem.swift */; };
 		13ED1C8E52819A651494F43D /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
 		15445D800D580708C9626D67 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		16CD49B95450C1C014D908CA /* NightReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4335F71F8F2B177EA0C997 /* NightReview.swift */; };
 		18F51DCF95BF7B35814020D8 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
 		1A17D77893AC31CCE914D45B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
 		1A9E8808FFC4C6C3C13C68D2 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
@@ -20,25 +23,37 @@
 		1F050908059D608BFDCE49BF /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7314616006F8FAE21BDAB4E5 /* ModelTests.swift */; };
 		208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0692FD212ABE2ECCEDD410E /* YouView.swift */; };
 		225B008BB4889202D2656A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
+		229148969423FD4ABFDC6D92 /* DisciplineScoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DC53F746DB97C1E99D70F /* DisciplineScoreCard.swift */; };
+		235435E7D896CB39D98DBDA8 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDF735E637F67631C9205A /* TodayViewModel.swift */; };
 		235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
+		27E23128357C95E98C530074 /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EC7D752D6EA8789CEE50E /* DailyPlan.swift */; };
 		2889F061E21D8D0979B01A1E /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
 		2A8FE9C171F88CC176F63EC0 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
+		2B11D2A31AE9D1D158DD92C8 /* DailyRoutinePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70A77BC582C1316823C878 /* DailyRoutinePolicy.swift */; };
 		2EF9782F844FEB56F04758C9 /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
+		31A3E1E78C8415A43B3AFC70 /* NightReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E286C5BD6260BDD646EC1897 /* NightReviewView.swift */; };
 		33DB73AF2A9C3268840E71DC /* DisciplineScorePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */; };
 		35703E3A8C4782F0EFB6F6A8 /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
 		359D17C5769785B6D2C4B4A2 /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
 		379868025C221DD580EABBFD /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
 		3B3B7DAFE48FAFAA54CFBECD /* OathenSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08573042820D67F43598B3 /* OathenSpacing.swift */; };
 		3DEBEDC54CE3D7FCA9987DEF /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
+		3E4DF91BDBEF89C60D689AF0 /* NightReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4335F71F8F2B177EA0C997 /* NightReview.swift */; };
 		407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
+		41D931F7F5286F59B2372455 /* TodayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B1C0A5DAED54F4CC0AD64 /* TodayState.swift */; };
 		45CC8AD3BA5B096DDFB84E10 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
 		46B35441E47AE813FAB528C5 /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
 		481D0716A71213F9B7C4915D /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
+		49304B60E6DBC115A4A529AD /* MorningCheckInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BEACC48883E005F7EA63BA /* MorningCheckInCard.swift */; };
 		4A96BDD25C27882834A83173 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
+		4B37E4D2341880A1BEA16D24 /* DailyPlanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464F57E1840793182F594FF6 /* DailyPlanCard.swift */; };
 		4CBB0F3F585F50D3922FDA6B /* OathenTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */; };
+		4E8B69221E453F3B5651F92E /* NightReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4335F71F8F2B177EA0C997 /* NightReview.swift */; };
 		51623C8F6FE2825B180C9E65 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
 		53AD500EF95EB42EF3F254BD /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B62BD503429B0F24A56AAE /* Evidence.swift */; };
 		574ECBA9CA042A7C04288E57 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
+		5857217188CB8BAC79C44E6C /* DailyRoutinePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70A77BC582C1316823C878 /* DailyRoutinePolicy.swift */; };
+		587F987BDBAF2F8AB3E057CA /* MorningCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1BE85F3D458B231E685E5 /* MorningCheckIn.swift */; };
 		5BC0A7E234D39AC09C417127 /* OathenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9505CC8C9943791433D86 /* OathenTask.swift */; };
 		5EC9CCB5E55A059F3253F70F /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
 		5F64AE3A437A747791187F98 /* TaskPriorityPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */; };
@@ -46,49 +61,73 @@
 		62CAED7BBE0E6201676CF4EF /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
 		6A46246149CC7DAE52F5E6F5 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */; };
 		6DFE7A7CBA9249CA7393ED9C /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
+		6E7DDEFDC71FA3410F327D45 /* NightReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508BD0EE0320F17F9BCD3102 /* NightReviewCard.swift */; };
 		71DFF0DE1E458BF9FA1AE404 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
 		72BC92B97A42B0E19B814842 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
 		78A853FDEAB833B5017CB002 /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712655DE840D8ED8868E82 /* CodableTests.swift */; };
+		7DE2E88FD25C82B29FE5F848 /* DailyRoutineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC6ACC66852973986B6016 /* DailyRoutineTests.swift */; };
 		7EBE7AC3B8C711C5D1B1E7B0 /* DisciplineScorePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */; };
 		7FD880F0A678E87A41514174 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
 		81A12815734B2E75944448AC /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
+		82AA297758E143E7FD294E6D /* DailyPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF614172AC95A3E420D047CF /* DailyPlanItem.swift */; };
 		82ECE645A4B5B4F5FF079E01 /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
 		86379E464CC583918858D524 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
 		88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */; };
+		890524C32470272E5CC82443 /* MorningCheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9213EB9FEB78986B3B8E1 /* MorningCheckInView.swift */; };
 		891E8698BC3050038C9CD93F /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
 		8EC442861169A15124DD70DC /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
 		9261DD1FB57AB515F61F3073 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */; };
 		9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
+		9357DE0BF829EBDD7510F979 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDF735E637F67631C9205A /* TodayViewModel.swift */; };
 		94AC2C7C905EBC9AB125A53C /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
 		96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */; };
 		9865226B5700741AF1CFA0A9 /* PolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */; };
 		991C5AFBEC12331BF3C1F5B7 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00275B20DB88AFF5DC971C59 /* Priority.swift */; };
+		9B0D124C029DAD60ED16DAE4 /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EC7D752D6EA8789CEE50E /* DailyPlan.swift */; };
 		9DE5CDED2FC8821367A53AED /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */; };
 		A0DFF5C7E5A6A0720D301D41 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
 		A4D77F88D4D1534C10D736F1 /* TaskPriorityPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */; };
 		A6A3EA8131EB3548571E8701 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
 		A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
 		AC2CD77693C3EF2D61F15DC9 /* OathenRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C275D072380C9643FCF9D3 /* OathenRadius.swift */; };
+		ACAEFD34FEADE1DF44FA92F9 /* HealthPillarsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E7A70C474362E38AB920C /* HealthPillarsCard.swift */; };
+		ACD3D5236FFA2623DC1E5906 /* DailyPlanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464F57E1840793182F594FF6 /* DailyPlanCard.swift */; };
 		AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E33DDAE65A979EB8996516 /* OathenApp.swift */; };
 		B0D9A67DCFB18C00C3DCA24A /* DisciplineScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */; };
+		B0F82EE798ED6EB84CAA6914 /* DailyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9440CBF1565977D75F1285CE /* DailyPlanView.swift */; };
+		B43456DAB804E2727341A29E /* MorningCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1BE85F3D458B231E685E5 /* MorningCheckIn.swift */; };
 		B4456AEA2295D5CF4F313FC5 /* ContextMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26D3653878D0E7364EE936A /* ContextMode.swift */; };
 		B4861B2857E639CCADE17041 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A85C57F9D240151081534 /* RoutineStep.swift */; };
 		B68B72B3E5D6A7A6EB4C6B3B /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
+		B789E149CFAA31C99785524F /* MorningCheckInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BEACC48883E005F7EA63BA /* MorningCheckInCard.swift */; };
 		B8040300652CBE8C7E8ACD41 /* OathenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3DEA8C48BC668C05B94ED /* OathenWatchApp.swift */; };
 		B897E2F66FAA9E307B111A45 /* PlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */; };
 		B8C1BD0E657E7BC76FC96C7A /* YouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0692FD212ABE2ECCEDD410E /* YouView.swift */; };
+		B9446EF70C80D0C5CD21B782 /* TodayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B1C0A5DAED54F4CC0AD64 /* TodayState.swift */; };
 		B9A7E871729A4CA2964173E3 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */; };
+		BA3177DB8BC35943E0D241D7 /* MorningCheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9213EB9FEB78986B3B8E1 /* MorningCheckInView.swift */; };
+		BC765F7B778CBBA7FBCB1105 /* MorningCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1BE85F3D458B231E685E5 /* MorningCheckIn.swift */; };
 		BC9589DC93983201373F8758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */; };
 		BCBFFC8F82572FC61E267667 /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
+		BF084AD00D98A377AA378D0D /* NightReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508BD0EE0320F17F9BCD3102 /* NightReviewCard.swift */; };
 		BF568B43EAE90474E6D01BE4 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F605FD8129789AF29DF8C /* Routine.swift */; };
 		C149390D1BB8887A5508A645 /* OathenColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745854A7BE85970C89D90CE /* OathenColors.swift */; };
+		C63324EB69D76A0483D864EB /* DisciplineScoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DC53F746DB97C1E99D70F /* DisciplineScoreCard.swift */; };
+		C90DD42B5B355A0FDC367222 /* DailyPlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF614172AC95A3E420D047CF /* DailyPlanItem.swift */; };
+		CA2178CEE15ACA8E2ED007A4 /* TodayProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90F5E6023593BCAC6E2C53 /* TodayProgressCard.swift */; };
 		CCC5375043CD5682551030FB /* DomainFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */; };
 		CDC90176F8D22B65C7FFC8B9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89560137A1F06CF1262673 /* Project.swift */; };
 		D2E192C3BA5A4F70BE1171F4 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4E9D79CAD908933055724 /* Goal.swift */; };
 		D465006883FEAF528B78171D /* OathenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678ED659BBD24A4028DA336 /* OathenRootView.swift */; };
+		D468BD8EE96BB372B098057A /* DailyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9440CBF1565977D75F1285CE /* DailyPlanView.swift */; };
 		D621D88666896359C93FCC9A /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */; };
 		DAAA4E0E605A32AF921566D3 /* EvidenceRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */; };
+		DB3C3373B681FB34503F9E67 /* HealthPillarsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E7A70C474362E38AB920C /* HealthPillarsCard.swift */; };
+		DB44E1DEC82184421253AD40 /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EC7D752D6EA8789CEE50E /* DailyPlan.swift */; };
+		DDE288D31687267E6AC3922E /* TodayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B1C0A5DAED54F4CC0AD64 /* TodayState.swift */; };
 		DE385FF82E73AE7027421C62 /* OathenTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8256AE6FAAC986D08DE8659 /* OathenTab.swift */; };
+		E1BAD942A402996B49FFC097 /* DailyRoutineCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025855696C4F50DEC358FB1C /* DailyRoutineCodableTests.swift */; };
+		E2F6FE54399B035E628BC049 /* TodayProgressCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90F5E6023593BCAC6E2C53 /* TodayProgressCard.swift */; };
 		E46062647368F624C1457880 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E468863462CA3FA9B2803BC /* Habit.swift */; };
 		E6DBA33F9C63E700DF3A42B5 /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */; };
 		E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712110164077E75AADB41F65 /* TodayView.swift */; };
@@ -100,6 +139,7 @@
 		F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABBC10215796200EE575D7 /* CoachView.swift */; };
 		F5199ABB17C49898476AA411 /* OathenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF5EC523D5731E383B247F /* OathenComponents.swift */; };
 		F5277668B68296BBD4C9B78F /* OathenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD9505CC8C9943791433D86 /* OathenTask.swift */; };
+		F58513A2F02C86BFCDFA5A26 /* NightReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E286C5BD6260BDD646EC1897 /* NightReviewView.swift */; };
 		F72B3E7B48F22EA8E58E992A /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F03FE73AA75F0B4AC010E /* DateRange.swift */; };
 		F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188259441D507D84049A8DC /* GoalsView.swift */; };
 		FE1C278CF435DCDB7CAABDE2 /* ScoreBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */; };
@@ -107,34 +147,46 @@
 
 /* Begin PBXFileReference section */
 		00275B20DB88AFF5DC971C59 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		025855696C4F50DEC358FB1C /* DailyRoutineCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutineCodableTests.swift; sourceTree = "<group>"; };
 		04F4E9D79CAD908933055724 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		0678ED659BBD24A4028DA336 /* OathenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRootView.swift; sourceTree = "<group>"; };
+		0A4335F71F8F2B177EA0C997 /* NightReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightReview.swift; sourceTree = "<group>"; };
 		0C020B0AB0E6B665F69BC590 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		16E33DDAE65A979EB8996516 /* OathenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenApp.swift; sourceTree = "<group>"; };
+		1E70A77BC582C1316823C878 /* DailyRoutinePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutinePolicy.swift; sourceTree = "<group>"; };
 		1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyTests.swift; sourceTree = "<group>"; };
 		256C301A73DBD9BA2F04A1A0 /* CompletionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionStatus.swift; sourceTree = "<group>"; };
 		2745854A7BE85970C89D90CE /* OathenColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenColors.swift; sourceTree = "<group>"; };
 		279485F50EFFF36E3EDEB05D /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeView.swift; sourceTree = "<group>"; };
 		2A08573042820D67F43598B3 /* OathenSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenSpacing.swift; sourceTree = "<group>"; };
+		353E7A70C474362E38AB920C /* HealthPillarsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthPillarsCard.swift; sourceTree = "<group>"; };
 		3853E3B7EFB1D567ACDD23C8 /* OathenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OathenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF325099E580CF1294D4A52 /* RecurrenceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceRule.swift; sourceTree = "<group>"; };
 		3DD9505CC8C9943791433D86 /* OathenTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTask.swift; sourceTree = "<group>"; };
+		41BEACC48883E005F7EA63BA /* MorningCheckInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningCheckInCard.swift; sourceTree = "<group>"; };
+		41EC6ACC66852973986B6016 /* DailyRoutineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutineTests.swift; sourceTree = "<group>"; };
+		464F57E1840793182F594FF6 /* DailyPlanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanCard.swift; sourceTree = "<group>"; };
 		4BF3F38E338610DCFD004A9A /* Oathen.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F712655DE840D8ED8868E82 /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
+		508BD0EE0320F17F9BCD3102 /* NightReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightReviewCard.swift; sourceTree = "<group>"; };
 		54C275D072380C9643FCF9D3 /* OathenRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenRadius.swift; sourceTree = "<group>"; };
 		55ABBC10215796200EE575D7 /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
 		5D0F03FE73AA75F0B4AC010E /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		6C89560137A1F06CF1262673 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		6CE78CB02B8BFA887EF5EA1F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		6E468863462CA3FA9B2803BC /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		6F6B1C0A5DAED54F4CC0AD64 /* TodayState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayState.swift; sourceTree = "<group>"; };
 		6FE6818DFD9ECDD0E133F20F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		704DEC8E4C532ACDEFF4E6FD /* PlaceholderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderData.swift; sourceTree = "<group>"; };
 		712110164077E75AADB41F65 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7148AAFEC8F0606BDA6D49BF /* DomainFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainFixtures.swift; sourceTree = "<group>"; };
 		7314616006F8FAE21BDAB4E5 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		7CFDF735E637F67631C9205A /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		88E09E425BE166955F977E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D90F5E6023593BCAC6E2C53 /* TodayProgressCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressCard.swift; sourceTree = "<group>"; };
 		916F605FD8129789AF29DF8C /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		9188259441D507D84049A8DC /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		9440CBF1565977D75F1285CE /* DailyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanView.swift; sourceTree = "<group>"; };
 		97888BEE0E7718184B65E9E7 /* MacDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDashboardView.swift; sourceTree = "<group>"; };
 		99B62BD503429B0F24A56AAE /* Evidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evidence.swift; sourceTree = "<group>"; };
 		A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineScore.swift; sourceTree = "<group>"; };
@@ -145,12 +197,18 @@
 		B0692FD212ABE2ECCEDD410E /* YouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouView.swift; sourceTree = "<group>"; };
 		B6438A1879D0C075A0AA1CCE /* Oathen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oathen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83C491C8F83D8C7DC5B0355 /* OathenTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTypography.swift; sourceTree = "<group>"; };
+		B8F9213EB9FEB78986B3B8E1 /* MorningCheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningCheckInView.swift; sourceTree = "<group>"; };
 		CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriorityPolicy.swift; sourceTree = "<group>"; };
 		CFFF5EC523D5731E383B247F /* OathenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenComponents.swift; sourceTree = "<group>"; };
+		D65EC7D752D6EA8789CEE50E /* DailyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlan.swift; sourceTree = "<group>"; };
 		D8256AE6FAAC986D08DE8659 /* OathenTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathenTab.swift; sourceTree = "<group>"; };
+		E0A1BE85F3D458B231E685E5 /* MorningCheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningCheckIn.swift; sourceTree = "<group>"; };
+		E286C5BD6260BDD646EC1897 /* NightReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightReviewView.swift; sourceTree = "<group>"; };
 		E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineScorePolicy.swift; sourceTree = "<group>"; };
 		E43C2DED49282DA756F1A0E7 /* EvidenceRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvidenceRequirement.swift; sourceTree = "<group>"; };
 		EADB1DA2378A06193C0E9FA2 /* PlatformRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRouter.swift; sourceTree = "<group>"; };
+		EF614172AC95A3E420D047CF /* DailyPlanItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanItem.swift; sourceTree = "<group>"; };
+		F85DC53F746DB97C1E99D70F /* DisciplineScoreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineScoreCard.swift; sourceTree = "<group>"; };
 		FC226965B90CC7D6488C38F2 /* ScoreBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBreakdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +231,19 @@
 				16E33DDAE65A979EB8996516 /* OathenApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		21A9E5069727C2086E7E0036 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				464F57E1840793182F594FF6 /* DailyPlanCard.swift */,
+				F85DC53F746DB97C1E99D70F /* DisciplineScoreCard.swift */,
+				353E7A70C474362E38AB920C /* HealthPillarsCard.swift */,
+				41BEACC48883E005F7EA63BA /* MorningCheckInCard.swift */,
+				508BD0EE0320F17F9BCD3102 /* NightReviewCard.swift */,
+				8D90F5E6023593BCAC6E2C53 /* TodayProgressCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		2ACAECD7AF41A9EEFB014EAB /* OathenWatch */ = {
@@ -205,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				39572E8159AC1AE78BC82F5A /* Coach */,
+				D7C01D6951736517A4377029 /* DailyRoutine */,
 				8842103A40C9BFCB61B2FFD3 /* Goals */,
 				D7B2F76FCDB01E918CFC50F1 /* Health */,
 				323AB920DDA39F4F56EB8041 /* MacDashboard */,
@@ -217,6 +289,7 @@
 		488DC5F8DB59A15F128918DC /* Policies */ = {
 			isa = PBXGroup;
 			children = (
+				1E70A77BC582C1316823C878 /* DailyRoutinePolicy.swift */,
 				E38D19934215BF1811F36D1F /* DisciplineScorePolicy.swift */,
 				CBB6E1BE14FBAA00858E11FC /* TaskPriorityPolicy.swift */,
 			);
@@ -247,7 +320,9 @@
 		643E6CEC2774F9E09ED3450B /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				21A9E5069727C2086E7E0036 /* Components */,
 				712110164077E75AADB41F65 /* TodayView.swift */,
+				7CFDF735E637F67631C9205A /* TodayViewModel.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -303,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				4F712655DE840D8ED8868E82 /* CodableTests.swift */,
+				025855696C4F50DEC358FB1C /* DailyRoutineCodableTests.swift */,
+				41EC6ACC66852973986B6016 /* DailyRoutineTests.swift */,
 				7314616006F8FAE21BDAB4E5 /* ModelTests.swift */,
 				1EE3A43E5B26838D5AB36ED1 /* PolicyTests.swift */,
 			);
@@ -341,18 +418,33 @@
 			path = Health;
 			sourceTree = "<group>";
 		};
+		D7C01D6951736517A4377029 /* DailyRoutine */ = {
+			isa = PBXGroup;
+			children = (
+				9440CBF1565977D75F1285CE /* DailyPlanView.swift */,
+				B8F9213EB9FEB78986B3B8E1 /* MorningCheckInView.swift */,
+				E286C5BD6260BDD646EC1897 /* NightReviewView.swift */,
+			);
+			path = DailyRoutine;
+			sourceTree = "<group>";
+		};
 		ED021723269C304986DDD466 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A26D3653878D0E7364EE936A /* ContextMode.swift */,
+				D65EC7D752D6EA8789CEE50E /* DailyPlan.swift */,
+				EF614172AC95A3E420D047CF /* DailyPlanItem.swift */,
 				A008CB3200B2FF7FE52F049F /* DisciplineScore.swift */,
 				99B62BD503429B0F24A56AAE /* Evidence.swift */,
 				04F4E9D79CAD908933055724 /* Goal.swift */,
 				6E468863462CA3FA9B2803BC /* Habit.swift */,
+				E0A1BE85F3D458B231E685E5 /* MorningCheckIn.swift */,
+				0A4335F71F8F2B177EA0C997 /* NightReview.swift */,
 				3DD9505CC8C9943791433D86 /* OathenTask.swift */,
 				6C89560137A1F06CF1262673 /* Project.swift */,
 				916F605FD8129789AF29DF8C /* Routine.swift */,
 				A44A85C57F9D240151081534 /* RoutineStep.swift */,
+				6F6B1C0A5DAED54F4CC0AD64 /* TodayState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -534,8 +626,14 @@
 				F03EF4C8E8F1D8F5BA62B1C5 /* CoachView.swift in Sources */,
 				9261DD1FB57AB515F61F3073 /* CompletionStatus.swift in Sources */,
 				6DFE7A7CBA9249CA7393ED9C /* ContextMode.swift in Sources */,
+				DB44E1DEC82184421253AD40 /* DailyPlan.swift in Sources */,
+				4B37E4D2341880A1BEA16D24 /* DailyPlanCard.swift in Sources */,
+				113CFFE4F9FEE36F7389220C /* DailyPlanItem.swift in Sources */,
+				D468BD8EE96BB372B098057A /* DailyPlanView.swift in Sources */,
+				2B11D2A31AE9D1D158DD92C8 /* DailyRoutinePolicy.swift in Sources */,
 				7FD880F0A678E87A41514174 /* DateRange.swift in Sources */,
 				B0D9A67DCFB18C00C3DCA24A /* DisciplineScore.swift in Sources */,
+				229148969423FD4ABFDC6D92 /* DisciplineScoreCard.swift in Sources */,
 				E9FE4EAC1E66A66C5998B81E /* DisciplineScorePolicy.swift in Sources */,
 				CCC5375043CD5682551030FB /* DomainFixtures.swift in Sources */,
 				53AD500EF95EB42EF3F254BD /* Evidence.swift in Sources */,
@@ -543,8 +641,15 @@
 				D2E192C3BA5A4F70BE1171F4 /* Goal.swift in Sources */,
 				235EDF756FC547528BD4A65D /* GoalsView.swift in Sources */,
 				1A17D77893AC31CCE914D45B /* Habit.swift in Sources */,
+				ACAEFD34FEADE1DF44FA92F9 /* HealthPillarsCard.swift in Sources */,
 				96C2C5F1294E67F4BF3B584F /* HealthView.swift in Sources */,
 				407937D27394B332BD193FBD /* MacDashboardView.swift in Sources */,
+				B43456DAB804E2727341A29E /* MorningCheckIn.swift in Sources */,
+				49304B60E6DBC115A4A529AD /* MorningCheckInCard.swift in Sources */,
+				890524C32470272E5CC82443 /* MorningCheckInView.swift in Sources */,
+				16CD49B95450C1C014D908CA /* NightReview.swift in Sources */,
+				6E7DDEFDC71FA3410F327D45 /* NightReviewCard.swift in Sources */,
+				F58513A2F02C86BFCDFA5A26 /* NightReviewView.swift in Sources */,
 				AD84F5B49FABDED002820E44 /* OathenApp.swift in Sources */,
 				15445D800D580708C9626D67 /* OathenColors.swift in Sources */,
 				8EC442861169A15124DD70DC /* OathenComponents.swift in Sources */,
@@ -563,7 +668,10 @@
 				05D5809477E5B6B3AE751E80 /* RoutineStep.swift in Sources */,
 				45CC8AD3BA5B096DDFB84E10 /* ScoreBreakdown.swift in Sources */,
 				1C3045D1FA8F78C3D9D9D3F2 /* TaskPriorityPolicy.swift in Sources */,
+				E2F6FE54399B035E628BC049 /* TodayProgressCard.swift in Sources */,
+				DDE288D31687267E6AC3922E /* TodayState.swift in Sources */,
 				E7ADA97310017E3A699CEB76 /* TodayView.swift in Sources */,
+				235435E7D896CB39D98DBDA8 /* TodayViewModel.swift in Sources */,
 				B8C1BD0E657E7BC76FC96C7A /* YouView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +692,11 @@
 				78A853FDEAB833B5017CB002 /* CodableTests.swift in Sources */,
 				6A46246149CC7DAE52F5E6F5 /* CompletionStatus.swift in Sources */,
 				2889F061E21D8D0979B01A1E /* ContextMode.swift in Sources */,
+				27E23128357C95E98C530074 /* DailyPlan.swift in Sources */,
+				C90DD42B5B355A0FDC367222 /* DailyPlanItem.swift in Sources */,
+				E1BAD942A402996B49FFC097 /* DailyRoutineCodableTests.swift in Sources */,
+				011EF4E60819F828ECF5EC21 /* DailyRoutinePolicy.swift in Sources */,
+				7DE2E88FD25C82B29FE5F848 /* DailyRoutineTests.swift in Sources */,
 				62CAED7BBE0E6201676CF4EF /* DateRange.swift in Sources */,
 				46B35441E47AE813FAB528C5 /* DisciplineScore.swift in Sources */,
 				33DB73AF2A9C3268840E71DC /* DisciplineScorePolicy.swift in Sources */,
@@ -593,6 +706,8 @@
 				94AC2C7C905EBC9AB125A53C /* Goal.swift in Sources */,
 				51623C8F6FE2825B180C9E65 /* Habit.swift in Sources */,
 				1F050908059D608BFDCE49BF /* ModelTests.swift in Sources */,
+				587F987BDBAF2F8AB3E057CA /* MorningCheckIn.swift in Sources */,
+				4E8B69221E453F3B5651F92E /* NightReview.swift in Sources */,
 				F5277668B68296BBD4C9B78F /* OathenTask.swift in Sources */,
 				9865226B5700741AF1CFA0A9 /* PolicyTests.swift in Sources */,
 				991C5AFBEC12331BF3C1F5B7 /* Priority.swift in Sources */,
@@ -602,6 +717,7 @@
 				5EC9CCB5E55A059F3253F70F /* RoutineStep.swift in Sources */,
 				71DFF0DE1E458BF9FA1AE404 /* ScoreBreakdown.swift in Sources */,
 				A4D77F88D4D1534C10D736F1 /* TaskPriorityPolicy.swift in Sources */,
+				41D931F7F5286F59B2372455 /* TodayState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,8 +729,14 @@
 				F455D5C0C93A529BD3AA2356 /* CoachView.swift in Sources */,
 				EB9CF0D95664295634F16C18 /* CompletionStatus.swift in Sources */,
 				B4456AEA2295D5CF4F313FC5 /* ContextMode.swift in Sources */,
+				9B0D124C029DAD60ED16DAE4 /* DailyPlan.swift in Sources */,
+				ACD3D5236FFA2623DC1E5906 /* DailyPlanCard.swift in Sources */,
+				82AA297758E143E7FD294E6D /* DailyPlanItem.swift in Sources */,
+				B0F82EE798ED6EB84CAA6914 /* DailyPlanView.swift in Sources */,
+				5857217188CB8BAC79C44E6C /* DailyRoutinePolicy.swift in Sources */,
 				F72B3E7B48F22EA8E58E992A /* DateRange.swift in Sources */,
 				0D733B1F6FF438DD02FD44A9 /* DisciplineScore.swift in Sources */,
+				C63324EB69D76A0483D864EB /* DisciplineScoreCard.swift in Sources */,
 				7EBE7AC3B8C711C5D1B1E7B0 /* DisciplineScorePolicy.swift in Sources */,
 				359D17C5769785B6D2C4B4A2 /* DomainFixtures.swift in Sources */,
 				3DEBEDC54CE3D7FCA9987DEF /* Evidence.swift in Sources */,
@@ -622,8 +744,15 @@
 				A0DFF5C7E5A6A0720D301D41 /* Goal.swift in Sources */,
 				F7CD6E7E754485E89DE9758D /* GoalsView.swift in Sources */,
 				E46062647368F624C1457880 /* Habit.swift in Sources */,
+				DB3C3373B681FB34503F9E67 /* HealthPillarsCard.swift in Sources */,
 				F30463E5C68552A810611B06 /* HealthView.swift in Sources */,
 				88D385052E2A5C30ED901DC6 /* MacDashboardView.swift in Sources */,
+				BC765F7B778CBBA7FBCB1105 /* MorningCheckIn.swift in Sources */,
+				B789E149CFAA31C99785524F /* MorningCheckInCard.swift in Sources */,
+				BA3177DB8BC35943E0D241D7 /* MorningCheckInView.swift in Sources */,
+				3E4DF91BDBEF89C60D689AF0 /* NightReview.swift in Sources */,
+				BF084AD00D98A377AA378D0D /* NightReviewCard.swift in Sources */,
+				31A3E1E78C8415A43B3AFC70 /* NightReviewView.swift in Sources */,
 				9276153EF5B6FF5840E1248E /* OathenApp.swift in Sources */,
 				C149390D1BB8887A5508A645 /* OathenColors.swift in Sources */,
 				F5199ABB17C49898476AA411 /* OathenComponents.swift in Sources */,
@@ -642,7 +771,10 @@
 				B4861B2857E639CCADE17041 /* RoutineStep.swift in Sources */,
 				FE1C278CF435DCDB7CAABDE2 /* ScoreBreakdown.swift in Sources */,
 				5F64AE3A437A747791187F98 /* TaskPriorityPolicy.swift in Sources */,
+				CA2178CEE15ACA8E2ED007A4 /* TodayProgressCard.swift in Sources */,
+				B9446EF70C80D0C5CD21B782 /* TodayState.swift in Sources */,
 				A7BBE991B5CE3B69B4DC54C4 /* TodayView.swift in Sources */,
+				9357DE0BF829EBDD7510F979 /* TodayViewModel.swift in Sources */,
 				208FE1DA1C9CBE0C1B12E589 /* YouView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

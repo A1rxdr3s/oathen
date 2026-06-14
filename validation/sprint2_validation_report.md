@@ -1,7 +1,7 @@
 # Sprint 2 Validation Report
 
 **Status:** PASSED
-**Date:** 2026-06-11 22:55:31 -04
+**Date:** 2026-06-14 01:31:19 -04
 **Repo:** /Users/andresherrera/Hacking/oathen-app/oathen
 
 ---
@@ -43,7 +43,7 @@
 
 ## Goal 3 — Domain Model Conformance
 
-  Scanning 18 domain Swift files...
+  Scanning 24 domain Swift files...
   ✅  Identifiable conformance present in domain layer
   ✅  Codable conformance present in domain layer
   ✅  Sendable conformance present in domain layer
@@ -79,7 +79,7 @@
 
 ## Goal 9 — Forbidden Implementation Scan (Sprint 2)
 
-  Scanning 40 Swift source files...
+  Scanning 58 Swift source files...
   ✅  No SwiftData @Model (@Model)
   ✅  No SwiftData ModelContainer (ModelContainer)
   ✅  No Core Data (NSManagedObject)

@@ -254,3 +254,15 @@ Format: Decision | Date | Reasoning | Risk | Rejected Alternatives | Status | Im
 **Rejected Alternatives:** Implementing all ~42 planned entities in Sprint 2 (rejected: too much surface area to test or stabilize); adding SwiftData persistence immediately (rejected: premature, would lock in schema before domain validation); adding backend schemas before domain validation (rejected: Supabase schema changes are harder to reverse than Swift struct changes).
 **Status:** Approved
 **Impact Area:** Architecture, implementation sequence, scope control, data model
+
+---
+
+## D-022: Sprint 3 Implements In-Memory Daily Routine Engine Before Persistence
+
+**Date:** 2026-06-12
+**Decision:** Sprint 3 implements the full Morning Check-in → Daily Plan → Day Progress → Night Review → Discipline Score loop as an in-memory experience only. No SwiftData, no Core Data, no Supabase, no HealthKit, no AI. State resets on app restart.
+**Reasoning:** The product needs a usable daily accountability loop before adding external integration complexity. A clean in-memory implementation validates the product flow and domain model interactions without introducing persistence coupling. Users (Andrés) can verify the daily routine UX before committing to a schema. The in-memory constraint forces the domain model design to be clean and correct — persistence will follow from a tested baseline.
+**Risk:** Data resets when the app restarts. Users cannot test multi-day patterns until Sprint 3+ adds persistence. The in-memory state boundary must be clearly documented and enforced.
+**Rejected Alternatives:** Adding SwiftData immediately (rejected: premature before daily flow validation); integrating HealthKit before the daily routine loop (rejected: adds complexity before core UX is validated); adding AI Coach before deterministic local behavior exists (rejected: non-determinism before correctness).
+**Status:** Approved
+**Impact Area:** Product, UX, architecture, implementation sequence, scope control

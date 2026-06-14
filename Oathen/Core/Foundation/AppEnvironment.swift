@@ -10,7 +10,7 @@ final class AppEnvironment {
     var isOnline: Bool = true
 
     // Sprint markers (read-only)
-    static let currentSprint = 1
+    static let currentSprint = 3
     static let productName   = "Oathen"
     static let internalName  = "Discipline OS"
 }

@@ -1,0 +1,23 @@
+{
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/DailyPlan.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlan.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlan.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlan.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlan.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlan.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Foundation/AppEnvironment.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/AppEnvironment.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/AppEnvironment.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/AppEnvironment.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/AppEnvironment.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/AppEnvironment.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Today/Components/DailyPlanCard.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlanCard.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlanCard.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlanCard.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlanCard.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphonesimulator/Oathen_iOS.build/Objects-normal/x86_64/DailyPlanCard.swiftdeps"
+  }
+}

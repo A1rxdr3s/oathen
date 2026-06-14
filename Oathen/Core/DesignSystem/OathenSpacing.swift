@@ -16,5 +16,6 @@ enum OathenSpacing {
     static let cardH:            CGFloat = 16
     static let cardV:            CGFloat = 12
     static let sectionGap:       CGFloat = 24
-    static let tabContentTop:    CGFloat = 8
+    static let tabContentTop:    CGFloat = 16   // top inset below status bar for bare ScrollView tabs
+    static let tabScrollBottom:  CGFloat = 140 // clearance above iOS 26 floating glass tab bar
 }

@@ -1,0 +1,37 @@
+{
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Fixtures/DomainFixtures.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DomainFixtures.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DomainFixtures.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DomainFixtures.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DomainFixtures.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DomainFixtures.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Evidence.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Evidence.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Evidence.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Evidence.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Evidence.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Evidence.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Goal.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Goal.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Goal.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Goal.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Goal.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Goal.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Policies/DisciplineScorePolicy.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DisciplineScorePolicy.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DisciplineScorePolicy.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DisciplineScorePolicy.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DisciplineScorePolicy.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/DisciplineScorePolicy.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/EvidenceRequirement.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/EvidenceRequirement.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/EvidenceRequirement.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/EvidenceRequirement.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/EvidenceRequirement.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/EvidenceRequirement.swiftdeps"
+  }
+}

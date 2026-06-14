@@ -15,9 +15,9 @@
 | Internal System Name | **Discipline OS** |
 | Product Descriptor | Personal Accountability OS |
 | Category | Discipline, Health, Focus & Execution |
-| Current Sprint | **Sprint 2 — Core Domain Models** |
+| Current Sprint | **Sprint 3.6 — Force Native iOS Scroll Layout** |
 | Sprint Status | Complete |
-| Last Updated | 2026-06-11 |
+| Last Updated | 2026-06-14 |
 
 ---
 
@@ -110,13 +110,62 @@ Visual QA on macOS revealed the NavigationSplitView columns were compressed at d
 - **No notifications**, no widgets, no Live Activities, no Watch sync
 - **Not the full 42-entity data model** — Sprint 2 implements only the core foundation (D-021)
 
-#### Next: Sprint 3 — Daily Routine Engine
-- Morning Check-in, Night Review, Weekly Review full UI flows
-- Daily plan generation (rule-based)
-- Real Discipline Score calculation using domain models
-- Today screen driven by real data
-- Task completion (mark done, postpone, skip with reason)
+### Sprint 3 — Daily Routine Engine (COMPLETE)
+
+**Completion date:** 2026-06-12
+
+#### What was built
+
+- **5 new domain models** (pure Swift structs): `MorningCheckIn`, `NightReview`, `DailyPlanItem`, `DailyPlan`, `TodayState`
+- **Supporting enums**: `EnergyLevel`, `FocusLevel`, `MoodLevel`, `DailyPlanItemKind`, `DailyPlanItemStatus`
+- **`DailyRoutinePolicy`** — 10 deterministic pure helpers: `defaultDailyPlan`, `defaultMorningCheckIn`, `nightReview`, `progressFraction`, `recoveryRecommendation`, `coachNudge`, `calculateScore`, `defaultTodayState`, `isMorningCheckInComplete`, `isNightReviewComplete`
+- **`TodayViewModel`** — `@Observable @MainActor` in-memory state. Owns `TodayState`. Functions: `completeMorningCheckIn`, `toggleItem`, `completeNightReview`, `resetToDefaults`
+- **6 Today card components**: `DisciplineScoreCard`, `MorningCheckInCard`, `DailyPlanCard`, `HealthPillarsCard`, `TodayProgressCard`, `NightReviewCard`
+- **3 DailyRoutine flow views**: `MorningCheckInView` (sheet, Form-based), `NightReviewView` (sheet, day summary + failure reason + recovery), `DailyPlanView` (sheet, priority-grouped list)
+- **Updated `TodayView`** — fully connected to TodayViewModel; sheets for check-in, night review, plan
+- **Updated `MacDashboardView`** — Today tab: live score, check-in bar, commitments list, health pillars, coach nudge
+- **`OathenApp`** injects `TodayViewModel` into environment via `@State`
+- **`DailyRoutineTests.swift`** (44 tests) + **`DailyRoutineCodableTests.swift`** (20 tests) — total 108 tests, 0 failures
+- **`scripts/validate_sprint3.sh`** — 74/74 checks pass, 0 failures
+- **`validation/sprint3_validation_report.md`** — generated
+
+#### Scope Boundaries
+
+- **No SwiftData**, no `@Model`, no `ModelContainer` — persistence is Sprint 4+
+- **No Supabase**, no backend schemas, no network code
+- **No HealthKit** — health pillars are local-only checkboxes
+- **No AI providers** — coach nudge and excuse detection are local rule-based
+- **No notifications**, no widgets, no Live Activities, no Watch sync
+- **In-memory only** — state resets on app restart (expected until Sprint 4)
+- **No streak calculation** across multiple days (Sprint 4+)
+
+#### Sprint 3.3 — iOS Layout Stabilization (2026-06-12)
+
+Visual QA after Sprint 3.2 showed the iPhone app was rendering as a light-mode white card against the dark phone frame, with the floating tab bar overlapping Today content. Three targeted fixes applied:
+- `OathenApp.swift`: Added `.preferredColorScheme(.dark)` at root → consistent dark mode on both iOS and macOS, matching the design intent reflected in all preview configurations
+- `OathenRootView.swift`: Added `.tint(OathenColors.accent)` and `.background(OathenColors.screenBackground.ignoresSafeArea())` to the TabView → accent color in tab bar; background extends behind the new iOS 26 glass tab bar
+- `TodayView.swift`: Changed `ScrollView` background to `.background { OathenColors.screenBackground.ignoresSafeArea() }` to extend the fill behind the tab bar; increased bottom content padding from `xxxl` (32pt) to `huge` (40pt) to provide more clearance above the floating tab bar
+
+No product logic, persistence, HealthKit, Supabase, or AI functionality was added.
+
+#### Sprint 3.1 — Placeholder Comprehension Cleanup (2026-06-12)
+
+Visual QA after Sprint 3 found that non-Today sections on macOS and iPhone still displayed internal sprint implementation labels ("Sprint 2 — Domain Models", "Sprint 10", "Module implementation", "Sprint 7", etc.) in user-visible UI. Sprint 3.1 replaced all user-facing sprint labels with product-meaningful placeholder copy and added per-module explanatory content (Goals, Coach, Health, You). No new product logic, persistence, HealthKit, Supabase, or AI functionality was added.
+
+- `GoalsView` — clarified as long-term commitments behind daily plan; removed sprint label from goal rows
+- `CoachView` — banner renamed to "Accountability Coach"; placeholder bubbles describe product intent without sprint numbers
+- `HealthView` — note now describes local targets and future HealthKit; "Coming in Sprint 4" → "Coming later"
+- `YouView` — settings rows now show "Not active yet"; version footer no longer shows "Sprint N Shell"
+- `MacDashboardView` — `sprintLabel` replaced by `subtitle`; non-Today sections now show per-module placeholder cards; detail panel "Sprint 10" removed
+- `TodayView` + `HealthPillarsCard` — "HealthKit — Sprint 4" → "Local target" / "Local target only"
+
+#### Next: Sprint 4 — HealthKit, Exercise, and Sleep
+- HealthKit permission request flow (lazy, at feature use)
+- Real exercise and sleep data integration
+- Hydration write to HealthKit
+- Score calculation updated with real health signals
 - Streak calculation
+- Health tab functional
 
 ---
 
@@ -278,6 +327,7 @@ See `DATA_MODEL.md` for full entity definitions.
 | Sprint 0 | Master Plan + All Documentation | 2026-06-11 |
 | Sprint 1 | SwiftUI App Shell + Validation Script | 2026-06-11 |
 | Sprint 2 | Core Domain Models + Unit Tests | 2026-06-11 |
+| Sprint 3 | Daily Routine Engine (in-memory) | 2026-06-12 |
 
 ---
 
@@ -285,8 +335,7 @@ See `DATA_MODEL.md` for full entity definitions.
 
 | Sprint | Deliverable |
 |---|---|
-| Sprint 3 | Daily Routine Engine (Morning Check-in, Night Review, Score) |
-| Sprint 3 | Daily Routine Engine (Morning Check-in, Night Review, Score) |
+| Sprint 4 | HealthKit, Exercise, Sleep |
 | Sprint 4 | HealthKit, Exercise, Sleep |
 | Sprint 5 | Hydration + Evidence |
 | Sprint 6 | Notifications + Escalation Engine |

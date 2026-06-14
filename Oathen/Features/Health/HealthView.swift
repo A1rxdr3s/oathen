@@ -4,55 +4,51 @@ import SwiftUI
 
 struct HealthView: View {
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
-                    sprintNote
+        ScrollView {
+            VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
+                sprintNote
 
-                    VStack(alignment: .leading, spacing: OathenSpacing.sm) {
-                        OathenSectionHeader(title: "Pillars")
-                        pillarCard(
-                            title: "Hydration",
-                            value: "\(PlaceholderData.hydrationCurrentStr)L",
-                            goal: "\(PlaceholderData.hydrationGoalStr)L target",
-                            progress: PlaceholderData.hydrationProgress,
-                            color: OathenColors.hydration,
-                            icon: "drop.fill"
-                        )
-                        pillarCard(
-                            title: "Exercise",
-                            value: "\(PlaceholderData.exerciseMinutes) min",
-                            goal: "\(PlaceholderData.exerciseGoal) min target",
-                            progress: PlaceholderData.exerciseProgress,
-                            color: OathenColors.exercise,
-                            icon: "figure.run"
-                        )
-                        pillarCard(
-                            title: "Sleep",
-                            value: "\(PlaceholderData.sleepHoursStr)h",
-                            goal: "\(PlaceholderData.sleepGoalStr)h target",
-                            progress: PlaceholderData.sleepProgress,
-                            color: OathenColors.sleep,
-                            icon: "moon.fill"
-                        )
-                    }
-
-                    VStack(alignment: .leading, spacing: OathenSpacing.sm) {
-                        OathenSectionHeader(title: "Coming in Sprint 4")
-                        comingCard(title: "Resting Heart Rate", icon: "heart.fill")
-                        comingCard(title: "HRV", icon: "waveform.path.ecg")
-                        comingCard(title: "Steps", icon: "figure.walk")
-                        comingCard(title: "Body Weight", icon: "scalemass.fill")
-                    }
+                VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+                    OathenSectionHeader(title: "Pillars")
+                    pillarCard(
+                        title: "Hydration",
+                        value: "\(PlaceholderData.hydrationCurrentStr)L",
+                        goal: "\(PlaceholderData.hydrationGoalStr)L target",
+                        progress: PlaceholderData.hydrationProgress,
+                        color: OathenColors.hydration,
+                        icon: "drop.fill"
+                    )
+                    pillarCard(
+                        title: "Exercise",
+                        value: "\(PlaceholderData.exerciseMinutes) min",
+                        goal: "\(PlaceholderData.exerciseGoal) min target",
+                        progress: PlaceholderData.exerciseProgress,
+                        color: OathenColors.exercise,
+                        icon: "figure.run"
+                    )
+                    pillarCard(
+                        title: "Sleep",
+                        value: "\(PlaceholderData.sleepHoursStr)h",
+                        goal: "\(PlaceholderData.sleepGoalStr)h target",
+                        progress: PlaceholderData.sleepProgress,
+                        color: OathenColors.sleep,
+                        icon: "moon.fill"
+                    )
                 }
-                .padding(.horizontal, OathenSpacing.screenHorizontal)
-                .padding(.top, OathenSpacing.tabContentTop)
-                .padding(.bottom, OathenSpacing.xxxl)
+
+                VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+                    OathenSectionHeader(title: "Coming later")
+                    comingCard(title: "Resting Heart Rate", icon: "heart.fill")
+                    comingCard(title: "HRV", icon: "waveform.path.ecg")
+                    comingCard(title: "Steps", icon: "figure.walk")
+                    comingCard(title: "Body Weight", icon: "scalemass.fill")
+                }
             }
-            .background(OathenColors.screenBackground)
-            .navigationTitle("Health")
-            .largeNavigationTitle()
+            .padding(.horizontal, OathenSpacing.screenHorizontal)
+            .padding(.top, OathenSpacing.tabContentTop)
+            .padding(.bottom, OathenSpacing.tabScrollBottom)
         }
+        .background(OathenColors.screenBackground.ignoresSafeArea())
     }
 
     private var sprintNote: some View {
@@ -60,7 +56,7 @@ struct HealthView: View {
             HStack {
                 Image(systemName: "info.circle")
                     .foregroundStyle(OathenColors.hydration)
-                Text("HealthKit integration (Sprint 4). Non-diagnostic only. All values are placeholders.")
+                Text("Hydration, exercise, and sleep are the first health pillars. Local targets only for now — HealthKit connects later.")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -105,7 +101,7 @@ struct HealthView: View {
                     .font(OathenTypography.headingSmall)
                     .foregroundStyle(.secondary)
                 Spacer()
-                Text("Sprint 4")
+                Text("Coming later")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.tertiary)
             }

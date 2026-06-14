@@ -1,0 +1,37 @@
+{
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Habit.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Habit.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Habit.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Habit.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Habit.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Habit.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Goals/GoalsView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/GoalsView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/GoalsView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/GoalsView.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/GoalsView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/GoalsView.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Health/HealthView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthView.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthView.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/MacDashboard/MacDashboardView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/MacDashboardView.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Features/Today/Components/HealthPillarsCard.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthPillarsCard.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthPillarsCard.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthPillarsCard.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthPillarsCard.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/HealthPillarsCard.swiftdeps"
+  }
+}

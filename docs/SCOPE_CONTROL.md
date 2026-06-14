@@ -139,12 +139,36 @@ This is the REALISTIC path to building the MVP product vision.
 
 ---
 
-### Sprint 3 — Daily Routine Engine (Next)
+### Sprint 3 — Daily Routine Engine (Complete — 2026-06-12)
 
-**Current Sprint:** Sprint 3 — Daily Routine Engine
+**What was built:**
+- In-memory Morning Check-in → Daily Plan → Day Progress → Night Review → Discipline Score loop
+- `TodayViewModel` (@Observable, @MainActor) with live in-memory state
+- `DailyRoutinePolicy` with 10 deterministic pure helpers
+- Full Today tab UI (iPhone) and Today module (Mac) connected to live state
+- 108 unit tests passing; 74/74 validation checks
+
+**Scope boundaries — explicitly out of scope for Sprint 3:**
+- SwiftData / `@Model` / `ModelContainer` — local persistence is Sprint 4+
+- Supabase sync, Postgres schemas, or any backend/network code
+- HealthKit data access — health pillars are local checkboxes only (Sprint 4)
+- AI providers, AI Coach logic, or AI-generated coaching (Sprint 7)
+- Notifications, WidgetKit, Live Activities, WatchConnectivity
+- DeviceActivity / FamilyControls / ManagedSettings
+- Photo storage, evidence upload, or evidence validation
+- Production authentication or onboarding
+- Streak calculation across multiple days (Sprint 4+)
+- Weekly Review full flow (Sprint 4)
+- State persists across restarts — in-memory only (expected limitation)
+
+---
+
+### Sprint 4 — HealthKit, Exercise, and Sleep (Next)
+
+**Current Sprint:** Sprint 4 — HealthKit, Exercise, and Sleep
 **Status:** Pending (not yet approved — do not begin implementation)
 
-Sprint 3 scope is defined in SPRINT_PLAN.md. No Sprint 3 work begins until Andrés explicitly approves it.
+Sprint 4 scope is defined in SPRINT_PLAN.md. No Sprint 4 work begins until Andrés explicitly approves it.
 
 ---
 

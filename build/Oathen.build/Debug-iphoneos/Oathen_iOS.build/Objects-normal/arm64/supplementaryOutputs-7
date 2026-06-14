@@ -1,0 +1,37 @@
+{
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/OathenRootView.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenRootView.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/OathenTab.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTab.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTab.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTab.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTab.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTab.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenSpacing.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenSpacing.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/DesignSystem/OathenTypography.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTypography.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/OathenTask.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTask.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTask.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTask.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTask.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/OathenTask.swiftdeps"
+  }
+}

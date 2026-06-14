@@ -7,15 +7,11 @@ struct CoachView: View {
     @State private var inputText = ""
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                conversationArea
+        conversationArea
+            .safeAreaInset(edge: .bottom, spacing: 0) {
                 composerBar
             }
-            .background(OathenColors.screenBackground)
-            .navigationTitle("Coach")
-            .largeNavigationTitle()
-        }
+            .background(OathenColors.screenBackground.ignoresSafeArea())
     }
 
     private var conversationArea: some View {
@@ -25,19 +21,19 @@ struct CoachView: View {
 
                 CoachBubble(
                     role: .coach,
-                    text: "AI Coach connects in Sprint 7. This is where strict, contextual coaching will appear — based on your goals, tasks, score, and patterns."
+                    text: "This is where strict, context-aware accountability lives — based on your goals, tasks, score, and daily patterns."
                 )
                 CoachBubble(
                     role: .coach,
-                    text: "The Coach will confront repeated excuses, detect weak patterns, and generate recovery plans. It will never be a cheerleader."
+                    text: "The Coach confronts repeated excuses, detects weak patterns, and generates recovery plans. It will never be a cheerleader."
                 )
                 CoachBubble(
                     role: .user,
-                    text: "Example user message — placeholder only."
+                    text: "Example user message — not active yet."
                 )
                 CoachBubble(
                     role: .coach,
-                    text: "Provider-agnostic AI abstraction layer (OpenAI, Claude, Gemini) is designed. Implementation begins Sprint 7."
+                    text: "AI connection arrives after the daily routine is stable. Today already uses local rule-based nudges."
                 )
             }
             .padding(.horizontal, OathenSpacing.screenHorizontal)
@@ -51,7 +47,7 @@ struct CoachView: View {
                 Image(systemName: "brain.head.profile")
                     .foregroundStyle(OathenColors.accent)
                 VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                    Text("AI Coach — Sprint 7")
+                    Text("Accountability Coach")
                         .font(OathenTypography.headingSmall)
                         .foregroundStyle(OathenColors.accent)
                     Text("Strict · Context-aware · Not a chatbot")

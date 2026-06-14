@@ -1,31 +1,58 @@
-// Sprint 1 — Today tab: Daily Command Center placeholder.
-// No real data. No business logic. No persistence.
+// Sprint 3 — Today tab: Daily Command Center.
+// Connected to TodayViewModel for live in-memory state.
+// No persistence, no HealthKit, no AI, no Supabase.
 import SwiftUI
 
 struct TodayView: View {
+    @Environment(TodayViewModel.self) private var viewModel
+
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
+        @Bindable var vm = viewModel
+        ScrollView {
+            VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
+                // Header: date + daily-plan context button share one row
+                HStack(alignment: .top) {
                     headerBanner
-                    scoreSection
-                    criticalSection
-                    healthSection
-                    coachSection
+                    Spacer()
+                    Button(action: { vm.isShowingDailyPlan = true }) {
+                        Label(viewModel.contextMode.displayName, systemImage: "list.bullet.clipboard")
+                            .font(OathenTypography.bodySmall)
+                            .foregroundStyle(OathenColors.accent)
+                    }
                 }
-                .padding(.horizontal, OathenSpacing.screenHorizontal)
-                .padding(.top, OathenSpacing.tabContentTop)
-                .padding(.bottom, OathenSpacing.xxxl)
+                DisciplineScoreCard(score: viewModel.score, contextMode: viewModel.contextMode)
+                checkInSection
+                progressSection
+                criticalSection
+                healthSection
+                coachSection
+                nightReviewSection
             }
-            .background(OathenColors.screenBackground)
-            .navigationTitle("Today")
-            .largeNavigationTitle()
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    Label(PlaceholderData.contextMode, systemImage: "circle.fill")
-                        .font(OathenTypography.bodySmall)
-                        .foregroundStyle(OathenColors.accent)
-                }
+            .padding(.horizontal, OathenSpacing.screenHorizontal)
+            .padding(.top, OathenSpacing.tabContentTop)
+            .padding(.bottom, OathenSpacing.tabScrollBottom)
+        }
+        .background(OathenColors.screenBackground.ignoresSafeArea())
+        .sheet(isPresented: $vm.isShowingMorningCheckIn) {
+            MorningCheckInView { sleep, energy, focus, mood, obstacle, mode in
+                viewModel.completeMorningCheckIn(
+                    sleepHours: sleep,
+                    energyLevel: energy,
+                    focusLevel: focus,
+                    mood: mood,
+                    mainObstacle: obstacle,
+                    contextMode: mode
+                )
+            }
+        }
+        .sheet(isPresented: $vm.isShowingNightReview) {
+            NightReviewView(state: viewModel.todayState) { reason in
+                viewModel.completeNightReview(failureReason: reason)
+            }
+        }
+        .sheet(isPresented: $vm.isShowingDailyPlan) {
+            DailyPlanView(plan: viewModel.dailyPlan) { id in
+                viewModel.toggleItem(id: id)
             }
         }
     }
@@ -33,40 +60,30 @@ struct TodayView: View {
     // MARK: - Sub-views
 
     private var headerBanner: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                Text(PlaceholderData.todayDateString)
-                    .font(OathenTypography.bodySmall)
-                    .foregroundStyle(.secondary)
-                Text("Discipline OS")
-                    .font(OathenTypography.headingSmall)
-                    .foregroundStyle(.tertiary)
-            }
-            Spacer()
+        VStack(alignment: .leading, spacing: OathenSpacing.xs) {
+            Text(formattedDate)
+                .font(OathenTypography.bodySmall)
+                .foregroundStyle(.secondary)
+            Text("Discipline OS")
+                .font(OathenTypography.headingSmall)
+                .foregroundStyle(.tertiary)
         }
     }
 
-    private var scoreSection: some View {
-        OathenCard {
-            HStack(alignment: .center, spacing: OathenSpacing.lg) {
-                VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                    Text("Discipline Score")
-                        .font(OathenTypography.headingSmall)
-                        .foregroundStyle(.secondary)
-                    Text("\(PlaceholderData.disciplineScore)")
-                        .font(OathenTypography.scoreDisplay)
-                        .foregroundStyle(OathenColors.accent)
-                    Text("Score engine — Sprint 3")
-                        .font(OathenTypography.bodySmall)
-                        .foregroundStyle(.tertiary)
-                }
-                Spacer()
-                ScoreRing(
-                    progress: PlaceholderData.scoreProgress,
-                    score: PlaceholderData.disciplineScore,
-                    size: 80
-                )
-            }
+    private var checkInSection: some View {
+        VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+            OathenSectionHeader(title: "Morning")
+            MorningCheckInCard(
+                checkIn: viewModel.todayState.morningCheckIn,
+                onTap: { viewModel.isShowingMorningCheckIn = true }
+            )
+        }
+    }
+
+    private var progressSection: some View {
+        VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+            OathenSectionHeader(title: "Day Progress")
+            TodayProgressCard(state: viewModel.todayState)
         }
     }
 
@@ -75,76 +92,32 @@ struct TodayView: View {
             HStack {
                 OathenSectionHeader(title: "Critical")
                 Spacer()
-                Text("Tasks — Sprint 2")
-                    .font(OathenTypography.bodySmall)
-                    .foregroundStyle(.tertiary)
-            }
-
-            OathenCard {
-                HStack(spacing: OathenSpacing.md) {
-                    Image(systemName: "circle")
-                        .foregroundStyle(OathenColors.critical)
-                        .font(.body)
-                    VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                        Text(PlaceholderData.criticalTaskTitle)
-                            .font(OathenTypography.headingSmall)
-                        Text("Evidence required · Today")
-                            .font(OathenTypography.bodySmall)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    PriorityBadge(priority: .critical)
+                Button(action: { viewModel.isShowingDailyPlan = true }) {
+                    Text("See all")
+                        .font(OathenTypography.bodySmall)
+                        .foregroundStyle(OathenColors.accent)
                 }
             }
-
-            OathenCard {
-                HStack(spacing: OathenSpacing.md) {
-                    Image(systemName: "circle")
-                        .foregroundStyle(OathenColors.high)
-                        .font(.body)
-                    VStack(alignment: .leading, spacing: OathenSpacing.xs) {
-                        Text(PlaceholderData.highTaskTitle)
-                            .font(OathenTypography.headingSmall)
-                        Text("Estimated 45 min · Due 18:00")
-                            .font(OathenTypography.bodySmall)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    PriorityBadge(priority: .high)
-                }
-            }
+            DailyPlanCard(
+                items: viewModel.dailyPlan.items,
+                onToggle: { viewModel.toggleItem(id: $0) }
+            )
         }
     }
 
     private var healthSection: some View {
         VStack(alignment: .leading, spacing: OathenSpacing.sm) {
             HStack {
-                OathenSectionHeader(title: "Health")
+                OathenSectionHeader(title: "Health Pillars")
                 Spacer()
-                Text("HealthKit — Sprint 4")
+                Text("Local target")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.tertiary)
             }
-
-            OathenCard {
-                VStack(spacing: OathenSpacing.lg) {
-                    OathenProgressBar(
-                        value: PlaceholderData.hydrationProgress,
-                        color: OathenColors.hydration,
-                        label: "Hydration  \(PlaceholderData.hydrationCurrentStr)L / \(PlaceholderData.hydrationGoalStr)L"
-                    )
-                    OathenProgressBar(
-                        value: PlaceholderData.exerciseProgress,
-                        color: OathenColors.exercise,
-                        label: "Exercise  \(PlaceholderData.exerciseMinutes) / \(PlaceholderData.exerciseGoal) min"
-                    )
-                    OathenProgressBar(
-                        value: PlaceholderData.sleepProgress,
-                        color: OathenColors.sleep,
-                        label: "Sleep  \(PlaceholderData.sleepHoursStr)h / \(PlaceholderData.sleepGoalStr)h target"
-                    )
-                }
-            }
+            HealthPillarsCard(
+                plan: viewModel.dailyPlan,
+                onToggle: { viewModel.toggleItem(id: $0) }
+            )
         }
     }
 
@@ -158,7 +131,7 @@ struct TodayView: View {
                     Text("Coach")
                         .font(OathenTypography.headingSmall)
                         .foregroundStyle(OathenColors.accent)
-                    Text(PlaceholderData.coachNudge)
+                    Text(viewModel.coachNudge)
                         .font(OathenTypography.bodySmall)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -166,9 +139,29 @@ struct TodayView: View {
             }
         }
     }
+
+    private var nightReviewSection: some View {
+        VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+            OathenSectionHeader(title: "Night")
+            NightReviewCard(
+                review: viewModel.todayState.nightReview,
+                state: viewModel.todayState,
+                onTap: { viewModel.isShowingNightReview = true }
+            )
+        }
+    }
+
+    // MARK: - Helpers
+
+    private var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d"
+        return formatter.string(from: Date())
+    }
 }
 
 #Preview {
     TodayView()
+        .environment(TodayViewModel())
         .preferredColorScheme(.dark)
 }

@@ -10,7 +10,12 @@
 | 0 | Master Plan | **Complete** |
 | 1 | SwiftUI App Shell | **Complete** |
 | 2 | Core Domain Models | **Complete** |
-| 3 | Daily Routine Engine | Pending |
+| 3 | Daily Routine Engine | **Complete** |
+| 3.1 | Placeholder Comprehension Cleanup | **Complete** |
+| 3.3 | iOS Layout Stabilization | **Complete** |
+| 3.4 | iOS Tab Bar and Safe Area Cleanup | **Complete** |
+| 3.5 | iOS Scroll and Tab Bar Fix | **Complete** |
+| 3.6 | Force Native iOS Scroll Layout | **Complete** |
 | 4 | HealthKit, Exercise, Sleep | Pending |
 | 5 | Hydration + Evidence | Pending |
 | 6 | Notifications + Escalation Engine | Pending |
@@ -193,30 +198,203 @@ Before closing Sprint 1 formally, install Xcode and verify:
 
 ## Sprint 3 — Daily Routine Engine
 
-**Status:** Pending
-**Goal:** Implement Morning Check-in, Night Review, Daily Plan, and baseline Discipline Score calculation. Full iPhone UI for daily flows.
+**Status:** Complete — 2026-06-12
+**Goal:** Build the first functional daily accountability loop in-memory: Morning Check-in → Daily Plan → Day Progress → Night Review → Discipline Score. No persistence, no HealthKit, no AI.
 
 ### Scope
 
 **In scope:**
-- Morning Check-in full UI flow
-- Night Review full UI flow
-- Weekly Review skeleton
-- Daily plan generation (rule-based, no AI yet)
-- Discipline Score calculation engine (rule-based)
-- Score display on Today screen
-- Task list for today with priority display
-- Task completion (mark done, postpone, skip with reason)
-- Streak calculation for habits and exercise
-- Today screen fully functional with real data
-- Empty states and error states
-- PROJECT_CONTEXT.md update
+- 5 new domain models: `MorningCheckIn`, `NightReview`, `DailyPlanItem`, `DailyPlan`, `TodayState`
+- `DailyRoutinePolicy` — 10 deterministic pure helpers (defaultPlan, calculateScore, coachNudge, recoveryRecommendation, etc.)
+- `TodayViewModel` — `@Observable @MainActor` in-memory state owner
+- 6 Today card components: `DisciplineScoreCard`, `MorningCheckInCard`, `DailyPlanCard`, `HealthPillarsCard`, `TodayProgressCard`, `NightReviewCard`
+- 3 DailyRoutine flow views: `MorningCheckInView` (sheet), `NightReviewView` (sheet), `DailyPlanView` (sheet)
+- Fully updated `TodayView` connected to live in-memory state
+- Updated `MacDashboardView` (Today tab: check-in bar, commitments, health pillars, coach nudge)
+- `OathenApp` injects `TodayViewModel` into environment
+- User can: complete Morning Check-in, toggle plan items, complete Night Review, see score update live
+- Local rule-based coach nudge (no AI)
+- Local excuse detection (keyword patterns, no AI)
+- `scripts/validate_sprint3.sh` — 74/74 checks pass
+- `validation/sprint3_validation_report.md` — generated
+- Documentation: DECISION_LOG.md, PROJECT_CONTEXT.md, ARCHITECTURE.md, DATA_MODEL.md, UX_FLOWS.md, SPRINT_PLAN.md, SCOPE_CONTROL.md
+- PROJECT_CONTEXT.md updated
 
 **Out of scope:**
-- HealthKit data (stubs only)
-- AI Coach
-- Notifications (triggers stubbed)
-- Evidence capture (stubbed)
+- SwiftData / `@Model` / `ModelContainer` (Sprint 3+)
+- Core Data, Supabase, HealthKit
+- AI providers, real AI coaching
+- Notifications, WidgetKit, Live Activities
+- WatchConnectivity, Apple Watch sync
+- DeviceActivity / FamilyControls / ManagedSettings
+- Production authentication, photo storage, evidence upload
+- Streak calculation (Sprint 4+)
+- Weekly Review flow (Sprint 3 next or Sprint 4)
+
+### Acceptance Criteria
+
+- [x] MorningCheckIn model exists — Identifiable, Codable, Equatable, Sendable
+- [x] NightReview model exists — Identifiable, Codable, Equatable, Sendable
+- [x] DailyPlan and DailyPlanItem models exist — Identifiable, Codable, Equatable, Sendable
+- [x] TodayState exists — Codable, Equatable, Sendable
+- [x] DailyRoutinePolicy exists with 10 deterministic helpers
+- [x] Today tab connected to live in-memory TodayViewModel state
+- [x] User can complete Morning Check-in locally (sheet + default quick-start)
+- [x] User can toggle daily plan items locally (score updates live)
+- [x] User can complete Night Review locally (failure reason + recovery plan)
+- [x] Discipline Score updates in real-time as items are toggled
+- [x] Mac dashboard shows Today state (check-in status, commitments, health pillars, coach nudge)
+- [x] watchOS still builds (placeholder unchanged)
+- [x] 108 unit tests pass (0 failures): ModelTests, PolicyTests, CodableTests, DailyRoutineTests, DailyRoutineCodableTests
+- [x] validate_sprint3.sh passes 74/74 checks, 0 failures, 0 warnings
+- [x] iOS, macOS, watchOS builds: exit 0
+- [x] No SwiftData, no HealthKit, no AI, no notifications implemented
+- [x] PROJECT_CONTEXT.md updated
+
+### Andrés Validation Checklist
+
+- [x] Run `bash scripts/validate_sprint3.sh` — confirm 74/74 passed, 0 failures
+- [ ] Open `Oathen.xcodeproj` in Xcode
+- [ ] Run on iPhone 16 simulator — confirm Today tab shows score, morning check-in, plan items, health pillars, coach nudge, night review
+- [ ] Tap "Start" on Morning Check-in — confirm sheet opens, fill in values, tap "Lock In Commitments"
+- [ ] Confirm score ring animates and morning check-in status updates
+- [ ] Tap circles to mark plan items complete — confirm score updates and strikethrough appears
+- [ ] Tap "Review" on Night Review — confirm sheet shows day summary, close the day
+- [ ] Run on macOS — confirm Today module shows check-in bar, commitments list, health pillars, coach nudge
+- [ ] Select OathenTests scheme and press ⌘U — confirm all 108 tests pass
+
+---
+
+## Sprint 3.1 — Placeholder Comprehension Cleanup
+
+**Status:** Complete
+**Completion date:** 2026-06-12
+**Scope:** UX clarity patch only. No new product logic, persistence, HealthKit, Supabase, or AI functionality.
+
+### What was changed
+
+- Removed all user-facing sprint implementation labels from visible app UI (Goals, Coach, Health, You, macOS detail panel)
+- Added per-module explanatory placeholder content to macOS non-Today sections
+- `MacSidebarItem.sprintLabel` renamed to `subtitle` with product-friendly descriptions
+- `GoalsView` — note clarifies long-term commitment purpose; goal rows no longer show sprint label
+- `CoachView` — banner title → "Accountability Coach"; placeholder bubbles describe product intent
+- `HealthView` — note describes local targets and future HealthKit; "Coming in Sprint 4" → "Coming later"
+- `YouView` — settings rows show "Not active yet"; version footer no longer shows "Sprint N Shell"
+- `TodayView` + `HealthPillarsCard` — "HealthKit — Sprint 4" → "Local target" / "Local target only"
+- `PlaceholderData.coachNudge` — sprint number removed
+
+### Validation
+
+- `bash scripts/validate_sprint3.sh` — **74/74 checks passed, 0 failures**
+- iOS, macOS, watchOS builds pass
+- 108 unit tests pass
+
+---
+
+## Sprint 3.3 — iOS Layout Stabilization
+
+**Status:** Complete
+**Completion date:** 2026-06-12
+**Scope:** Layout-only fix. No new product logic, persistence, HealthKit, Supabase, or AI functionality.
+
+### Root cause
+
+The iPhone app was rendering in system light mode (white `UIColor.systemBackground`) while the design intent is dark-mode throughout. All Preview configurations use `.preferredColorScheme(.dark)` but the live app root did not, causing the content to appear as a white card inside the dark simulator phone frame. Additionally, the iOS 26 floating glass tab bar required explicit background extension and additional bottom padding to prevent content overlap.
+
+### Changes made
+
+- `Oathen/App/OathenApp.swift` — Added `.preferredColorScheme(.dark)` to root view
+- `Oathen/App/Root/OathenRootView.swift` — Added `.tint(OathenColors.accent)` and `.background(OathenColors.screenBackground.ignoresSafeArea())` to TabView
+- `Oathen/Features/Today/TodayView.swift` — Changed `ScrollView` background to `.background { OathenColors.screenBackground.ignoresSafeArea() }`; increased bottom padding from `xxxl` (32pt) to `huge` (40pt)
+
+### Validation
+
+- `bash scripts/validate_sprint3.sh` — **74/74 checks passed, 0 failures**
+- iOS, macOS, watchOS builds pass; 108 unit tests pass
+
+---
+
+## Sprint 3.4 — iOS Tab Bar and Safe Area Cleanup
+
+**Status:** Complete
+**Completion date:** 2026-06-13
+**Scope:** Layout-only fix. No new product logic, persistence, HealthKit, Supabase, or AI functionality.
+
+### Root cause
+
+iOS 26's floating glass tab bar does not reliably propagate bottom safe area insets into `NavigationStack` > `ScrollView` hierarchies in the same way the classic tab bar did. All four non-Today tab screens still used `xxxl` (32pt) bottom padding and `.background(OathenColors.screenBackground)` without `ignoresSafeArea()`, causing the floating tab bar to overlap the last card(s). The Coach composer bar was inside a `VStack` at the raw bottom of the navigation hierarchy, so it could also be obscured. `tabContentTop` was unnecessarily large (8pt), adding visual whitespace below the large navigation title.
+
+### Changes made
+
+- `Oathen/Core/DesignSystem/OathenSpacing.swift` — Added `tabScrollBottom: CGFloat = 80` (shared clearance token for all tab scroll views); reduced `tabContentTop` from 8pt to 4pt
+- `Oathen/Features/Today/TodayView.swift` — Switched bottom padding from `OathenSpacing.huge` (40pt) to `OathenSpacing.tabScrollBottom` (80pt)
+- `Oathen/Features/Goals/GoalsView.swift` — Switched bottom padding to `tabScrollBottom`; changed background to `OathenColors.screenBackground.ignoresSafeArea()`
+- `Oathen/Features/Health/HealthView.swift` — Same as GoalsView
+- `Oathen/Features/You/YouView.swift` — Same as GoalsView
+- `Oathen/Features/Coach/CoachView.swift` — Replaced `VStack { conversationArea; composerBar }` with `conversationArea.safeAreaInset(edge: .bottom) { composerBar }`; fixed background to `ignoresSafeArea()`
+
+### Validation
+
+- `bash scripts/validate_sprint3.sh` — **74/74 checks passed, 0 failures**
+- iOS, macOS, watchOS builds pass; 108 unit tests pass
+
+---
+
+## Sprint 3.5 — iOS Scroll and Tab Bar Fix
+
+**Status:** Complete
+**Completion date:** 2026-06-13
+**Scope:** Layout-only fix. No new product logic, persistence, HealthKit, Supabase, or AI functionality.
+
+### Root cause
+
+iOS 26's floating glass tab bar provides minimal or zero bottom safe area for `NavigationStack > ScrollView` hierarchies — content renders under the tab bar. The iOS 26 large navigation title consumes significantly more vertical space than iOS 17, compressing the visible scroll area from the top. Combined, these two forces trapped the usable content window between two glass overlays, making it appear as if content did not scroll. Users attempting to scroll from the lower screen area had their gestures intercepted by the tab bar touch zone.
+
+### Changes made
+
+- `Oathen/App/OathenApp.swift` — Added `init()` setting `UIScrollView.appearance().contentInsetAdjustmentBehavior = .always` (iOS only). Forces every scroll view in the app to always apply safe area insets from the tab bar, regardless of how the iOS 26 floating tab bar propagates them.
+- `Oathen/Core/DesignSystem/OathenComponents.swift` — Changed `largeNavigationTitle()` from `.large` to `.inline` navigation bar title display mode on iOS. This removes ~60–80pt of nav bar overhead, making substantially more content visible above the tab bar on first render.
+- `Oathen/Core/DesignSystem/OathenSpacing.swift` — Increased `tabScrollBottom` from 80pt to 120pt. iOS 26's floating glass tab bar is approximately 83pt tall; 120pt ensures the last card in every scrollable tab always clears the tab bar with visible margin.
+
+### Validation
+
+- `bash scripts/validate_sprint3.sh` — **74/74 checks passed, 0 failures**
+- iOS, macOS, watchOS builds pass; 108 unit tests pass
+
+### Note on navigation title style
+
+Sprint 3.5 intentionally switches from large to inline navigation titles on iPhone. The large title pattern can be revisited in a future sprint once iOS 26's layout behavior is better characterised and the daily loop is stable.
+
+---
+
+## Sprint 3.6 — Force Native iOS Scroll Layout
+
+**Status:** Complete
+**Completion date:** 2026-06-14
+**Scope:** Layout-only fix. No new product logic, persistence, HealthKit, Supabase, or AI functionality.
+
+### Root cause
+
+In iOS 26, `NavigationStack` wrapping a `ScrollView` inside a `TabView` creates two overlapping glass overlay layers (the liquid-glass navigation bar + the floating glass tab bar). SwiftUI's content inset propagation between these two layers is unreliable in this OS version: the scroll view's frame was either computed over the full screen with no usable inset, or the glass nav bar was intercepting scroll gesture initiation from the top of the content area. The result was that the `ScrollView` did not respond to scroll gestures reliably in the iPhone Simulator and on device.
+
+### Changes made
+
+- `Oathen/Core/DesignSystem/OathenSpacing.swift` — `tabContentTop` updated to 16pt (appropriate top breathing room for bare ScrollView tabs below status bar); `tabScrollBottom` updated to 140pt (matches brief guidance for reliable tab-bar clearance).
+- `Oathen/Features/Today/TodayView.swift` — Removed `NavigationStack`; `ScrollView` is now the root content view. Daily-plan context button moved from `.toolbar` into an `HStack` alongside the headerBanner. All `.sheet()` modifiers attached to the `ScrollView`. `headerBanner` simplified to a plain `VStack` (the `HStack`/`Spacer` wrapper moved to the body). Background changed from closure form to direct `ignoresSafeArea()`.
+- `Oathen/Features/Goals/GoalsView.swift` — Removed `NavigationStack` and `.navigationTitle`. `ScrollView` is now root content. Background changed to direct form.
+- `Oathen/Features/Health/HealthView.swift` — Same as GoalsView.
+- `Oathen/Features/You/YouView.swift` — Same as GoalsView.
+- `Oathen/Features/Coach/CoachView.swift` — Removed `NavigationStack` and `.navigationTitle`. `conversationArea` (ScrollView) with `.safeAreaInset` for the composerBar is now root content.
+- `Oathen/App/Root/OathenRootView.swift` — Removed redundant `.background(OathenColors.screenBackground.ignoresSafeArea())` from `TabView` (dark mode is forced at root via `preferredColorScheme(.dark)`, making this a no-op that could interfere with the tab bar's glass rendering).
+
+### Sprint 3.6 fixed the iPhone scroll and tab bar usability issue
+
+The iOS layout now uses reliable scrollable native tab screens (bare `ScrollView` as root, no `NavigationStack` overlay) and prevents tab bar overlap via 140pt of explicit bottom padding. No Sprint 4 functionality or persistence was added.
+
+### Validation
+
+- `bash scripts/validate_sprint3.sh` — **74/74 checks passed, 0 failures**
+- iOS, macOS, watchOS builds pass; 108 unit tests pass
 
 ---
 

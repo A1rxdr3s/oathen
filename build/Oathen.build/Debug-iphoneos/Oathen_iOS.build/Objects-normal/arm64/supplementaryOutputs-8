@@ -1,0 +1,37 @@
+{
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/App/Root/PlatformRouter.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlatformRouter.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/Models/Project.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Project.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Project.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Project.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Project.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Project.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/Priority.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Priority.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Priority.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Priority.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Priority.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/Priority.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Domain/ValueObjects/RecurrenceRule.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/RecurrenceRule.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/RecurrenceRule.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/RecurrenceRule.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/RecurrenceRule.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/RecurrenceRule.swiftdeps"
+  },
+  "/Users/andresherrera/Hacking/oathen-app/oathen/Oathen/Core/Foundation/PlaceholderData.swift" : {
+    "const-values" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.swiftconstvalues",
+    "dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.d",
+    "diagnostics" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.dia",
+    "object" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.o",
+    "swift-dependencies" : "/Users/andresherrera/Hacking/oathen-app/oathen/build/Oathen.build/Debug-iphoneos/Oathen_iOS.build/Objects-normal/arm64/PlaceholderData.swiftdeps"
+  }
+}

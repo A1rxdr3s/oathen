@@ -27,5 +27,6 @@ struct OathenRootView: View {
                 .tabItem { Label(OathenTab.you.rawValue, systemImage: OathenTab.you.icon) }
                 .tag(OathenTab.you)
         }
+        .tint(OathenColors.accent)
     }
 }

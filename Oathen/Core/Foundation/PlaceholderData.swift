@@ -42,7 +42,7 @@ enum PlaceholderData {
     ]
 
     // Coach
-    static let coachNudge = "AI Coach connects in Sprint 7. Strict, contextual coaching will appear here."
+    static let coachNudge = "The accountability Coach connects after the daily routine is stable."
 
     // Context
     static let contextMode             = "Normal"

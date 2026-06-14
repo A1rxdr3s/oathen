@@ -73,7 +73,7 @@ Information about project "Oathen":
 
 ## Goal 8 — Forbidden Implementation Scan
 
-  Scanning 40 Swift source files...
+  Scanning 58 Swift source files...
   ✅  No Supabase SDK import (import Supabase) found
   ✅  No SupabaseClient usage (SupabaseClient) found
   ✅  No Supabase query (supabase\.from() found

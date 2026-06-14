@@ -137,11 +137,14 @@ struct ScoreRing: View {
 // MARK: - Platform utility
 
 extension View {
-    /// Applies large navigation bar title display on iOS only.
+    /// Applies inline navigation bar title on iOS.
+    /// iOS 26's liquid-glass nav bar makes the large-title variant consume excessive
+    /// vertical space and compresses the usable scroll area between the nav bar
+    /// and the floating tab bar. Inline keeps the title native without the height penalty.
     @ViewBuilder
     func largeNavigationTitle() -> some View {
         #if os(iOS)
-        self.navigationBarTitleDisplayMode(.large)
+        self.navigationBarTitleDisplayMode(.inline)
         #else
         self
         #endif

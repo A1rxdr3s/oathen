@@ -5,22 +5,18 @@ import SwiftUI
 
 struct YouView: View {
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
-                    profileSection
-                    streakSection
-                    settingsSection
-                    versionFooter
-                }
-                .padding(.horizontal, OathenSpacing.screenHorizontal)
-                .padding(.top, OathenSpacing.tabContentTop)
-                .padding(.bottom, OathenSpacing.xxxl)
+        ScrollView {
+            VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
+                profileSection
+                streakSection
+                settingsSection
+                versionFooter
             }
-            .background(OathenColors.screenBackground)
-            .navigationTitle("You")
-            .largeNavigationTitle()
+            .padding(.horizontal, OathenSpacing.screenHorizontal)
+            .padding(.top, OathenSpacing.tabContentTop)
+            .padding(.bottom, OathenSpacing.tabScrollBottom)
         }
+        .background(OathenColors.screenBackground.ignoresSafeArea())
     }
 
     private var profileSection: some View {
@@ -37,7 +33,7 @@ struct YouView: View {
                 VStack(alignment: .leading, spacing: OathenSpacing.xs) {
                     Text("Placeholder User")
                         .font(OathenTypography.headingMedium)
-                    Text("Account: Sprint 5 (Sign in with Apple / Google)")
+                    Text("Sign-in and account management arrive later.")
                         .font(OathenTypography.bodySmall)
                         .foregroundStyle(.secondary)
                 }
@@ -73,16 +69,16 @@ struct YouView: View {
     private var settingsSection: some View {
         VStack(alignment: .leading, spacing: OathenSpacing.sm) {
             OathenSectionHeader(title: "Settings")
-            settingsRow(title: "Notifications", icon: "bell.fill", sprint: 6)
-            settingsRow(title: "Apple Watch", icon: "applewatch", sprint: 6)
-            settingsRow(title: "Privacy", icon: "lock.shield.fill", sprint: 5)
-            settingsRow(title: "Ultra Strict Mode", icon: "bolt.shield.fill", sprint: 3)
-            settingsRow(title: "Accountability Partner", icon: "person.2.fill", sprint: 8)
-            settingsRow(title: "Data Export", icon: "square.and.arrow.up", sprint: 10)
+            settingsRow(title: "Notifications", icon: "bell.fill")
+            settingsRow(title: "Apple Watch", icon: "applewatch")
+            settingsRow(title: "Privacy", icon: "lock.shield.fill")
+            settingsRow(title: "Ultra Strict Mode", icon: "bolt.shield.fill")
+            settingsRow(title: "Accountability Partner", icon: "person.2.fill")
+            settingsRow(title: "Data Export", icon: "square.and.arrow.up")
         }
     }
 
-    private func settingsRow(title: String, icon: String, sprint: Int) -> some View {
+    private func settingsRow(title: String, icon: String) -> some View {
         OathenCard {
             HStack(spacing: OathenSpacing.md) {
                 Image(systemName: icon)
@@ -91,7 +87,7 @@ struct YouView: View {
                 Text(title)
                     .font(OathenTypography.headingSmall)
                 Spacer()
-                Text("Sprint \(sprint)")
+                Text("Not active yet")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.tertiary)
                 Image(systemName: "chevron.right")
@@ -106,7 +102,7 @@ struct YouView: View {
             Text("Oathen · Discipline OS")
                 .font(OathenTypography.bodySmall)
                 .foregroundStyle(.quaternary)
-            Text("Sprint \(AppEnvironment.currentSprint) Shell · v1.0.0 (1)")
+            Text("v1.0.0 (1)")
                 .font(OathenTypography.bodySmall)
                 .foregroundStyle(.quaternary)
         }

@@ -4,33 +4,29 @@ import SwiftUI
 
 struct GoalsView: View {
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
-                    sprintNote
+        ScrollView {
+            VStack(alignment: .leading, spacing: OathenSpacing.sectionGap) {
+                sprintNote
 
-                    VStack(alignment: .leading, spacing: OathenSpacing.sm) {
-                        OathenSectionHeader(title: "Active Goals")
-                        ForEach(PlaceholderData.goalTitles, id: \.self) { title in
-                            GoalRowPlaceholder(title: title)
-                        }
-                    }
-
-                    VStack(alignment: .leading, spacing: OathenSpacing.sm) {
-                        OathenSectionHeader(title: "Habits")
-                        habitRow(title: "Morning workout", streak: 12, icon: "figure.run")
-                        habitRow(title: "Hydration (3L)", streak: 8, icon: "drop.fill")
-                        habitRow(title: "Evening review", streak: 5, icon: "moon.fill")
+                VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+                    OathenSectionHeader(title: "Active Goals")
+                    ForEach(PlaceholderData.goalTitles, id: \.self) { title in
+                        GoalRowPlaceholder(title: title)
                     }
                 }
-                .padding(.horizontal, OathenSpacing.screenHorizontal)
-                .padding(.top, OathenSpacing.tabContentTop)
-                .padding(.bottom, OathenSpacing.xxxl)
+
+                VStack(alignment: .leading, spacing: OathenSpacing.sm) {
+                    OathenSectionHeader(title: "Habits")
+                    habitRow(title: "Morning workout", streak: 12, icon: "figure.run")
+                    habitRow(title: "Hydration (3L)", streak: 8, icon: "drop.fill")
+                    habitRow(title: "Evening review", streak: 5, icon: "moon.fill")
+                }
             }
-            .background(OathenColors.screenBackground)
-            .navigationTitle("Goals")
-            .largeNavigationTitle()
+            .padding(.horizontal, OathenSpacing.screenHorizontal)
+            .padding(.top, OathenSpacing.tabContentTop)
+            .padding(.bottom, OathenSpacing.tabScrollBottom)
         }
+        .background(OathenColors.screenBackground.ignoresSafeArea())
     }
 
     private var sprintNote: some View {
@@ -38,7 +34,7 @@ struct GoalsView: View {
             HStack {
                 Image(systemName: "info.circle")
                     .foregroundStyle(OathenColors.accent)
-                Text("Domain models (Goal, Project, Habit, Task) implement in Sprint 2.")
+                Text("Goals are the long-term commitments behind your daily plan. This area is not editable yet — Today is active first.")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -81,7 +77,7 @@ private struct GoalRowPlaceholder: View {
                     PriorityBadge(priority: .high)
                 }
                 OathenProgressBar(value: Double.random(in: 0.2...0.8), color: OathenColors.accent, label: "Progress")
-                Text("Goal → Project → Habit → Task hierarchy — Sprint 2")
+                Text("Daily actions connect back to this goal.")
                     .font(OathenTypography.bodySmall)
                     .foregroundStyle(.tertiary)
             }

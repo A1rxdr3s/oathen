@@ -5,9 +5,26 @@
 - **Storage:** `Local` = device only | `Cloud` = Supabase sync | `Hybrid` = local default, cloud opt-in
 - **Sensitivity:** `Public` = non-sensitive | `Private` = user-controlled | `Sensitive` = restricted by default | `Critical` = never auto-uploaded
 - **Sync:** `Auto` = synced automatically | `OptIn` = user must enable | `Never` = never synced
-- **Implementation:** `✅ Sprint 2` = pure Swift domain struct exists | `⏳ Planned` = documented, not yet implemented | `🔒 Gated` = feasibility-gated
+- **Implementation:** `✅ Sprint 2` = pure Swift domain struct | `✅ Sprint 3` = pure Swift, in-memory, connected to UI | `⏳ Planned` = documented, not yet implemented | `🔒 Gated` = feasibility-gated
 
 ---
+
+## Sprint 3 Implementation Status
+
+| Entity | Swift File | Status |
+|---|---|---|
+| `MorningCheckIn` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
+| `NightReview` | `Domain/Models/NightReview.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
+| `DailyPlanItem` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
+| `DailyPlan` | `Domain/Models/DailyPlan.swift` | ✅ Sprint 3 — pure Swift struct, in-memory |
+| `TodayState` | `Domain/Models/TodayState.swift` | ✅ Sprint 3 — pure Swift struct, in-memory, resets on restart |
+| `EnergyLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
+| `FocusLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
+| `MoodLevel` | `Domain/Models/MorningCheckIn.swift` | ✅ Sprint 3 — value enum |
+| `DailyPlanItemKind` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — value enum |
+| `DailyPlanItemStatus` | `Domain/Models/DailyPlanItem.swift` | ✅ Sprint 3 — value enum |
+
+> **Note:** Sprint 3 models are in-memory only. No persistence, no SwiftData, no backend schema. Data resets on app restart. Persistence is Sprint 4+.
 
 ## Sprint 2 Implementation Status
 
@@ -20,7 +37,7 @@
 | `Routine` | `Domain/Models/Routine.swift` | ✅ Sprint 2 — pure Swift struct |
 | `RoutineStep` | `Domain/Models/RoutineStep.swift` | ✅ Sprint 2 — pure Swift struct |
 | `Evidence` | `Domain/Models/Evidence.swift` | ✅ Sprint 2 — concept only, no photo storage |
-| `DisciplineScore` | `Domain/Models/DisciplineScore.swift` | ✅ Sprint 2 — shape only, no calculation engine |
+| `DisciplineScore` | `Domain/Models/DisciplineScore.swift` | ✅ Sprint 2 + Sprint 3 — calculation engine connected |
 | `ContextMode` | `Domain/Models/ContextMode.swift` | ✅ Sprint 2 — pure Swift enum |
 | `Priority` | `Domain/ValueObjects/Priority.swift` | ✅ Sprint 2 — value object |
 | `ScoreBreakdown` | `Domain/ValueObjects/ScoreBreakdown.swift` | ✅ Sprint 2 — value object |
@@ -30,10 +47,7 @@
 | `GoalStatus` / `TaskStatus` / etc. | `Domain/ValueObjects/CompletionStatus.swift` | ✅ Sprint 2 — 6 status enums |
 | `User` | — | ⏳ Planned — Sprint 8 (auth) |
 | `AuthProvider` | — | ⏳ Planned — Sprint 8 |
-| `DailyPlan` | — | ⏳ Planned — Sprint 3 |
-| `MorningCheckIn` | — | ⏳ Planned — Sprint 3 |
-| `NightReview` | — | ⏳ Planned — Sprint 3 |
-| `WeeklyReview` | — | ⏳ Planned — Sprint 3 |
+| `WeeklyReview` | — | ⏳ Planned — Sprint 4 |
 | `HydrationLog` | — | ⏳ Planned — Sprint 5 |
 | `ExerciseSession` | — | ⏳ Planned — Sprint 4 |
 | `SleepLog` | — | ⏳ Planned — Sprint 4 |
@@ -51,7 +65,7 @@
 | `PermissionPolicy` | — | ⏳ Planned — Sprint 12 |
 | `DeviceActivityMonitor` | — | 🔒 Gated — Sprint 11 (entitlement required) |
 
-> **Note:** Sprint 2 establishes the domain language. The entities above that are "Planned" exist in Sprint 0 documentation and will be implemented in their respective sprints. No persistence, sync, or backend schemas exist yet.
+> **Note:** Sprint 2 establishes the domain language. Sprint 3 adds the daily routine models. No persistence, sync, or backend schemas exist yet.
 
 ---
 

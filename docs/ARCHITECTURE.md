@@ -137,6 +137,90 @@ validation/
 | `Domain/Policies/` | Pure function helpers | `static func` only. No stored state. No external dependencies. Deterministic. |
 | `Domain/Fixtures/` | Sample data for previews | Fixed UUID and date values for determinism. Not for production use. |
 
+### Sprint 3 Actual Structure (as built — additions only)
+
+```
+Oathen/
+├── App/
+│   └── OathenApp.swift              # @State private var todayViewModel = TodayViewModel()
+│                                    # .environment(todayViewModel) injected to PlatformRouter
+├── Core/
+│   └── Domain/
+│       ├── Models/
+│       │   ├── MorningCheckIn.swift # Start-of-day commitment review + EnergyLevel/FocusLevel/MoodLevel enums
+│       │   ├── NightReview.swift    # End-of-day closure + excuse detection (local, no AI)
+│       │   ├── DailyPlanItem.swift  # Single day action + DailyPlanItemKind + DailyPlanItemStatus
+│       │   ├── DailyPlan.swift      # Daily commitment set + progress computation
+│       │   └── TodayState.swift     # In-memory aggregate of the full day state (resets on restart)
+│       └── Policies/
+│           └── DailyRoutinePolicy.swift # defaultDailyPlan, coachNudge, calculateScore, etc. (10 helpers)
+├── Features/
+│   ├── Today/
+│   │   ├── TodayView.swift          # UPDATED — full daily command center, connected to TodayViewModel
+│   │   ├── TodayViewModel.swift     # NEW — @Observable @MainActor in-memory state owner
+│   │   └── Components/              # NEW directory
+│   │       ├── DisciplineScoreCard.swift   # Live score ring + label + context mode
+│   │       ├── MorningCheckInCard.swift    # Status + "Start" button → sheet
+│   │       ├── DailyPlanCard.swift         # Critical/high items with completion toggles
+│   │       ├── HealthPillarsCard.swift     # Hydration/exercise/sleep local checkboxes
+│   │       ├── TodayProgressCard.swift     # Progress bar + morning/night status pills
+│   │       └── NightReviewCard.swift       # Status + "Review" button → sheet
+│   ├── DailyRoutine/                # NEW directory
+│   │   ├── MorningCheckInView.swift  # Sheet: Form-based check-in (sleep, energy, focus, mood, mode)
+│   │   ├── NightReviewView.swift     # Sheet: Day summary + failure reason + recovery plan
+│   │   └── DailyPlanView.swift       # Sheet: Priority-grouped full plan list
+│   └── MacDashboard/
+│       └── MacDashboardView.swift   # UPDATED — Today: live check-in bar + commitments + health + coach
+
+OathenTests/
+├── DailyRoutineTests.swift          # NEW — 44 tests for Sprint 3 models + DailyRoutinePolicy
+└── DailyRoutineCodableTests.swift   # NEW — 20 JSON round-trip tests
+
+scripts/
+└── validate_sprint3.sh              # NEW — 12 goals, 74/74 checks
+```
+
+### Daily Routine Data Flow (Sprint 3)
+
+```
+OathenApp (@State TodayViewModel)
+    ↓ .environment(todayViewModel)
+PlatformRouter
+    ↓
+OathenRootView (iOS)          MacDashboardView (macOS)
+    ↓                                ↓
+TodayView                    Today content pane
+    ↓ @Environment(TodayViewModel)
+  ├── DisciplineScoreCard     ← score (computed live)
+  ├── MorningCheckInCard      → isShowingMorningCheckIn = true
+  │       ↓ sheet
+  │   MorningCheckInView      → viewModel.completeMorningCheckIn(...)
+  ├── TodayProgressCard       ← TodayState.progressFraction
+  ├── DailyPlanCard           → viewModel.toggleItem(id:) → recalculateScore()
+  ├── HealthPillarsCard       → viewModel.toggleItem(id:) → recalculateScore()
+  ├── Coach nudge             ← DailyRoutinePolicy.coachNudge(for: state)
+  └── NightReviewCard         → isShowingNightReview = true
+          ↓ sheet
+      NightReviewView         → viewModel.completeNightReview(failureReason:)
+```
+
+### In-Memory State Boundary (Sprint 3)
+
+| What is in-memory | What happens on restart | When it changes |
+|---|---|---|
+| `TodayState` | Resets to fixture defaults | Sprint 4 adds SwiftData |
+| `TodayViewModel` | Re-created by `@State` in OathenApp | Persistent in Sprint 4+ |
+| `DisciplineScore` (today) | Recalculated from fresh state | Real calc in Sprint 3; HealthKit in Sprint 4 |
+
+### How Sprint 3 Prepares for Future Persistence
+
+- `TodayState`, `DailyPlan`, `MorningCheckIn`, `NightReview` are all `Codable` — JSON round-trip tested
+- All models use `UUID` IDs — map to Postgres primary keys
+- `completedAt: Date?` and `approvedAt: Date?` mirror Supabase timestamp patterns
+- `DailyPlan.date` is calendar-day scoped — maps cleanly to `date` column in persistence
+- `DailyRoutinePolicy.calculateScore(from:)` takes a pure value — no ViewModel dependency, safe to call from persistence layer
+- `TodayViewModel.resetToDefaults()` makes test isolation trivial — same pattern works for SwiftData reset
+
 ### How Sprint 2 Prepares for Future Persistence (Without Implementing It)
 
 - All models use `UUID` for `id` — maps cleanly to Postgres `uuid` primary keys

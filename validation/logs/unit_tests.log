@@ -1,0 +1,286 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -project /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj -scheme OathenTests -destination platform=macOS,arch=arm64 CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+2026-06-14 01:31:29.107 xcodebuild[53545:3889392] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'OathenTests' in project 'Oathen' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/andresherrera/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Users/andresherrera/Hacking/oathen-app/oathen/Oathen.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/andresherrera/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+ProcessInfoPlistFile /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Info.plist /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/empty-OathenTests.plist (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    builtin-infoPlistUtility /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/empty-OathenTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Info.plist
+
+CopySwiftLibs /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest (in target 'OathenTests' from project 'Oathen')
+    cd /Users/andresherrera/Hacking/oathen-app/oathen
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/MacOS/OathenTests --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Frameworks --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/PlugIns --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Library/SystemExtensions --scan-folder /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Products/Debug/OathenTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Build/Intermediates.noindex/Oathen.build/Debug/OathenTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+Test Suite 'All tests' started at 2026-06-14 01:31:30.179.
+Test Suite 'OathenTests.xctest' started at 2026-06-14 01:31:30.179.
+Test Suite 'CodableTests' started at 2026-06-14 01:31:30.179.
+Test Case '-[OathenTests.CodableTests testContextModeCodableAllCases]' started.
+Test Case '-[OathenTests.CodableTests testContextModeCodableAllCases]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testDisciplineScoreCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testDisciplineScoreCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testEvidenceCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testEvidenceCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testGoalCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testGoalCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testGoalWithOptionalFieldsCodable]' started.
+Test Case '-[OathenTests.CodableTests testGoalWithOptionalFieldsCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testHabitCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testHabitCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testOathenTaskCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testOathenTaskCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testOathenTaskWithNilOptionals]' started.
+Test Case '-[OathenTests.CodableTests testOathenTaskWithNilOptionals]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testPriorityCodableAllCases]' started.
+Test Case '-[OathenTests.CodableTests testPriorityCodableAllCases]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testProjectCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testProjectCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testRecurrenceRuleCodable]' started.
+Test Case '-[OathenTests.CodableTests testRecurrenceRuleCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testRoutineCodableRoundTrip]' started.
+Test Case '-[OathenTests.CodableTests testRoutineCodableRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.CodableTests testScoreBreakdownCodable]' started.
+Test Case '-[OathenTests.CodableTests testScoreBreakdownCodable]' passed (0.001 seconds).
+Test Suite 'CodableTests' passed at 2026-06-14 01:31:30.192.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.009 (0.013) seconds
+Test Suite 'DailyRoutineCodableTests' started at 2026-06-14 01:31:30.193.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanDefaultRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanDefaultRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemKindAllCasesCodable]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemKindAllCasesCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemRoundTrip]' passed (0.004 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemStatusAllCasesCodable]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanItemStatusAllCasesCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testDailyPlanRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testEnergyLevelCodable]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testEnergyLevelCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testFocusLevelCodable]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testFocusLevelCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testMoodLevelCodable]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testMoodLevelCodable]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTripWithNilFields]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testMorningCheckInRoundTripWithNilFields]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTripWithNilFields]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testNightReviewRoundTripWithNilFields]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateRoundTrip]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateWithNightReviewRoundTrip]' started.
+Test Case '-[OathenTests.DailyRoutineCodableTests testTodayStateWithNightReviewRoundTrip]' passed (0.001 seconds).
+Test Suite 'DailyRoutineCodableTests' passed at 2026-06-14 01:31:30.212.
+	 Executed 14 tests, with 0 failures (0 unexpected) in 0.014 (0.020) seconds
+Test Suite 'DailyRoutineTests' started at 2026-06-14 01:31:30.213.
+Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreFromDefaultState]' started.
+Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreFromDefaultState]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreIncreasesWhenItemsComplete]' started.
+Test Case '-[OathenTests.DailyRoutineTests testCalculateScoreIncreasesWhenItemsComplete]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeAfterMorningCheckIn]' started.
+Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeAfterMorningCheckIn]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeBeforeMorningCheckIn]' started.
+Test Case '-[OathenTests.DailyRoutineTests testCoachNudgeBeforeMorningCheckIn]' passed (0.004 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanCriticalFilter]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanCriticalFilter]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanDefaults]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanDefaults]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanHealthPillarFlags]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanHealthPillarFlags]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemDefaults]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemDefaults]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindAllCasesHaveDisplayNamesAndIcons]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindAllCasesHaveDisplayNamesAndIcons]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindHealthPillar]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemKindHealthPillar]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemStatusFlags]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemStatusFlags]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemToggled]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanItemToggled]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanProgressFraction]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDailyPlanProgressFraction]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDefaultDailyPlanHasItems]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDefaultDailyPlanHasItems]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDefaultMorningCheckInIsNotComplete]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDefaultMorningCheckInIsNotComplete]' passed (0.003 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testDefaultTodayStateStructure]' started.
+Test Case '-[OathenTests.DailyRoutineTests testDefaultTodayStateStructure]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testEnergyLevelAllCasesHaveDisplayNames]' started.
+Test Case '-[OathenTests.DailyRoutineTests testEnergyLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testFocusLevelAllCasesHaveDisplayNames]' started.
+Test Case '-[OathenTests.DailyRoutineTests testFocusLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testIsMorningCheckInCompleteHelper]' started.
+Test Case '-[OathenTests.DailyRoutineTests testIsMorningCheckInCompleteHelper]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testIsNightReviewCompleteHelper]' started.
+Test Case '-[OathenTests.DailyRoutineTests testIsNightReviewCompleteHelper]' passed (0.003 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testMoodLevelAllCasesHaveDisplayNames]' started.
+Test Case '-[OathenTests.DailyRoutineTests testMoodLevelAllCasesHaveDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInDefaults]' started.
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInDefaults]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInIsComplete]' started.
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInIsComplete]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepHoursClamped]' started.
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepHoursClamped]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepQualityLabels]' started.
+Test Case '-[OathenTests.DailyRoutineTests testMorningCheckInSleepQualityLabels]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewCounts]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewCounts]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewDefaults]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewDefaults]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewDerivation]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewDerivation]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewExcuseDetection]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewExcuseDetection]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewExecutionSummary]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewExecutionSummary]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewIsComplete]' started.
+Test Case '-[OathenTests.DailyRoutineTests testNightReviewIsComplete]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testProgressFraction]' started.
+Test Case '-[OathenTests.DailyRoutineTests testProgressFraction]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationManyMissed]' started.
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationManyMissed]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationOneMissed]' started.
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationOneMissed]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationZeroMissed]' started.
+Test Case '-[OathenTests.DailyRoutineTests testRecoveryRecommendationZeroMissed]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateCompletionSummary]' started.
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateCompletionSummary]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateDefaults]' started.
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateDefaults]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateMorningCheckInFlag]' started.
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateMorningCheckInFlag]' passed (0.001 seconds).
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateNightReviewFlag]' started.
+Test Case '-[OathenTests.DailyRoutineTests testTodayStateNightReviewFlag]' passed (0.001 seconds).
+Test Suite 'DailyRoutineTests' passed at 2026-06-14 01:31:30.262.
+	 Executed 39 tests, with 0 failures (0 unexpected) in 0.032 (0.049) seconds
+Test Suite 'ModelTests' started at 2026-06-14 01:31:30.262.
+Test Case '-[OathenTests.ModelTests testContextModeAllCasesHaveDisplayNames]' started.
+Test Case '-[OathenTests.ModelTests testContextModeAllCasesHaveDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testContextModeIsReducedFlag]' started.
+Test Case '-[OathenTests.ModelTests testContextModeIsReducedFlag]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testContextModeScoreMultipliers]' started.
+Test Case '-[OathenTests.ModelTests testContextModeScoreMultipliers]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testDateRangeDuration]' started.
+Test Case '-[OathenTests.ModelTests testDateRangeDuration]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testDateRangeIsValid]' started.
+Test Case '-[OathenTests.ModelTests testDateRangeIsValid]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testDisciplineScoreLabels]' started.
+Test Case '-[OathenTests.ModelTests testDisciplineScoreLabels]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testDisciplineScoreTotalClamped]' started.
+Test Case '-[OathenTests.ModelTests testDisciplineScoreTotalClamped]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testEvidenceDefaultLocalOnly]' started.
+Test Case '-[OathenTests.ModelTests testEvidenceDefaultLocalOnly]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testEvidenceRequirementFlags]' started.
+Test Case '-[OathenTests.ModelTests testEvidenceRequirementFlags]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testEvidenceTypeFlags]' started.
+Test Case '-[OathenTests.ModelTests testEvidenceTypeFlags]' passed (0.002 seconds).
+Test Case '-[OathenTests.ModelTests testEvidenceValidationStatusResolved]' started.
+Test Case '-[OathenTests.ModelTests testEvidenceValidationStatusResolved]' passed (0.000 seconds).
+Test Case '-[OathenTests.ModelTests testGoalCategoryDisplayNames]' started.
+Test Case '-[OathenTests.ModelTests testGoalCategoryDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testGoalDefaultInit]' started.
+Test Case '-[OathenTests.ModelTests testGoalDefaultInit]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testGoalProgressPercentClamped]' started.
+Test Case '-[OathenTests.ModelTests testGoalProgressPercentClamped]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testHabitDefaultRecurrence]' started.
+Test Case '-[OathenTests.ModelTests testHabitDefaultRecurrence]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testHabitStreakClamped]' started.
+Test Case '-[OathenTests.ModelTests testHabitStreakClamped]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testOathenTaskDefaultInit]' started.
+Test Case '-[OathenTests.ModelTests testOathenTaskDefaultInit]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testOathenTaskEstimatedMinutesClamped]' started.
+Test Case '-[OathenTests.ModelTests testOathenTaskEstimatedMinutesClamped]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testPriorityBlockedIsNotActionable]' started.
+Test Case '-[OathenTests.ModelTests testPriorityBlockedIsNotActionable]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testPriorityDisplayNames]' started.
+Test Case '-[OathenTests.ModelTests testPriorityDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testPrioritySortOrderIsAscending]' started.
+Test Case '-[OathenTests.ModelTests testPrioritySortOrderIsAscending]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testRecurrenceRulePresets]' started.
+Test Case '-[OathenTests.ModelTests testRecurrenceRulePresets]' passed (0.004 seconds).
+Test Case '-[OathenTests.ModelTests testRoutineProgressFraction]' started.
+Test Case '-[OathenTests.ModelTests testRoutineProgressFraction]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testRoutineTypeDisplayNames]' started.
+Test Case '-[OathenTests.ModelTests testRoutineTypeDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testScoreBreakdownTotal]' started.
+Test Case '-[OathenTests.ModelTests testScoreBreakdownTotal]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testTaskStatusDisplayNames]' started.
+Test Case '-[OathenTests.ModelTests testTaskStatusDisplayNames]' passed (0.001 seconds).
+Test Case '-[OathenTests.ModelTests testTaskStatusTerminalFlags]' started.
+Test Case '-[OathenTests.ModelTests testTaskStatusTerminalFlags]' passed (0.001 seconds).
+Test Suite 'ModelTests' passed at 2026-06-14 01:31:30.294.
+	 Executed 27 tests, with 0 failures (0 unexpected) in 0.020 (0.032) seconds
+Test Suite 'PolicyTests' started at 2026-06-14 01:31:30.297.
+Test Case '-[OathenTests.PolicyTests testBlockedAlwaysWins]' started.
+Test Case '-[OathenTests.PolicyTests testBlockedAlwaysWins]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testContextModeReducesScore]' started.
+Test Case '-[OathenTests.PolicyTests testContextModeReducesScore]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testCriticalDoesNotEscalateBeyondCritical]' started.
+Test Case '-[OathenTests.PolicyTests testCriticalDoesNotEscalateBeyondCritical]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testDueWithin24HoursWithEvidenceEscalates]' started.
+Test Case '-[OathenTests.PolicyTests testDueWithin24HoursWithEvidenceEscalates]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testDueWithin4HoursEscalates]' started.
+Test Case '-[OathenTests.PolicyTests testDueWithin4HoursEscalates]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testFutureDueNoEvidenceKeepsAssigned]' started.
+Test Case '-[OathenTests.PolicyTests testFutureDueNoEvidenceKeepsAssigned]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testNoDueDateReturnsAssigned]' started.
+Test Case '-[OathenTests.PolicyTests testNoDueDateReturnsAssigned]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testNoTasksGivesFullTaskScore]' started.
+Test Case '-[OathenTests.PolicyTests testNoTasksGivesFullTaskScore]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromLow]' started.
+Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromLow]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromNormal]' started.
+Test Case '-[OathenTests.PolicyTests testOverdueEscalatesFromNormal]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testPartialCriticalTasksScore]' started.
+Test Case '-[OathenTests.PolicyTests testPartialCriticalTasksScore]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testPerfectDayReachesMaxScore]' started.
+Test Case '-[OathenTests.PolicyTests testPerfectDayReachesMaxScore]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testScoreCappedAt100]' started.
+Test Case '-[OathenTests.PolicyTests testScoreCappedAt100]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testUltraStrictModeIncreasesScore]' started.
+Test Case '-[OathenTests.PolicyTests testUltraStrictModeIncreasesScore]' passed (0.001 seconds).
+Test Case '-[OathenTests.PolicyTests testZeroDayScoresZero]' started.
+Test Case '-[OathenTests.PolicyTests testZeroDayScoresZero]' passed (0.001 seconds).
+Test Suite 'PolicyTests' passed at 2026-06-14 01:31:30.315.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.009 (0.018) seconds
+Test Suite 'OathenTests.xctest' passed at 2026-06-14 01:31:30.315.
+	 Executed 108 tests, with 0 failures (0 unexpected) in 0.084 (0.136) seconds
+Test Suite 'All tests' passed at 2026-06-14 01:31:30.316.
+	 Executed 108 tests, with 0 failures (0 unexpected) in 0.084 (0.137) seconds
+2026-06-14 01:31:30.592 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.829 elapsed -- Testing started completed.
+2026-06-14 01:31:30.593 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-06-14 01:31:30.593 xcodebuild[53545:3889392] [MT] IDETestOperationsObserverDebug: 0.829 sec, +0.829 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/andresherrera/Library/Developer/Xcode/DerivedData/Oathen-fvvkowvgqqwieifhypgiwkfqyesl/Logs/Test/Test-OathenTests-2026.06.14_01-31-29--0400.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
